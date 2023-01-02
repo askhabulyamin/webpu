@@ -14,6 +14,28 @@ class MY_Controller extends CI_Controller {
         $ServerName = $_SERVER['SERVER_NAME'];
 
         $this->load->helper('general_helper');
+
+        $this->load->model(array('Custom_model'));
+        
+        $this->menu_nav = array();
+        $this->menu_nav = $this->Custom_model->getdata('db_webpu.menu_nav');
+
+        $this->footer_nav = array();
+        $this->footer_nav = $this->Custom_model->getdata('db_webpu.footer_nav');
+
+        foreach ($this->menu_nav as $key => $value) 
+        {
+            $findsubmenu = $this->Custom_model->getdata('db_webpu.submenu_nav', array('id_menu_nav' => $value['id_menu_nav']), 'name_submenu_nav', 'ASC');
+
+            if (!empty($findsubmenu)) 
+            {
+                $this->menu_nav[$key]['submenu'] = $findsubmenu;
+            }
+            else
+            {
+                $this->menu_nav[$key]['submenu'] = '';
+            }
+        }
     }
 
     public function template($content)

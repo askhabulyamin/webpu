@@ -12,12 +12,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="manifest" href="site.webmanifest"> -->
-		<link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/img/pufavicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/img/pufavicon.png">
         <link
           rel="canonical"
           href="https://www.ampstart.com/templates/product-material-oak.amp"
         />
-		<!-- CSS here -->
+        <!-- CSS here -->
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/owl.carousel.min.css">
         <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/css/ticker-style.css"> -->
@@ -366,10 +366,13 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="footer-menu f-right">
-                                    <ul>                             
-                                        <li><a href="#">Terms of use</a></li>
+                                    <ul>
+                                        <?php foreach ($this->footer_nav as $key => $value): ?>
+                                            <li><a href="<?=$value['link_footer']?>"><?=$value['name_footer_nav']?></a></li>
+                                        <?php endforeach ?>
+                                        <!-- <li><a href="#">Terms of use</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Contact</a></li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -387,36 +390,36 @@
             window.blogs_url = '<?= blogs_url; ?>';
         </script>
 
-    	<!-- JS here -->
-    	
-    		<!-- All JS Custom Plugins Link Here here -->
+        <!-- JS here -->
+        
+            <!-- All JS Custom Plugins Link Here here -->
             <script src="<?= base_url();?>/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    		<!-- Jquery, Popper, Bootstrap -->
-    		<script src="<?= base_url();?>/assets/js/vendor/jquery-1.12.4.min.js"></script>
+            <!-- Jquery, Popper, Bootstrap -->
+            <script src="<?= base_url();?>/assets/js/vendor/jquery-1.12.4.min.js"></script>
             <script src="<?= base_url();?>/assets/js/popper.min.js"></script>
             <script src="<?= base_url();?>/assets/js/bootstrap.min.js"></script>
-    	    <!-- Jquery Mobile Menu -->
+            <!-- Jquery Mobile Menu -->
             <script src="<?= base_url();?>/assets/js/jquery.slicknav.min.js"></script>
 
-    		<!-- Jquery Slick , Owl-Carousel Plugins -->
+            <!-- Jquery Slick , Owl-Carousel Plugins -->
             <script src="<?= base_url();?>/assets/js/owl.carousel.min.js"></script>
             <script src="<?= base_url();?>/assets/js/slick.min.js"></script>
             <!-- Date Picker -->
             <script src="<?= base_url();?>/assets/js/moment.js"></script>
             <script src="<?= base_url();?>/assets/js/gijgo.min.js"></script>
-    		<!-- One Page, Animated-HeadLin -->
+            <!-- One Page, Animated-HeadLin -->
             <script src="<?= base_url();?>/assets/js/wow.min.js"></script>
-    		<script src="<?= base_url();?>/assets/js/animated.headline.js"></script>
+            <script src="<?= base_url();?>/assets/js/animated.headline.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.magnific-popup.js"></script>
 
             <!-- Breaking New Pluging -->
             <script src="<?= base_url();?>/assets/js/jquery.ticker.js"></script>
             <script src="<?= base_url();?>/assets/js/site.js"></script>
 
-    		<!-- Scrollup, nice-select, sticky -->
+            <!-- Scrollup, nice-select, sticky -->
             <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.nice-select.min.js"></script>
-    		<script src="<?= base_url();?>/assets/js/jquery.sticky.js"></script>
+            <script src="<?= base_url();?>/assets/js/jquery.sticky.js"></script>
             
             <!-- contact js -->
             <script src="<?= base_url();?>/assets/js/contact.js"></script>
@@ -425,7 +428,7 @@
             <script src="<?= base_url();?>/assets/js/mail-script.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.ajaxchimp.min.js"></script>
             
-    		<!-- Jquery Plugins, main Jquery -->	
+            <!-- Jquery Plugins, main Jquery -->    
             <script src="<?= base_url();?>/assets/js/plugins.js"></script>
             <script src="<?= base_url();?>/assets/js/main.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
