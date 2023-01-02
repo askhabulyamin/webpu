@@ -15,24 +15,6 @@
         $this->load->library('curl');
         $this->load->helper('form');
         $this->load->library('pagination');
-        $this->load->model(array('Custom_model'));
-
-        $this->menu_nav = array();
-        $this->menu_nav = $this->Custom_model->getdata('db_webpu.menu_nav');
-
-        foreach ($this->menu_nav as $key => $value) 
-        {
-            $findsubmenu = $this->Custom_model->getdata('db_webpu.submenu_nav', array('id_menu_nav' => $value['id_menu_nav']), 'name_submenu_nav', 'ASC');
-
-            if (!empty($findsubmenu)) 
-            {
-                $this->menu_nav[$key]['submenu'] = $findsubmenu;
-            }
-            else
-            {
-                $this->menu_nav[$key]['submenu'] = '';
-            }
-        }
     }
 
 

@@ -84,19 +84,21 @@
             </div> 
     </header> -->
 
-    <div style="background: url(https://bootstrapious.com/i/snippets/sn-bg-image/bg.jpg)" class="page-holder bg-cover">
-
-      <div class="container py-5">
-        <header class="text-white py-5">
-          <h1 class="display-4 font-weight-bold mb-4 text-white">PODOMORO UNIVERSITY</h1>
-
-          <p class="lead mb-0 text-white">Starts your journey with us</p>
-          <!-- <p class="font-italic text-white">Snippet By <a href="https://bootstrapious.com" class="text-white">
-              <u>Bootstrapious</u></a>
-          </p> -->
-        </header>
-
-      </div>
+    <div class="container-fluid" style="background-image: url('assets/img/side_building.jpg'); background-repeat: no-repeat; background-size: cover; background-color: rgba(255,255,255,0.7);
+    background-blend-mode: lighten;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center mt-5">
+                    <img src="assets/img/logo/icon_right.png" class="img-fluid">
+                </div>
+                <div class="col-md-5 mt-5 mb-5">
+                    <h3 style="color: #0525b2">Podomoro University</h3>
+                    <p style="text-align: justify; text-justify: inter-word;">
+                    Founded by Yayasan Pendidikan Agung Podomoro, and with full support from the leading holding company, Agung Podomoro Group, has made Podomoro University a perfect place to study. We develop industry-driven curriculum framework and teaching methodology through work-based learning, hence the students will be equipped with knowledge and skills that are required highly and consistent with the needs of business and industry.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <main>
@@ -655,7 +657,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle mb-30">
-                            <h3>Announcement</h3>
+                            <a href="<?=base_url('announcement')?>"><h3>Announcement</h3></a>
                         </div>
                     </div>
                 </div>
@@ -722,7 +724,7 @@
                     <div class="col-lg-12">
                         <div class="trending-tittle">
                             
-                            <h3>News</h3>
+                            <a href="<?=base_url('news')?>"><h3>News</h3></a>
                             
                         </div>
                     </div>
@@ -791,7 +793,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle mb-30">
-                            <h3>Marketing Activity</h3>
+                            <a href="<?=base_url('marketing_activity')?>"><h3>Marketing Activity</h3></a>
                         </div>
                     </div>
                 </div>
@@ -925,7 +927,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle mb-30">
-                            <h3>Worldwide Articles</h3>
+                            <a href="<?=base_url('world_article')?>"><h3>Worldwide Articles</h3></a>
                         </div>
                     </div>
                 </div>
