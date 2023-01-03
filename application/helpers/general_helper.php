@@ -17,31 +17,38 @@ function get_ext($data)
 }
 
 function tgl_ina($parameter, $bul=FALSE)
-	{  //ini  untuk  mengubah  format  2015-06-15  ke  dalam format  15  Juni 2015
-		$thn=substr($parameter,0,4);  //menngambil  4  digit  dari  kiri,  0  adalah  index  pertama  dari  tahun (angka 2 dari 2015), 4 banyaknya digit yg diambil
-		$b=substr($parameter,5,2); //mengambil 2 digit, index 5 adalah angka 0 dari 06
-		$tgl=substr($parameter,8,2); //mengambil 2 digit dari kanan
-		if($b==1) {$bln="Januari";}
-		else if($b==2) {$bln="Februari";}
-		else if($b==3) {$bln="Maret";}
-		else if($b==4) {$bln="April";}
-		else if($b==5) {$bln="Mei";}
-		else if($b==6) {$bln="Juni";}
-		else if($b==7) {$bln="Juli";}
-		else if($b==8) {$bln="Agustus";}
-		else if($b==9) {$bln="September";}
-		else if($b==10){$bln="Oktober";}
-		else if($b==11){$bln="November";}
-		else if($b==12){$bln="Desember";}
-		$tanggal=$tgl . " ".$bln ." ".$thn;
-
-		if ($bul == TRUE) 
+	{  
+		if ($parameter == '0000-00-00') 
 		{
-			return $bln;
+			return '-';
 		}
 		else
 		{
-			return $tanggal;
+			$thn=substr($parameter,0,4);
+			$b=substr($parameter,5,2);
+			$tgl=substr($parameter,8,2);
+			if($b==1) {$bln="Januari";}
+			else if($b==2) {$bln="Februari";}
+			else if($b==3) {$bln="Maret";}
+			else if($b==4) {$bln="April";}
+			else if($b==5) {$bln="Mei";}
+			else if($b==6) {$bln="Juni";}
+			else if($b==7) {$bln="Juli";}
+			else if($b==8) {$bln="Agustus";}
+			else if($b==9) {$bln="September";}
+			else if($b==10){$bln="Oktober";}
+			else if($b==11){$bln="November";}
+			else if($b==12){$bln="Desember";}
+			$tanggal=$tgl . " ".$bln ." ".$thn;
+
+			if ($bul == TRUE) 
+			{
+				return $bln;
+			}
+			else
+			{
+				return $tanggal;
+			}
 		}
 	}
 
