@@ -70,10 +70,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => '',
+	'hostname' => (ENVIRONMENT == 'development') ? 'localhost' : 'pu-conn0123.mariadb.ap-southeast-5.rds.aliyuncs.com',
+	'username' => (ENVIRONMENT == 'development') ? 'root' : 'db_itpu',
+	'password' => (ENVIRONMENT == 'development') ? '' : '4dm1n5!S',
+	'database' => 'db_it',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
