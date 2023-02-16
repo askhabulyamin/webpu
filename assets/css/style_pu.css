@@ -854,3 +854,13 @@ a, button {
     width: 150px;
     margin-top: 10px;
 }
+
+.owl-lazy {
+    height: 700px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""] {
+    max-height: none !important;
+}

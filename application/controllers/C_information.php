@@ -81,6 +81,84 @@
         }  
     }
 
+    public function events($id_event = false)
+    {
+        $data = array();
+        if ($id_event == false) 
+        {
+            $data['page'] = 1;
+
+            $pageget = $this->input->get('page');
+            $page = 0;
+            if (!empty($pageget)) 
+            {
+                if ($pageget == 1) 
+                {
+                    $page = 0;
+                }
+                else
+                {
+                    $page = $pageget * 5 - 5;
+                    $data['page'] = $pageget;
+                }
+            }
+
+            $data['events'] = $this->client_rest->client_get('events/EventsList',['page' => $page]);
+
+            $content = $this->load->view('page/V_events',$data,true);
+            parent::template($content);
+        }
+        else
+        {
+            $data['detail'] = $this->client_rest->client_get('announcement/DetailAnnouncement',['id_announcement' => $id_announcement]);
+            
+            $data['recent_announcement'] = $this->client_rest->client_get('announcement/RecentAnnouncement',[]);
+
+            $content = $this->load->view('page/V_announcement_detail',$data,true);
+            parent::template($content);
+        }  
+    }
+
+    public function kerja_sama($id_kerja_sama = false)
+    {
+        $data = array();
+        if ($id_kerja_sama == false) 
+        {
+            $data['page'] = 1;
+
+            $pageget = $this->input->get('page');
+            $page = 0;
+            if (!empty($pageget)) 
+            {
+                if ($pageget == 1) 
+                {
+                    $page = 0;
+                }
+                else
+                {
+                    $page = $pageget * 5 - 5;
+                    $data['page'] = $pageget;
+                }
+            }
+
+            $data['kerja_sama'] = $this->client_rest->client_get('kerja_sama/KerjaSamaList',['page' => $page]);
+
+            $data['recent_kerja_sama'] = $this->client_rest->client_get('kerja_sama/KerjaSamaList',['page' => 0, 'limit' => 5]);
+
+            $content = $this->load->view('page/V_kerja_sama',$data,true);
+            parent::template($content);
+        }
+        else
+        {
+            $data['detail'] = $this->client_rest->client_get('announcement/DetailAnnouncement',['id_announcement' => $id_announcement]);
+            
+            $data['recent_announcement'] = $this->client_rest->client_get('announcement/RecentAnnouncement',[]);
+
+            $content = $this->load->view('page/V_announcement_detail',$data,true);
+            parent::template($content);
+        }  
+    }
+
     public function marketing_activity($id_marketing_activity = false)
     {
         $data = array();

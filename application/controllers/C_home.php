@@ -26,7 +26,13 @@
         $getprodi = $this->client_rest->client_get('prodi/ProdiFront',[]);
         $getcalendaracademic = $this->client_rest->client_get('academic/calendaracademic',[]);
 
+        $banner = $this->client_rest->client_get('banner/BannerList',[]);
+
         $recomendnews = $this->client_rest->client_get('blogs/RecomentNews',[]);
+
+        $events = $this->client_rest->client_get('events/EventsList',['page' => 0, 'limit' => 10]);
+
+        $kerjasama = $this->client_rest->client_get('kerja_sama/KerjaSamaList',['page' => 0, 'limit' => 10]);
 
         $marketingactivity = $this->client_rest->client_get('marketing/MarketingActivity',['page' => 0, 'limit' => 10]);
 
@@ -43,6 +49,9 @@
         $data['newsapi'] = $d['articles'];
         $data['announcement'] = $getAnouncem_api;
         $data['marketingactivity'] = $marketingactivity;
+        $data['events'] = $events;
+        $data['kerjasama'] = $kerjasama;
+        $data['banner'] = $banner;
 
         $calendar = array();
         $calendar[0]['name'] = 'Kuliah';

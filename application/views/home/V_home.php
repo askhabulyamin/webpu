@@ -84,6 +84,55 @@
             </div> 
     </header> -->
 
+    <div class="container-fluid pl-0 pr-0" style="height: auto;">
+        <!-- Set up your HTML -->
+        <div class="owl-carousel carousel-banner owl-theme">
+            <?php foreach ($banner as $key => $value): ?>
+                <?php if ($value['banner_align'] == 'left'): ?>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px;">
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 style="color:white"><?=$value['banner_text']?></h3><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    </div>
+                <?php endif ?>
+                <?php if ($value['banner_align'] == 'center'): ?>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: center;">
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 style="color:white"><?=$value['banner_text']?></h3><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    </div>
+                <?php endif ?>
+                <?php if ($value['banner_align'] == 'right'): ?>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: right;">
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 style="color:white"><?=$value['banner_text']?></h3><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    </div>
+                <?php endif ?>
+                    
+            <?php endforeach ?>
+          <!-- <div class="owl-lazy" data-src="https://img-cdn.hltv.org/gallerypicture/Dskz-OH0gKplxoMLB6SBJV.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=213&mx=39&my=947&w=1600&s=24cc070f5f694dc298e8fa5e647179fb" style="padding-top:100px; padding-left: 50px;">
+                <h3 style="color:white">INI TEXT HEAD</h3>
+          </div>
+          <div class="owl-lazy" data-src="https://img-cdn.hltv.org/gallerypicture/Dskz-OH0gKplxoMLB6SBJV.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=213&mx=39&my=947&w=1600&s=24cc070f5f694dc298e8fa5e647179fb">
+              text
+          </div> -->
+          
+          <!-- <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div>
+          <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div>
+          <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div>
+          <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div> -->
+        </div>
+    </div>
+
     <div class="container-fluid" style="background-image: url('assets/img/side_building.jpg'); background-repeat: no-repeat; background-size: cover; background-color: rgba(255,255,255,0.7);
     background-blend-mode: lighten;">
         <div class="container">
@@ -715,8 +764,234 @@
     </div>           
     <!-- End Weekly-News -->
 
+    <!-- EVENTS -->
+    <div class="weekly2-news-area  weekly2-pading">
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle mb-30">
+                            <a href="<?=base_url('events')?>"><h3>Events</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="events-featured dot-style d-flex dot-style">
+                            <?php foreach ($events as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['start_date'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4><?= $value['event_name']?>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <?php foreach ($events as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['start_date'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4>
+                                                <a href="<?= base_url('events/').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <?php foreach ($events as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['start_date'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4>
+                                                <a href="<?= base_url('events/').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <?php foreach ($events as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['start_date'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4>
+                                                <a href="<?= base_url('events/').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <?php foreach ($events as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['start_date'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4>
+                                                <a href="<?= base_url('events/').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                            <?php foreach ($events as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['start_date'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4>
+                                                <a href="<?= base_url('events/').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>       
+    <!-- END EVENTS -->
+
     <!-- Trending Area Start -->
-    <div class="trending-area fix">
+    <div class="trending-area fix gray-bg">
         <div class="container">
             <div class="trending-main">
                 <!-- Trending Tittle -->
@@ -786,7 +1061,7 @@
     
     
     <!--   Weekly2-News start -->
-    <div class="weekly2-news-area  weekly2-pading gray-bg">
+    <div class="weekly2-news-area weekly2-pading">
         <div class="container">
             <div class="weekly2-wrapper">
                 <!-- section Tittle -->
@@ -841,6 +1116,63 @@
         </div>
     </div>           
     <!-- End Weekly-News -->
+
+    <!--   Weekly2-News start -->
+    <div class="weekly2-news-area weekly2-pading gray-bg">
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle mb-30">
+                            <a href="<?=base_url('cooperation')?>"><h3>Cooperation</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="kerja-sama-carousel dot-style d-flex dot-style">
+                            <?php foreach ($kerjasama as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['StartDate'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['CooperationBanner'])): ?>
+                                            <img class="card-img-top" src="<?=puis_url?><?=$value['CooperationBanner']?>" alt="Card image cap">
+                                        <?php endif ?>
+                                        <?php if (empty($value['CooperationBanner'])): ?>
+                                            <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div>
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h4>
+                                                <a href="<?= base_url('kerjasama').$value['ID'];?>"><?= $value['JudulKegiatan']?></a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>           
+    <!-- End Weekly-News -->
+
     <!-- Start Youtube -->
     <!-- <div class="youtube-area video-padding">
         <div class="container">
