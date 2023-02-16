@@ -20,6 +20,8 @@
         <!-- CSS here -->
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?= base_url();?>/assets/css/owl.carousel.theme.css">
+        
         <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/css/ticker-style.css"> -->
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/flaticon.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/slicknav.css">
@@ -441,10 +443,26 @@
                             }
                         });
 
+            $('.carousel-banner').owlCarousel({
+                loop:true,
+                lazyLoad: true,
+                dots:true,
+                responsive:{
+                    0:{
+                        items:1
+                    }
+                }
+            });
+
+            var dots = $('.owl-dots').css('position', 'absolute').css('bottom', '5px');
+            dots.css('left', 'calc(50% - ' + dots.width()/2+'px)');
+
+
+
             $('.carousel-responsive1').owlCarousel({
                 loop:true,
                 margin:10,
-                nav:false,
+                nav:true,
                 autoplay:true,
                 responsive:{
                     0:{
@@ -458,6 +476,8 @@
                     }
                 }
             })
+
+            
             </script>
     </body>
 </html>
