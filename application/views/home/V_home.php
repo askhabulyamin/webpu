@@ -91,21 +91,22 @@
                 <?php if ($value['banner_align'] == 'left'): ?>
                     <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px;">
                         <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 style="color:white"><?=$value['banner_text']?></h3><br>
+                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
                         <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'center'): ?>
                     <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: center;">
                         <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 style="color:white"><?=$value['banner_text']?></h3><br>
+                        <center>
+                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
                         <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'right'): ?>
                     <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: right;">
                         <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 style="color:white"><?=$value['banner_text']?></h3><br>
+                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
                         <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                     </div>
                 <?php endif ?>
