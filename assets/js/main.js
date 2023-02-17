@@ -68,7 +68,7 @@
         infinite: true,
         speed: 600,
         arrows: false,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay:true,
         initialSlide: 3,
