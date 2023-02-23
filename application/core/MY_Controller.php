@@ -36,6 +36,14 @@ class MY_Controller extends CI_Controller {
                 $this->menu_nav[$key]['submenu'] = '';
             }
         }
+
+        $imggenquery = $this->Custom_model->getdata('db_webpu.gen_img');
+        $this->genimg = array();
+        foreach ($imggenquery as $key => $value) 
+        {
+            $this->genimg[] = $value['img_file'];
+        }
+
     }
 
     public function template($content)
