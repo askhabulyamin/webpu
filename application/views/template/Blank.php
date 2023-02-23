@@ -33,8 +33,67 @@
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/nice-select.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/style.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/css/style_pu.css">
+        <!-- AOS Anination -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Sweper Slide -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.css">
         <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/amp/css/amp-source-compiled-css.css"> -->
         <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/css/custom.css"> -->
+        <!-- Demo styles -->
+          <style>            
+            .swiper {
+              width: 100%;
+              height: 100%;
+            }
+
+            .swiper-slide {
+              text-align: center;
+              font-size: 18px;
+              background: #fff;
+
+              /* Center slide text vertically */
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              -webkit-justify-content: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-align-items: center;
+              align-items: center;
+            }
+
+            .swiper-slide img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .footer-area {
+                background: #203468;
+            }
+            .footer-area .footer-tittle p {
+                color: #ccc;
+            }
+
+            .footer-area .footer-pera p {
+                color: #cccc;
+                font-size: 15px;
+                margin-bottom: 50px;
+                line-height: 1.8;
+            }
+            .footer-area p {
+                color: #ccc;
+            }
+            .footer-area .footer-tittle ul li a {
+                color: #ccc;
+                font-weight: 300;
+                font-size: 15px;
+            }
+          </style>
    </head>
 
     <body>
@@ -71,7 +130,7 @@
             <!-- Header Start -->
            <div class="header-area">
                 <div class="main-header ">
-                    <div class="header-top black-bg d-none d-md-block">
+                    <!-- <div class="header-top black-bg d-none d-md-block">
                        <div class="container">
                            <div class="col-xl-12">
                                 <div class="row d-flex justify-content-between align-items-center">
@@ -91,7 +150,7 @@
                                 </div>
                            </div>
                        </div>
-                    </div>
+                    </div> -->
                     <div class="header-mid d-none d-md-block">
                        <div class="container">
                             <div class="row d-flex align-items-center">
@@ -184,23 +243,47 @@
         </header> 
        
         <?= $content ?>
-        
+        <style>
+        .wa{
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 117px;
+            right: 90px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            z-index: 100;
+        }
+
+        .my-wa{
+            margin-top:16px;
+        }
+        </style>
+        <a href="https://api.whatsapp.com/send?phone=6287787770456&text" class="wa" target="_blank">
+            <i class="fab fa-whatsapp my-wa" aria-hidden="true"></i>
+        </a>
        <footer>
            <!-- Footer Start-->
-            <!-- <div class="footer-area footer-padding fix">
+            <div class="footer-area footer-padding fix">
+                <svg class="block-wave bottom mi-top-140" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
+                </svg>
                 <div class="container">
                     <div class="row d-flex justify-content-between">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="single-footer-caption">
                                 <div class="single-footer-caption">
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="<?=base_url()?>assets/img/logo/logo-hitam-putih.png" alt=""></a>
+                                        <a href="<?=base_url()?>"><img class="w-100" src="<?=base_url()?>assets/img/logo/log_PU-w.webp" alt=""></a>
                                     </div>
-                                    <div class="footer-tittle">
+                                   <!--  <div class="footer-tittle">
                                         <div class="footer-pera">
                                             <p>Founded by Yayasan Pendidikan Agung Podomoro, and with full support from the leading holding company, Agung Podomoro Group, has made Podomoro University a perfect place to study. We develop industry-driven curriculum framework and teaching methodology through work-based learning, hence the students will be equipped with knowledge and skills that are required highly and consistent with the needs of business and industry.</p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     
                                 </div>
                             </div>
@@ -219,7 +302,7 @@
                                     <strong>Email:</strong> <span id="Email">info@podomorouniversity.ac.id</span><br>
                                     
                                 </p>
-                                <div class="instagram-gellay">
+                                <!-- <div class="instagram-gellay">
                                     <ul class="insta-feed">
                                         <li><a href="#"><img src="assets/img/post/instra1.jpg" alt=""></a></li>
                                         <li><a href="#"><img src="assets/img/post/instra2.jpg" alt=""></a></li>
@@ -228,7 +311,7 @@
                                         <li><a href="#"><img src="assets/img/post/instra5.jpg" alt=""></a></li>
                                         <li><a href="#"><img src="assets/img/post/instra6.jpg" alt=""></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -352,7 +435,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             
            <!-- footer-bottom aera -->
            <div class="footer-bottom-area">
@@ -434,6 +517,12 @@
             <script src="<?= base_url();?>/assets/js/plugins.js"></script>
             <script src="<?= base_url();?>/assets/js/main.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+            <!-- AOS JS -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.js"></script>
+            <script>
+              AOS.init();
+            </script>
             <script type="text/javascript">
             moment().format(); 
             document.addEventListener('scroll', function(e) {
@@ -462,7 +551,7 @@
             $('.carousel-responsive1').owlCarousel({
                 loop:true,
                 margin:10,
-                nav:true,
+                nav:false,
                 autoplay:true,
                 responsive:{
                     0:{
@@ -479,5 +568,42 @@
 
             
             </script>
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                  slidesPerView: 4,
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                  grabCursor: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                });
+            </script>
+            <!-- <script type="text/javascript">
+              $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                dots: true,
+                nav: false,
+                responsiveClass: true,
+                responsive: {
+                  0: {
+                    items: 2,
+                    margin: 10,
+                    stagePadding: 20,
+                  },
+                  600: {
+                    items: 3,
+                    margin: 20,
+                    stagePadding: 50,
+                  },
+                  1000: {
+                    items: 4
+                  }
+                }
+              });
+            </script> -->
     </body>
 </html>
