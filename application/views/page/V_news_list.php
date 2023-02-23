@@ -60,7 +60,7 @@
                             $explodetext = explode('.', $value['Images']) 
                         ?>
                         <?php if ($explodetext[1] != 'gif'): ?>
-                            <p><?=text_panjang(htmlspecialchars($value['Content']))?></p>
+                            <p><?=text_panjang($value['Content'])?></p>
                         <?php endif ?>
                         <br>
                         <span class="badge badge-primary"><?=$value['Name']?></span>
@@ -98,6 +98,7 @@
                 </div>
             </div>
             <hr>
+            
 
             <div class="card shadow">
                 <div class="card-body">

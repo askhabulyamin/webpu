@@ -2,6 +2,17 @@
     .slick-dots li button:before {
         content: "\2588\2588\2588\2588\2588";
     }
+    .time-bg-1 {
+        background-color: #023f8785;
+    }
+
+    .time-bg-2 {
+        background-color: #d00000a6;
+    }
+
+    .time-bg-3 {
+        background-color: #a19467a8;
+    }
     time > .day {
         display: block;
         font-size: 50pt;
@@ -153,7 +164,7 @@
         margin-top: 0px;
     }
     .bg-calender {
-        background-image: url(assets/img/bg_calender.jpg);
+        background-image: url(assets/img/bg_calender.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -198,6 +209,7 @@
     .mi-top-187 {
         top: -187px;
         position: relative;
+        z-index: 9;
     }
     .mi-top-20 {
         top: -20px;
@@ -216,6 +228,25 @@
     }
     .mi-top-100 {
         top: -100px;
+        position: relative;
+    }
+    .mi-top-87 {
+        top: -87px;
+        position: relative;
+    }
+    .gold-2 {
+        color: #cec7af;
+    }
+    .mi-top-197 {
+        top: -197px;
+        position: relative;
+    }
+    .border-img {
+        border-top-right-radius: 2.25rem;
+        border-top-left-radius: 2.25rem;
+    }
+    .mi-top-110 {
+        top: -110px;
         position: relative;
     }
 
@@ -271,7 +302,57 @@
             </div> 
     </header> -->
 
-    <div class="container-fluid" style="background-image: url('assets/img/side_building.jpg'); background-repeat: no-repeat; background-size: cover; background-color: rgba(255,255,255,0.7);
+    <div class="container-fluid pl-0 pr-0" style="height: auto;">
+        <!-- Set up your HTML -->
+        <div class="owl-carousel carousel-banner">
+            <?php foreach ($banner as $key => $value): ?>
+                <?php if ($value['banner_align'] == 'left'): ?>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px;">
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    </div>
+                <?php endif ?>
+                <?php if ($value['banner_align'] == 'center'): ?>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: center;">
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <center>
+                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    </div>
+                <?php endif ?>
+                <?php if ($value['banner_align'] == 'right'): ?>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: right;">
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    </div>
+                <?php endif ?>
+                    
+            <?php endforeach ?>
+          <!-- <div class="owl-lazy" data-src="https://img-cdn.hltv.org/gallerypicture/Dskz-OH0gKplxoMLB6SBJV.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=213&mx=39&my=947&w=1600&s=24cc070f5f694dc298e8fa5e647179fb" style="padding-top:100px; padding-left: 50px;">
+                <h3 style="color:white">INI TEXT HEAD</h3>
+          </div>
+          <div class="owl-lazy" data-src="https://img-cdn.hltv.org/gallerypicture/Dskz-OH0gKplxoMLB6SBJV.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=213&mx=39&my=947&w=1600&s=24cc070f5f694dc298e8fa5e647179fb">
+              text
+          </div> -->
+          
+          <!-- <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div>
+          <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div>
+          <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div>
+          <div>
+            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
+          </div> -->
+        </div>
+    </div>
+
+    <!-- <div class="container-fluid" style="background-image: url('assets/img/side_building.jpg'); background-repeat: no-repeat; background-size: cover; background-color: rgba(255,255,255,0.7);
     background-blend-mode: lighten;">
         <div class="container bg-programs">
             <div class="row">
@@ -286,7 +367,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <main>
 
@@ -435,7 +516,7 @@
                                                      data-aos-offset="300"
                                                      data-aos-easing="ease-in-sine">
                                         <div class="">
-                                            <time class="p-3" datetime="">
+                                            <time class="p-3 time-bg-2" datetime="">
                                                 <span class="day font-weight-bold"><?=$day?></span>
                                                 <span class="month"><?=$month?></span>
                                                 <span class="year"><?=$year?></span>
@@ -468,11 +549,68 @@
     </section>           
     <!-- End Weekly-News -->
 
-    <!-- Trending Area Start -->
-    <section class="trending-area programs pt-100 mi-top">
-        <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
+    <!-- EVENTS -->
+       
+    <section class="weekly2-news-area">
+        <svg class="block-wave gold-1 mi-top-87" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
         </svg>
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle trending-tittle">
+                            <h3 class="text-uppercase" data-aos="zoom-out-left">Events</h3>
+                            <a href="<?=base_url('events')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                        </div>
+                            <p style="color:#6c757d !important" data-aos="zoom-out-left">Event Campus Podomoro University</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="events-featured dot-style d-flex dot-style">
+                            <?php foreach ($events as $key => $value): ?>
+                               
+                                <div class="weekly2-single active">
+                                    <div class="card">
+                                        <?php if (!empty($value['event_background'])): ?>
+                                            <img class="card-img-top border-img" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                        <?php endif ?>
+                                        <?php if (empty($value['event_background'])): ?>
+                                            <?php $randomimg = array_rand($this->genimg);?>
+                                            <img class="card-img-top border-img" src="<?=base_url()?><?=$this->genimg[$randomimg]?>" alt="Card image cap">
+                                            <!-- <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div> -->
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h5>
+                                                <a href="<?= base_url('event').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>     
+    <!-- END EVENTS -->
+
+    <!-- Trending Area Start -->
+    <section class="trending-area programs pt-100 mi-top">
+        <!-- <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
+        </svg> -->
         <div class="container pt-50 ">
             <div class="trending-main">
                 <!-- Trending Tittle -->
@@ -546,22 +684,24 @@
     
     
     <!--   Weekly2-News start -->
-    <section class="weekly2-news-area">
-        <!-- <svg class="block-wave mi-top-110" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
+    <section class="weekly2-news-area  weekly2-pading gray-bg">
+        <svg class="block-wave mi-top-110" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
-        </svg> -->
-        <div class="container pb-50">
+        </svg>
+        <div class="container">
             <div class="weekly2-wrapper">
                 <!-- section Tittle -->
                 <div class="row">
                     <div class="col-lg-12">
                         
                         <div class="trending-tittle">                            
-                        
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">Marketing Activity </h3>
-                                <a class="more" data-aos="zoom-out-right" href="<?=base_url('marketing_activity')?>"> More <i class="fas fa-arrow-right fz"></i>
+
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Marketing Activity</h3>
+                            <a class="more" data-aos="zoom-out-right" href="<?=base_url('marketing_activity')?>"> 
+                                More 
+                                <i class="fas fa-arrow-right fz"></i>
                             </a> 
-                                     
+
                         </div>
                     </div>
                 </div>
@@ -581,20 +721,84 @@
                                 <div class="weekly2-single">
                                     <div class="card"  data-aos="flip-up">
                                         <?php if (!empty($value['Banner'])): ?>
-                                            <img class="card-img-top" src="<?=puis_url?>uploads/admisi/banner/<?=$value['Banner']?>" alt="Card image cap">
+                                            <img class="card-img-top border-img" src="<?=puis_url?>uploads/admisi/banner/<?=$value['Banner']?>" alt="">
                                             
                                         <?php endif ?>
+                                        <div class="">
+
                                         <?php if (empty($value['Banner'])): ?>
-                                                <time class="p-3" datetime="">
+                                                <time class="p-3 time-bg-3" datetime="">
                                                     <span class="day font-weight-bold"><?=$day?></span>
                                                     <span class="month"><?=$month?></span>
                                                     <span class="year"><?=$year?></span>
                                                 </time>
                                         <?php endif ?>
-                                            
+                                        </div>
                                         <div class="p-4">
                                             <h5>
                                                 <a href="<?= base_url('details');?>"><?= $b['Title']?></a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>           
+    <!-- End Weekly-News -->
+
+    <!--   Weekly2-News start -->
+    <section class="weekly2-news-area weekly2-pading gray-bg">
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle trending-tittle">
+                            <h3 class="text-uppercase" data-aos="zoom-out-left">Cooperation</h3>
+                            <a href="<?=base_url('cooperation')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                        </div>
+                            <p style="color:#6c757d !important" data-aos="zoom-out-left">Campus Cooperation Spaces Podomoro University students</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="kerja-sama-carousel dot-style d-flex dot-style">
+                            <?php foreach ($kerjasama as $key => $value): ?>
+                                <?php 
+                                    $getStart = $value['StartDate'];
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    $newDate = date("d-M-Y", strtotime($getStart));
+                                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
+                                    $day = date("d",strtotime($getStart));
+                                    $month = date("F",strtotime($getStart));
+                                    $year = date("Y",strtotime($getStart));
+                                ?>
+                                <div class="weekly2-single">
+                                    <div class="card">
+                                        <?php if (!empty($value['CooperationBanner'])): ?>
+                                            <img class="card-img-top border-img" src="<?=puis_url?><?=$value['CooperationBanner']?>" alt="Card image cap">
+                                        <?php endif ?>
+                                        <?php if (empty($value['CooperationBanner'])): ?>
+                                            <?php $randomimg = array_rand($this->genimg);?>
+                                            <img class="card-img-top border-img" src="<?=base_url()?><?=$this->genimg[$randomimg]?>" alt="Card image cap">
+                                            <!-- <div class="overlay rounded">
+                                                <time class="p-3" datetime="">
+                                                    <span class="day font-weight-bold"><?=$day?></span>
+                                                    <span class="month"><?=$month?></span>
+                                                    <span class="year"><?=$year?></span>
+                                                </time>
+                                            </div> -->
+                                        <?php endif ?>
+                                            
+                                        <div class="p-4">
+                                            <h5>
+                                                <a href="<?= base_url('kerjasama').$value['ID'];?>"><?= $value['JudulKegiatan']?></a>
                                             </h5>
                                         </div>
                                     </div>
@@ -607,6 +811,7 @@
         </div>
     </section>           
     <!-- End Weekly-News -->
+
     <!-- Start Youtube -->
     <!-- <div class="youtube-area video-padding">
         <div class="container">
@@ -687,6 +892,9 @@
     <!-- End Start youtube -->
     <!--  Recent Articles start -->
     <section class="recent-articles weekly2-pading ">
+        <svg class="block-wave mi-top-110" style="color:#f7f7fd;" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
+        </svg>
         <div class="container">
            <div class="recent-wrapper">
                 <!-- section Tittle -->
@@ -760,7 +968,7 @@
         <div class="container">
             <center><h3 style="color: #0525b2" class="garisbawah">Our Affiliations</h3></center>
 
-            <div class="owl-carousel carousel-responsive1 owl-theme mb-5">
+            <div class="owl-carousel carousel-responsive1 mb-5">
                 <?php for ($i=1; $i <= 16; $i++) :?>
                     <div class="item">
                         <center>

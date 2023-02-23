@@ -66,6 +66,12 @@ $route['marketing_activity/(:any)'] = 'c_information/marketing_activity/$1';
 $route['announcement'] = 'c_information/announcement';
 $route['announcement/(:any)'] = 'c_information/announcement/$1';
 
+$route['events'] = 'c_information/events';
+$route['events/(:any)'] = 'c_information/events/$1';
+
+$route['cooperation'] = 'c_information/kerja_sama';
+$route['cooperation/(:any)'] = 'c_information/kerja_sama/$1';
+
 $route['world_article'] = 'c_information/world_article';
 
 $route['404_override'] = '';
