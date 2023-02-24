@@ -880,7 +880,7 @@
                             </div>
                             <div class="trand-right-cap">
                                 <span class="color<?php echo $no; ?>"><?php echo $response[$i]['Category'];?></span>
-                                <h4><a href="details.html"><?php echo $response[$i]['Title'];?></a></h4>
+                                <h4><a href="<?=base_url()?>news/<?=$response[$i]['ID_title']?>"><?php echo $response[$i]['Title'];?></a></h4>
                             </div>
                         </div>
                         <?php endfor; ?>
