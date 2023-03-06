@@ -91,7 +91,14 @@
                                 </div>
                            </div>
                        </div>
+<<<<<<< Updated upstream
                     </div>
+=======
+                    </div> -->
+                    <script type="text/javascript">
+                       $('.topbannercar').slick();
+                    </script>
+>>>>>>> Stashed changes
                     <div class="header-mid d-none d-md-block">
                        <div class="container">
                             <div class="row d-flex align-items-center">
@@ -103,7 +110,12 @@
                                 </div>
                                 <div class="col-xl-9 col-lg-9 col-md-9">
                                     <div class="header-banner f-right ">
-                                        <img src="<?=base_url()?>assets/img/hero/BEASISWA8SEMESTER100.gif" alt="">
+                                            <?php if ($this->topbanner['banner_top_link'] != ''): ?>
+                                                <a href="<?=$this->topbanner['banner_top_link']?>" target="_blank"><img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt=""></a>
+                                            <?php endif ?>
+                                            <?php if ($this->topbanner['banner_top_link'] == ''): ?>
+                                                <img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt="">
+                                            <?php endif ?>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +196,32 @@
         </header> 
        
         <?= $content ?>
+<<<<<<< Updated upstream
         
+=======
+        <style>
+        .wa{
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 117px;
+            right: 90px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            z-index: 100;
+        }
+
+        .my-wa{
+            margin-top:16px;
+        }
+        </style>
+        <a href="https://api.whatsapp.com/send?phone=<?=$this->contactinfo['whatsapp']?>&text" class="wa" target="_blank">
+            <i class="fab fa-whatsapp my-wa" aria-hidden="true"></i>
+        </a>
+>>>>>>> Stashed changes
        <footer>
            <!-- Footer Start-->
             <!-- <div class="footer-area footer-padding fix">
@@ -212,11 +249,9 @@
                                     <h4>Contact Us</h4>
                                 </div>
                                 <p class="text-left" > <span id="Address"></span>
-                                    Central Park Mall 3rd Floor - Unit 112 <br>
-                                    Podomoro City, Jl. Let. Jend. S. Parman Kav. 28<br>
-                                    West Jakarta, 11470, Indonesia<br>
-                                    <strong>Phone:</strong> <span id="Tlp">021-29200456</span><br>
-                                    <strong>Email:</strong> <span id="Email">info@podomorouniversity.ac.id</span><br>
+                                    <?=$this->contactinfo['address']?><br>
+                                    <strong>Phone:</strong> <span id="Tlp"><?=$this->contactinfo['phone']?></span><br>
+                                    <strong>Email:</strong> <span id="Email"><?=$this->contactinfo['email']?></span><br>
                                     
                                 </p>
                                 <div class="instagram-gellay">

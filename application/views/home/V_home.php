@@ -89,25 +89,33 @@
         <div class="owl-carousel carousel-banner owl-theme">
             <?php foreach ($banner as $key => $value): ?>
                 <?php if ($value['banner_align'] == 'left'): ?>
-                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px;">
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>">
+                        <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                            
+                        
                         <h1 style="color:white"><?=$value['banner_header']?></h1><br>
                         <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
                         <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        </div>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'center'): ?>
-                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: center;">
-                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <center>
-                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
-                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style=" text-align: center;">
+                        <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                            <center>
+                            <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
+                            <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        </div>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'right'): ?>
-                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: right;">
-                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
-                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="text-align: right;">
+                        <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                            <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                            <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        </div>
                     </div>
                 <?php endif ?>
                     
@@ -154,6 +162,7 @@
     <main>
 
     <!-- Whats New Start -->
+<<<<<<< Updated upstream
     <section class="whats-news-area pt-50 pb-20">
         <div class="container">
             <div class="row">
@@ -169,6 +178,60 @@
                             <!--Nav Button  -->                                            
                             <nav>                                                                     
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
+=======
+    <section class="whats-news-area programs pt-100 pb-90">
+        <svg class="block-wave top  mi-top-187" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" clip-rule="evenodd" d="m1440.3 87h-715.4-725.2v-60.3c239.6 34.4 480.3 34.4 722.2 0s481.4-34.4 718.5 0v60.3z" fill-rule="evenodd"></path></svg>
+        <!-- <div  class="container"> -->
+            <!-- Swiper -->
+              <!-- <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div> -->
+        <!-- </div> -->
+        <div class="container ">
+            <div class="row pb-100">
+                <div class="col-lg-12">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="section-tittle mb-30" data-aos="fade-up" data-aos-duration="3000">
+                                <h3 class="text-uppercase">Undergraduate Programs</h3>
+                                <p>Explore our undergraduate programs and find an academic path that's right for you</p>
+                                <a href="<?=base_url()?>/undergraduated_programs" data-ux="Showcase_HomeGP_Experiences_SeeAll" rel="nofollow" class="Link Link-Arrow" style="text-decoration">
+                                    Explore <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="col-12">
+                                <div class="weekly2-news-active dot-style " >
+                                    <?php foreach ($ProdiList as $key => $value): ?>
+                                        <div class="weekly2-single " data-aos="fade-left">
+                                            <div class="card p-3">
+                                                
+                                                <?php if ($key == 0): ?>
+                                                    <a class="nav-item nav-link min-hight-170 active" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
+                                                        <img class="card-img-top w-100 h-40" src="<?=puis_url?>/images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <p class="text-left bottom-0 p-2"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
+                                                    </a>
+                                                
+                                                <?php endif ?>
+                                                <?php if ($key != 0): ?>
+                                                    <a class="nav-item nav-link min-hight-170" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
+                                                        <img class="card-img-top w-100" src="<?=puis_url?>/images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <p class="text-right bottom-0"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
+                                                    </a>
+                                                <?php endif ?>
+>>>>>>> Stashed changes
 
                                     <?php foreach ($ProdiList as $key => $value): ?>
                                         <?php if ($key == 0): ?>
@@ -713,6 +776,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
+                        
                         <div class="weekly-news-active dot-style d-flex dot-style">
                             <?php
                             if (is_array($announcement) || is_object($announcement)) // Anaouncement
@@ -740,9 +804,15 @@
                                             </time>
                                         </div>
                                         <div class="p-4">
+<<<<<<< Updated upstream
                                             <h4>
                                                 <a href="<?= base_url('details');?>"><?= $b['Title']?></a>
                                             </h4>
+=======
+                                            <h5>
+                                                <?= $b['Title']?>
+                                            </h5>
+>>>>>>> Stashed changes
                                         </div>
                                 </div>
                                 <!-- <div class="card">
@@ -809,8 +879,14 @@
                                         <?php endif ?>
                                             
                                         <div class="p-4">
+<<<<<<< Updated upstream
                                             <h4><?= $value['event_name']?>
                                             </h4>
+=======
+                                            <h5>
+                                                <?= $value['event_name']?>
+                                            </h5>
+>>>>>>> Stashed changes
                                         </div>
                                     </div>
                                 </div>
@@ -880,7 +956,11 @@
                             </div>
                             <div class="trand-right-cap">
                                 <span class="color<?php echo $no; ?>"><?php echo $response[$i]['Category'];?></span>
+<<<<<<< Updated upstream
                                 <h4><a href="<?=base_url()?>news/<?=$response[$i]['ID_title']?>"><?php echo $response[$i]['Title'];?></a></h4>
+=======
+                                <h5><a href="<?=base_url()?>news/<?=$response[$i]['ID_title']?>"><?=$response[$i]['Title']?>"><?php echo $response[$i]['Title'];?></a></h5>
+>>>>>>> Stashed changes
                             </div>
                         </div>
                         <?php endfor; ?>
@@ -937,9 +1017,15 @@
                                         <?php endif ?>
                                             
                                         <div class="p-4">
+<<<<<<< Updated upstream
                                             <h4>
                                                 <a href="<?= base_url('details');?>"><?= $b['Title']?></a>
                                             </h4>
+=======
+                                            <h5>
+                                                <?= $b['Title']?>
+                                            </h5>
+>>>>>>> Stashed changes
                                         </div>
                                     </div>
                                 </div>
@@ -995,9 +1081,15 @@
                                         <?php endif ?>
                                             
                                         <div class="p-4">
+<<<<<<< Updated upstream
                                             <h4>
                                                 <a href="<?= base_url('kerjasama').$value['ID'];?>"><?= $value['JudulKegiatan']?></a>
                                             </h4>
+=======
+                                            <h5>
+                                                <?= $value['JudulKegiatan']?>
+                                            </h5>
+>>>>>>> Stashed changes
                                         </div>
                                     </div>
                                 </div>
@@ -1154,6 +1246,24 @@
         </div>
     </div> -->
     <!-- End pagination  -->
+<<<<<<< Updated upstream
+=======
+    <section class="recent-articles">
+        <div class="container">
+            <center><h3 style="color: #0525b2" class="garisbawah">Our Affiliations</h3></center>
+
+            <div class="owl-carousel carousel-responsive1 mb-5">
+                <?php foreach ($affiliation as $key => $value): ?>
+                    <div class="item">
+                        <center>
+                            <img src="<?=puis_url.$value['affiliation_file']?>" class="img-fluid">
+                        </center>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </section>
+>>>>>>> Stashed changes
     </main>
 
 
