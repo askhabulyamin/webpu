@@ -1,42 +1,18 @@
 <style type="text/css">
-    .slick-dots li button:before {
-        content: "\2588\2588\2588\2588\2588";
-    }
-    .time-bg-1 {
-        background-color: #023f8785;
-    }
-
-    .time-bg-2 {
-        background-color: #d00000a6;
-    }
-
-    .time-bg-3 {
-        background-color: #a19467a8;
-    }
-    time > .day {
-        display: block;
-        font-size: 50pt;
-        font-weight: 100;
-        line-height: 1;
-    }
-
-    time > .month {
-        display: block;
-        font-size: 20pt;
-        font-weight: 900;
-        line-height: 1;
-    }
-    time > .year {
-        display: block;
-        font-size: 35pt;
-        font-weight: 900;
-        line-height: 1.1;
-    }
-
-    time > span {
-        display: none;
-    }
-
+    .programs {
+        background-image: url(assets/img/beams-components.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-top: 0px;
+        }
+    .bg-calender {
+        background-image: url(assets/img/bg_calender.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-top: 0px;
+        }   
     time {
         display: inline-block;
         width: 100%;
@@ -50,257 +26,10 @@
         background-repeat: no-repeat;
         border-top-left-radius: 2.25rem;
         border-top-right-radius: 2.25rem;
-    }
-    .purple-gradient {
-        background: linear-gradient(88deg, #034087,#d71921, #fc3f00) !important;
-    }
-    /* Carousel */
-
-    .owl-carousel .carousel-item {
-      background: #fff;
-      border: 1px solid #D9D7DA;
-      text-align: center;
-    }
-
-    .owl-carousel .carousel-item-text {
-      padding: 12px;
-    }
-
-    .owl-carousel .carousel-item .item-kicker {
-      color: #9A5053;
-      display: block;
-      font-size: .8em;
-      font-weight: 600;
-      height: 30px;
-      margin-bottom: 16px;
-      overflow: hidden;
-      text-transform: uppercase;
-    }
-
-    .owl-carousel .carousel-item .item-title {
-      color: #646464;
-      font-size: 1em;
-      font-weight: 600;
-      height: 38px;
-      margin: 0;
-      overflow: hidden;
-    }
-
-    .owl-dots {
-      margin-top: 40px;
-      text-align: center;
-      width: 100%;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-
-    .owl-dot {
-      border-radius: 50px;
-      height: 10px;
-      width: 10px;
-      display: inline-block;
-      background: rgba(127, 127, 127, 0.5);
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-
-    .owl-dot.active {
-      background: rgba(127, 127, 127, 1);
-    }
-
-
-    /* Tabs */
-
-    .nav-tabs {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-
-    .nav-tabs>li {
-      display: block;
-      position: relative;
-      text-align: center;
-    }
-
-    .nav-tabs>li:last-child {
-      margin-right: 0;
-    }
-
-    .tab-content {
-      display: inline-block;
-      width: 100%;
-    }
-
-    .tab-content .tab-pane {
-      display: none;
-    }
-
-    .tab-content .tab-pane.active {
-      display: block;
-    }
-    .card {
-        position: relative;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: #fff;
-        background-clip: border-box;
-        border: 1px solid #ccc;
-        border-radius: 2.25rem;
-        margin: 10px;
-    }
-    .programs {
-        background-image: url(assets/img/beams-components.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        margin-top: 0px;
-    }
-    .bg-calender {
-        background-image: url(assets/img/bg_calender.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        margin-top: 0px;
-    } 
-    /*.slick-slider {
-        position: relative;
-        display: block;
-        box-sizing: border-box;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-touch-callout: none;
-        -khtml-user-select: none;
-        -ms-touch-action: pan-y;
-        touch-action: pan-y;
-        -webkit-tap-highlight-color: #415094;
-        background-color: #5f9ea026;
-        padding: 30px;
-        border-radius: 50px;
-    }*/
-    .bg-programs {
-        background-color: rgb(102 102 101 / 9%);
-        border-radius: 50px;
-        padding: 40px;
-    }
-    .mi-top {
-        top: -87px;
-        position: relative;
-    }
-    svg {
-        color: #fff;
-    }
-    .bottom-0 {
-        bottom: 0px;
-        position: absolute;
-    }
-    .min-hight-170 {
-        min-height: 170px;
-    }
-    .mi-top-187 {
-        top: -187px;
-        position: relative;
-        z-index: 9;
-    }
-    .mi-top-20 {
-        top: -20px;
-        position: relative;
-    }
-    .gold-1 {
-        color: #c3bb9ed1;
-    }
-    .mi-top-110 {
-        top: -110px;
-        position: relative;
-    }
-    .mi-top-140 {
-        top: -140px;
-        position: relative;
-    }
-    .mi-top-100 {
-        top: -100px;
-        position: relative;
-    }
-    .mi-top-87 {
-        top: -87px;
-        position: relative;
-    }
-    .gold-2 {
-        color: #cec7af;
-    }
-    .mi-top-197 {
-        top: -197px;
-        position: relative;
-    }
-    .border-img {
-        border-top-right-radius: 2.25rem;
-        border-top-left-radius: 2.25rem;
-    }
-    .mi-top-110 {
-        top: -110px;
-        position: relative;
-    }
-
-    .more {
-        margin-left: 12px;
-        line-height: 2.5;
-    }    
-    .fz {
-        margin-left: 5px;
-        font-size: 12px;
-    }
+        }  
 
 </style>
     
-    <!-- <header class="masthead" role="banner"> 
-        <div class="masthead-shell">
-            <div class="primary-content ready-to-animate"> 
-                <div class="titling bound"> 
-                    <h1 class="product-name"> 
-                    <span>Podomoro University</span> </h1>
-                    <p class="tagline" id="tagline">
-                        <span style="color: #343a40">Where Future</span> 
-                        <span style="color: #023f87">Entrepreneur Begins</span> 
-                        <span style="color: #d71921">At</span> 
-                        <span style="color: #a19467">Podomoro University</span> 
-                    </p>
-                </div> 
-                    <section class="precis above-fold"> 
-                        <div class="plate bound"> 
-                            <div class="prose"> 
-                                <h2>Go to Online Registration</h2> 
-                                <p>Segala sesuatu yang Anda butuhkan untuk menjadi diri Anda yang paling produktif dan selalu terhubung—di rumah, saat bepergian, dan di mana saja.</p> 
-                            </div> 
-                            <div class="action"> 
-                                <a href="" class="internal">
-                                    <span>Registration</span></a> 
-                            </div> 
-                        </div> 
-                    </section> 
-                    <div class="mobile-cta" aria-hidden="true"> 
-                        <div class="bound"> 
-                            <h2>Go to Online Registration</h2> 
-                            <div class="action-wrapper"> 
-                                <div class="action"> 
-                                    <a  class="internal">
-                                        <span>Registration</span></a> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-                
-            </div> 
-    </header> -->
 
     <div class="container-fluid pl-0 pr-0" style="height: auto;">
         <!-- Set up your HTML -->
@@ -322,7 +51,8 @@
                         <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
                             <h1 style="color:white"><?=$value['banner_header']?></h1><br>
                             <center>
-                            <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
+                                <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3>
+                            </center><br>
                             <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
                     </div>
@@ -338,67 +68,17 @@
                 <?php endif ?>
                     
             <?php endforeach ?>
-          <!-- <div class="owl-lazy" data-src="https://img-cdn.hltv.org/gallerypicture/Dskz-OH0gKplxoMLB6SBJV.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=213&mx=39&my=947&w=1600&s=24cc070f5f694dc298e8fa5e647179fb" style="padding-top:100px; padding-left: 50px;">
-                <h3 style="color:white">INI TEXT HEAD</h3>
-          </div>
-          <div class="owl-lazy" data-src="https://img-cdn.hltv.org/gallerypicture/Dskz-OH0gKplxoMLB6SBJV.jpg?auto=compress&ixlib=java-2.1.0&m=%2Fm.png&mw=213&mx=39&my=947&w=1600&s=24cc070f5f694dc298e8fa5e647179fb">
-              text
-          </div> -->
           
-          <!-- <div>
-            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
-          </div>
-          <div>
-            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
-          </div>
-          <div>
-            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
-          </div>
-          <div>
-            <img src="https://owlcarousel2.github.io/OwlCarousel2/assets/img/feature-zombie.png" class="img-fluid">
-          </div> -->
         </div>
     </div>
 
-    <!-- <div class="container-fluid" style="background-image: url('assets/img/side_building.jpg'); background-repeat: no-repeat; background-size: cover; background-color: rgba(255,255,255,0.7);
-    background-blend-mode: lighten;">
-        <div class="container bg-programs">
-            <div class="row">
-                <div class="col-md-6 text-center mt-5">
-                    <img src="assets/img/logo/icon_right.png" class="img-fluid">
-                </div>
-                <div class="col-md-5 mt-5 mb-5">
-                    <h3 style="color: #0525b2">Podomoro University</h3>
-                    <p style="text-align: justify; text-justify: inter-word;">
-                    Founded by Yayasan Pendidikan Agung Podomoro, and with full support from the leading holding company, Agung Podomoro Group, has made Podomoro University a perfect place to study. We develop industry-driven curriculum framework and teaching methodology through work-based learning, hence the students will be equipped with knowledge and skills that are required highly and consistent with the needs of business and industry.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <main>
 
     <!-- Whats New Start -->
     <section class="whats-news-area programs pt-100 pb-90">
         <svg class="block-wave top  mi-top-187" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" clip-rule="evenodd" d="m1440.3 87h-715.4-725.2v-60.3c239.6 34.4 480.3 34.4 722.2 0s481.4-34.4 718.5 0v60.3z" fill-rule="evenodd"></path></svg>
-        <!-- <div  class="container"> -->
-            <!-- Swiper -->
-              <!-- <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  <div class="swiper-slide">Slide 4</div>
-                  <div class="swiper-slide">Slide 5</div>
-                  <div class="swiper-slide">Slide 6</div>
-                  <div class="swiper-slide">Slide 7</div>
-                  <div class="swiper-slide">Slide 8</div>
-                  <div class="swiper-slide">Slide 9</div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div> -->
-        <!-- </div> -->
+        
         <div class="container ">
             <div class="row pb-100">
                 <div class="col-lg-12">
@@ -444,18 +124,18 @@
                     
                 </div>
             </div>
-            <div class="row bg-calender card" style="margin-bottom: 100px !important;">
+            <div class="row bg-calender card mb-100">
                 
                 <div class="col-md-6 ml-auto">
 
                     <div class="p-5">
                         
                         <div class="section-tittle mb-30">
-                            <h3 class="text-uppercase" data-aos="fade-left" style="color: #fff;">Calender Academic  <small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                            <h3 class="text-uppercase text-white" data-aos="fade-left" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
                               <?=$semester_name?>
                             </small>
                             </h3>
-                            <p style="color: #e9ecef">Podomoro University Academic Calendars</p>
+                            <p class="text-white">Podomoro University Academic Calendars</p>
                         </div>
                         <!-- Days -->
                         <div class="row">
@@ -997,57 +677,3 @@
 
 
     </main>
-
-
-    <!-- <script type="text/javascript">
-        dataNEWSAPI();
-        function dataNEWSAPI() {
-            var url = 'https://newsapi.org/v2/top-headlines?country=id&apiKey=96b7521327044529a95b04762e15d43e';
-            return fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data)
-                    var total = data.totalResults;
-                    var articles = data.articles;
-                    var response = '';
-                    $.each(articles,function (i,v) {
-                        var slickOptions = {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            rows: 3,
-                            dots: true,
-                            arrows: false,
-                            dotsClass: 'slick-dots slick-dots-black',
-                            adaptiveHeight: true,
-                        };
-                        var response = '<div class="single-recent mb-100">'+
-                                        '<div class="what-img">'+
-                                            '<img src="'+v.urlToImage+'" alt="'+v.title+'">'+
-                                        '</div>'+
-                                        '<div class="what-cap">'+
-                                            '<span class="color'+i+'">'+v.publishedAt+'</span>'+
-                                            '<h5><a href="'+v.url+'">'+v.title+'</a></h5>'+
-                                        '</div>'+
-                                    '</div>';
-                        $('#NewsApiOrg').append(response);
-                        $('#NewsApiOrg').slick({
-                                              autoplay: false,
-                                              dots: false,
-                                              infinite: false,
-                                              arrows: false,
-                                              slidesToShow: 3,
-                                              slidesToScroll: 3,
-                                              rows: 2
-                                            });
-                    })
-                })
-                      
-        }
-        
-
-       
-    </script> -->
-
-    
-    
-   
