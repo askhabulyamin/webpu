@@ -307,25 +307,33 @@
         <div class="owl-carousel carousel-banner">
             <?php foreach ($banner as $key => $value): ?>
                 <?php if ($value['banner_align'] == 'left'): ?>
-                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px;">
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>">
+                        <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                            
+                        
                         <h1 style="color:white"><?=$value['banner_header']?></h1><br>
                         <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
                         <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        </div>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'center'): ?>
-                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: center;">
-                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <center>
-                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
-                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style=" text-align: center;">
+                        <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                            <center>
+                            <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3></center><br>
+                            <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        </div>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'right'): ?>
-                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="padding-top:200px; padding-left: 50px; text-align: right;">
-                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
-                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                    <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="text-align: right;">
+                        <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                            <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                            <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        </div>
                     </div>
                 <?php endif ?>
                     
@@ -399,7 +407,7 @@
                             <div class="section-tittle mb-30" data-aos="fade-up" data-aos-duration="3000">
                                 <h3 class="text-uppercase">Undergraduate Programs</h3>
                                 <p>Explore our undergraduate programs and find an academic path that's right for you</p>
-                                <a href="" data-ux="Showcase_HomeGP_Experiences_SeeAll" rel="nofollow" class="Link Link-Arrow" style="text-decoration">
+                                <a href="<?=base_url()?>/undergraduated_programs" data-ux="Showcase_HomeGP_Experiences_SeeAll" rel="nofollow" class="Link Link-Arrow" style="text-decoration">
                                     Explore <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -412,14 +420,14 @@
                                             <div class="card p-3">
                                                 
                                                 <?php if ($key == 0): ?>
-                                                    <a class="nav-item nav-link min-hight-170 active" id="nav-prod<?=$key?>-tab" data-toggle="tab" href="#nav-prod<?=$key?>" role="tab" aria-controls="nav-prod<?=$key?>" aria-selected="true">
+                                                    <a class="nav-item nav-link min-hight-170 active" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
                                                         <img class="card-img-top w-100 h-40" src="<?=puis_url?>/images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-left bottom-0 p-2"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 
                                                 <?php endif ?>
                                                 <?php if ($key != 0): ?>
-                                                    <a class="nav-item nav-link min-hight-170" id="nav-prod<?=$key?>-tab" data-toggle="tab" href="#nav-prod<?=$key?>" role="tab" aria-controls="nav-prod<?=$key?>" aria-selected="true">
+                                                    <a class="nav-item nav-link min-hight-170" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
                                                         <img class="card-img-top w-100" src="<?=puis_url?>/images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-right bottom-0"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
@@ -495,6 +503,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
+                        
                         <div class="weekly-news-active dot-style d-flex dot-style">
                             <?php
                             if (is_array($announcement) || is_object($announcement)) // Anaouncement
@@ -670,7 +679,7 @@
                             </div>
                             <div class="trand-right-cap">
                                 <span class="color<?php echo $no; ?>"><?php echo $response[$i]['Category'];?></span>
-                                <h5><a href="details.html"><?php echo $response[$i]['Title'];?></a></h5>
+                                <h4><a href="<?=base_url()?>news/<?=$response[$i]['ID_title']?>"><?php echo $response[$i]['Title'];?></a></h4>
                             </div>
                         </div>
                         <?php endfor; ?>
@@ -735,9 +744,11 @@
                                         <?php endif ?>
                                         </div>
                                         <div class="p-4">
+
                                             <h5>
-                                                <a href="<?= base_url('details');?>"><?= $b['Title']?></a>
+                                                <?= $b['Title']?>
                                             </h5>
+
                                         </div>
                                     </div>
                                 </div>
@@ -797,9 +808,11 @@
                                         <?php endif ?>
                                             
                                         <div class="p-4">
+
                                             <h5>
-                                                <a href="<?= base_url('kerjasama').$value['ID'];?>"><?= $value['JudulKegiatan']?></a>
+                                                <?= $value['JudulKegiatan']?>
                                             </h5>
+
                                         </div>
                                     </div>
                                 </div>
@@ -964,21 +977,25 @@
         </div>
     </div> -->
     <!-- End pagination  -->
+
     <section class="recent-articles">
         <div class="container">
             <center><h3 style="color: #0525b2" class="garisbawah">Our Affiliations</h3></center>
 
             <div class="owl-carousel carousel-responsive1 mb-5">
-                <?php for ($i=1; $i <= 16; $i++) :?>
+
+                <?php foreach ($affiliation as $key => $value): ?>
                     <div class="item">
                         <center>
-                            <img src="<?=base_url()?>assets/img/brand_affiliations/ba<?=$i?>.webp" class="img-fluid">
+                            <img src="<?=puis_url.$value['affiliation_file']?>" class="img-fluid">
                         </center>
                     </div>
-                <?php endfor;?>
+                <?php endforeach ?>
             </div>
         </div>
     </section>
+
+
     </main>
 
 

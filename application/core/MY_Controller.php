@@ -23,6 +23,9 @@ class MY_Controller extends CI_Controller {
         $this->footer_nav = array();
         $this->footer_nav = $this->Custom_model->getdata('db_webpu.footer_nav');
 
+        $this->contactinfo = $this->client_rest->client_get('contactinfo/DetailInfo',[]);
+        $this->topbanner = $this->client_rest->client_get('banner/TopBannerList',[]);
+
         foreach ($this->menu_nav as $key => $value) 
         {
             $findsubmenu = $this->Custom_model->getdata('db_webpu.submenu_nav', array('id_menu_nav' => $value['id_menu_nav']), 'name_submenu_nav', 'ASC');

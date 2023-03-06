@@ -27,6 +27,7 @@
         $getcalendaracademic = $this->client_rest->client_get('academic/calendaracademic',[]);
 
         $banner = $this->client_rest->client_get('banner/BannerList',[]);
+        
 
         $recomendnews = $this->client_rest->client_get('blogs/RecomentNews',[]);
 
@@ -35,6 +36,8 @@
         $kerjasama = $this->client_rest->client_get('kerja_sama/KerjaSamaList',['page' => 0, 'limit' => 10]);
 
         $marketingactivity = $this->client_rest->client_get('marketing/MarketingActivity',['page' => 0, 'limit' => 10]);
+
+        $affiliation = $this->client_rest->client_get('affiliation/AffiliationList',[]);
 
         $currentPage = 01;
         $maxpage = 10;
@@ -52,6 +55,7 @@
         $data['events'] = $events;
         $data['kerjasama'] = $kerjasama;
         $data['banner'] = $banner;
+        $data['affiliation'] = $affiliation;
 
         $calendar = array();
         $calendar[0]['name'] = 'Kuliah';

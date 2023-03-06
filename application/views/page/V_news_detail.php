@@ -554,7 +554,7 @@
         <div class="column left">
           <h2><?=$detail['Title']?></h2>
             <small><?=tgl_ina($detail['CreateAT'])?></small>
-            <img src="<?=blogs_url?>uploads/<?=$detail['Images']?>" style="width:100%"><br><br>
+            <img src="<?=blogs_url_file?>uploads/<?=$detail['Images']?>" style="width:100%"><br><br>
             <span class="badge"><?=$detail['Name']?></span>
             <?=$detail['Content']?>
         </div>
