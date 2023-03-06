@@ -41,7 +41,7 @@
 
         $currentPage = 01;
         $maxpage = 10;
-        $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?country=id&page='.$currentPage.'&pageSize='.$maxpage.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
+        $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news&page='.$currentPage.'&pageSize='.$maxpage.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
         // $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?country=id&apiKey=96b7521327044529a95b04762e15d43e',[]);
         $d = json_decode($response->getBody()->getCOntents(),true);            
         $data['response'] = $get_api;
