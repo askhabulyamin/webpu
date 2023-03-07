@@ -101,14 +101,14 @@
                                                 
                                                 <?php if ($key == 0): ?>
                                                     <a class="nav-item nav-link min-hight-170 active" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
-                                                        <img class="card-img-top w-100 h-40" src="<?=puis_url?>/images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <img class="card-img-top w-100 h-40" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-left bottom-0 p-2"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 
                                                 <?php endif ?>
                                                 <?php if ($key != 0): ?>
                                                     <a class="nav-item nav-link min-hight-170" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
-                                                        <img class="card-img-top w-100" src="<?=puis_url?>/images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <img class="card-img-top w-100" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-right bottom-0"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 <?php endif ?>
