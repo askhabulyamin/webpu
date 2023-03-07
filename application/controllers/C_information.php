@@ -294,7 +294,7 @@
                 }
             }
 
-            $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?country=id&page='.$page.'&pageSize='.'5'.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
+            $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news&page='.$page.'&pageSize='.'5'.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
             $d = json_decode($response->getBody()->getCOntents(),true);      
             $data['article'] = $d['articles'];
 

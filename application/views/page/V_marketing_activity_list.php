@@ -77,7 +77,7 @@
                                     
                             </div>
                             <div class="col-7 pt-3 pr-5">
-                                <h4><a href="<?= base_url('marketing_activity/').$value['ID'];?>"><?= $value['Title']?></a></h4>
+                                <h4><?= $value['Title']?></h4>
                                 <hr style="margin: 0px 0px;">
                                 <strong><?=tgl_ina($value['Start'])?> - <?=tgl_ina($value['End'])?></strong>
                             </div>
@@ -106,7 +106,7 @@
                     <?php foreach ($recent_marketing as $key => $value): ?>
                         <div class="row mb-6">
                             <div class="col-md-12">
-                                <a href="<?=base_url()?>marketing_activity/<?=$value['ID']?>"><strong><h5><?=$value['Title']?></h5></strong></a>
+                                <strong><h5><?=$value['Title']?></h5></strong>
                                 <?=tgl_ina($value['Start'])?> - <?=tgl_ina($value['End'])?>
                                 <hr>
                             </div>
