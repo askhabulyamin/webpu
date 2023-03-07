@@ -508,6 +508,9 @@
       text-align: center;
       border-radius: 5px;
     }
+    .text-capitalize {
+      text-transform: capitalize!important
+    }
 
   </style>
 </head>
@@ -552,16 +555,16 @@
     <div class="content content-width">
       <div class="row">
         <div class="column left">
-          <h2><?=$detail['Title']?></h2>
+          <h2 class="text-capitalize"><?=$detail['Title']?></h2>
             <small><?=tgl_ina($detail['CreateAT'])?></small>
-            <img src="<?=blogs_url_file?>uploads/<?=$detail['Images']?>" style="width:100%"><br><br>
+            <img src="<?=blogs_url_file?>upload/<?=$detail['Images']?>" style="width:100%"><br><br>
             <span class="badge"><?=$detail['Name']?></span>
             <?=$detail['Content']?>
         </div>
         <div class="column right">
           <h2>Recent News</h2>
           <?php foreach ($recent_news as $key => $value): ?>
-            <h3><strong><?=$value['Title']?></strong></h3>
+            <h3 class="text-capitalize"><a href="<?=base_url()?>news/<?=$value['ID_title']?>"><strong><?=$value['Title']?></strong></a></h3>
             <span class="badge"><?=$value['Name']?></span><br><br>
             <hr>
           <?php endforeach ?>
