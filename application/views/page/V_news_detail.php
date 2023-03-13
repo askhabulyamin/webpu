@@ -679,7 +679,15 @@
   <footer>
     <div class="content content-width">
       <div class="meta-content">
-        <p>&#169; 2022 <a href="https://www.amptemplates.io">Podomoro University</a>. All Rights Reserved.</p>
+        <p style="float: left">&#169; 2022 <a href="https://www.amptemplates.io">Podomoro University</a>. All Rights Reserved.</p>
+        <p style="float: right">
+          <?php foreach ($this->footer_nav as $key => $value): ?>
+            <a href="<?=$value['link_footer']?>"><?=$value['name_footer_nav']?></a> 
+            <?php if ($key+1 != count($this->footer_nav)): ?>
+              |
+            <?php endif ?>
+          <?php endforeach ?>
+        </p>
       </div>
     </div>
   </footer>

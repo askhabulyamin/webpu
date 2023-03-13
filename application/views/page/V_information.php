@@ -48,39 +48,19 @@
 </style>
 
 <div class="container mt-5 mb-5">
-    <div class="row">
+    <div class="row justify-content-md-center">
+
+      <?php foreach ($this->menu_nav as $key => $value): ?>
         <div class="col-3">
           <div class="card">
-            <img class="card-img" src="<?=base_url()?>assets/banner_info.jpg" alt="News" style="opacity: 0.3;">
-            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
-              <a href="<?=base_url()?>news"><center><button type="button" class="btn btn-outline-primary">News</button></center></a>
+            <img class="card-img" src="<?=base_url()?>assets/banner_info.jpg" alt="News" style="opacity: 0.3; border-radius: 32px;">
+            <!-- <h3 style="color:white;" class="d-flex flex-column justify-content-center"><a href="<?=$value['link_menu']?>"><center>Admission & <br>Registration</center></a></h3> -->
+            <div class="card-img-overlay text-white d-flex flex-column justify-content-center" >
+              <h3 style="color:#002e5b"><a href="<?=$value['link_menu']?>"><center><?=$value['name_menu_nav']?></center></h3></a>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <img class="card-img" src="<?=base_url()?>assets/banner_info.jpg" alt="News" style="opacity: 0.3;">
-            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
-              <a href="<?=base_url()?>announcement"><center><button type="button" class="btn btn-outline-primary">Announcement</button></center></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <img class="card-img" src="<?=base_url()?>assets/banner_info.jpg" alt="News" style="opacity: 0.3;">
-            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
-              <center><button type="button" class="btn btn-outline-primary">Marketing</button></center>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <img class="card-img" src="<?=base_url()?>assets/banner_info.jpg" alt="News" style="opacity: 0.3;">
-            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
-              <center><button type="button" class="btn btn-outline-primary">World News</button></center>
-            </div>
-          </div>
-        </div>
+      <?php endforeach ?>
 
     </div>
 </div>
