@@ -82,7 +82,7 @@
                     <?php foreach ($recent_news as $key => $value): ?>
                         <div class="row mb-6">
                             <div class="col-md-4">
-                                <img src="<?=blogs_url.'uploads/'.$value['Images']?>" class="img-fluid">
+                                <img src="<?=blogs_url_file.'uploads/'.$value['Images']?>" class="img-fluid">
                             </div>
                             <div class="col-md-6">
                                 <span class="badge badge-primary"><?=$value['Name']?></span>

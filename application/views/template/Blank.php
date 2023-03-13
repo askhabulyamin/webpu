@@ -186,7 +186,7 @@
                                 <div class="col-xl-12 col-lg-12 col-md-12 header-flex">
                                     <!-- sticky -->
                                         <div class="sticky-logo">
-                                            <a href="<?=base_url()?>"><img src="assets/img/logo/logo_PU.webp" alt="Logo Podomoro University"></a>
+                                            <a href="<?=base_url()?>"><img src="<?=base_url()?>assets/img/logo/logo_PU.webp" alt="Logo Podomoro University"></a>
                                         </div>
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-md-block">
