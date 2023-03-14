@@ -557,14 +557,14 @@
         <div class="column left">
           <h2 class="text-capitalize"><?=$detail['Title']?></h2>
             <small><?=tgl_ina($detail['CreateAT'])?></small>
-            <img src="<?=blogs_url_file?>upload/<?=$detail['Images']?>" style="width:100%"><br><br>
+            <a href="<?=blogs_url_file?>upload/<?=$detail['Images']?>" target="_blank"><img src="<?=blogs_url_file?>upload/<?=$detail['Images']?>" style="width:100%"></a><br><br>
             <span class="badge"><?=$detail['Name']?></span>
             <?=$detail['Content']?>
         </div>
         <div class="column right">
           <h2>Recent News</h2>
           <?php foreach ($recent_news as $key => $value): ?>
-            <h3 class="text-capitalize"><a href="<?=base_url()?>news/<?=$value['ID_title']?>"><strong><?=$value['Title']?></strong></a></h3>
+            <a href="<?=base_url()?>/news/<?=$value['ID_title']?>"><h3><strong><?=$value['Title']?></strong></h3></a>
             <span class="badge"><?=$value['Name']?></span><br><br>
             <hr>
           <?php endforeach ?>
