@@ -172,10 +172,11 @@
     public function about(){ 
         $data = array();
         $data['prodi'] = $this->client_rest->client_get('prodi/ProdiFront',[]);
+        $data['affiliation'] = $this->client_rest->client_get('affiliation/AffiliationList',[]);
 
         $content = $this->load->view('page/V_about',$data,true);
         parent::template($content);
-    }   
+    }
 
     public function undergraduated_programs(){ 
         $data = array();
