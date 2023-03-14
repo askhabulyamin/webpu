@@ -265,11 +265,11 @@
                                 <div class="weekly2-single active">
                                     <div class="card">
                                         <?php if (!empty($value['event_background'])): ?>
-                                            <img class="card-img-top border-img" src="<?=puis_url?><?=$value['event_background']?>" alt="Card image cap">
+                                            <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="<?=$value['event_background']?>" alt="Card image cap"></a>
                                         <?php endif ?>
                                         <?php if (empty($value['event_background'])): ?>
                                             <?php $randomimg = array_rand($this->genimg);?>
-                                            <img class="card-img-top border-img" src="<?=base_url()?><?=$this->genimg[$randomimg]?>" alt="Card image cap">
+                                            <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="<?=base_url()?><?=$this->genimg[$randomimg]?>" alt="Card image cap"></a>
                                             <!-- <div class="overlay rounded">
                                                 <time class="p-3" datetime="">
                                                     <span class="day font-weight-bold"><?=$day?></span>
@@ -281,7 +281,12 @@
                                             
                                         <div class="p-4">
                                             <h5>
-                                                <a href="<?= base_url('event').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                                <?php if ($value['blogs'] == 1): ?>
+                                                    <a href="<?= base_url('news/').$value['id_event'];?>"><?= $value['event_name']?></a>
+                                                <?php endif ?>
+                                                <?php if ($value['blogs'] == 0): ?>
+                                                    <?= $value['event_name']?>
+                                                <?php endif ?>
                                             </h5>
                                         </div>
                                     </div>
@@ -294,6 +299,21 @@
         </div>
     </section>     
     <!-- END EVENTS -->
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">              
+          <div class="modal-body" style="padding:0">
+            <button type="button" class="close" data-dismiss="modal" style="float:right;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <img src="" class="imagepreview" style="width: 100%;" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        
+    </script>
 
     <!-- Trending Area Start -->
     <section class="trending-area programs pt-100 mi-top">

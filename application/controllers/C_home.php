@@ -32,6 +32,32 @@
         $recomendnews = $this->client_rest->client_get('blogs/RecomentNews',[]);
 
         $events = $this->client_rest->client_get('events/EventsList',['page' => 0, 'limit' => 10]);
+        $eventblog = $this->client_rest->client_get('blogs/EventsBlog',['page' => 0, 'limit' => 5]);
+
+        $eventout = array();
+        foreach ($events as $key => $value) 
+        {
+            $eventout[] = array
+                        (
+                            'id_event' => 0,
+                            'event_name' => $value['event_name'],
+                            'date' => $value['start_date'],
+                            'event_background' => puis_url.$value['event_background'],
+                            'blogs' => 0
+                        );
+        }
+        foreach ($eventblog as $key => $value) 
+        {
+            $eventout[] = array
+                        (
+                            'id_event' => $value['ID_title'],
+                            'event_name' => $value['Title'],
+                            'date' => $value['CreateAT'],
+                            'event_background' => blogs_url_file.'/upload/'.$value['Images'],
+                            'blogs' => 1
+                        );
+        }
+
 
         $kerjasama = $this->client_rest->client_get('kerja_sama/KerjaSamaList',['page' => 0, 'limit' => 10]);
 
@@ -52,7 +78,7 @@
         $data['newsapi'] = $d['articles'];
         $data['announcement'] = $getAnouncem_api;
         $data['marketingactivity'] = $marketingactivity;
-        $data['events'] = $events;
+        $data['events'] = $eventout;
         $data['kerjasama'] = $kerjasama;
         $data['banner'] = $banner;
         $data['affiliation'] = $affiliation;
