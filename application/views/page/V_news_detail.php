@@ -561,7 +561,7 @@
         <div class="column right">
           <h2>Recent News</h2>
           <?php foreach ($recent_news as $key => $value): ?>
-            <h3><strong><?=$value['Title']?></strong></h3>
+            <a href="<?=base_url()?>/news/<?=$value['ID_title']?>"><h3><strong><?=$value['Title']?></strong></h3></a>
             <span class="badge"><?=$value['Name']?></span><br><br>
             <hr>
           <?php endforeach ?>
