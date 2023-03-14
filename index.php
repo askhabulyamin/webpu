@@ -124,7 +124,7 @@ switch (ENVIRONMENT)
 		define("PORTAL",$HostPath."portal.podomorouniversity.ac.id/");
 		define("blogs_url_file",$HostPath."adminblogs.podomorouniversity.ac.id/");
 		define("blogs_url",$HostPath."blogs.podomorouniversity.ac.id/");
-		define("puis_url",$HostPath."pcam.podomorouniversity/");
+		define("puis_url",$HostPath."pcam.podomorouniversity.ac.id//");
 		break;
 
 	default:

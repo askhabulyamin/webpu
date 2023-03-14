@@ -508,6 +508,9 @@
       text-align: center;
       border-radius: 5px;
     }
+    .text-capitalize {
+      text-transform: capitalize!important
+    }
 
   </style>
 </head>
@@ -552,7 +555,7 @@
     <div class="content content-width">
       <div class="row">
         <div class="column left">
-          <h2><?=$detail['Title']?></h2>
+          <h2 class="text-capitalize"><?=$detail['Title']?></h2>
             <small><?=tgl_ina($detail['CreateAT'])?></small>
             <a href="<?=blogs_url_file?>upload/<?=$detail['Images']?>" target="_blank"><img src="<?=blogs_url_file?>upload/<?=$detail['Images']?>" style="width:100%"></a><br><br>
             <span class="badge"><?=$detail['Name']?></span>
