@@ -13,13 +13,6 @@
   <title>News | Podomoro University</title>
   <link rel="canonical" href="/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Product",
-        "headline": "Dessiner Store",
-      }
-    </script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
    crossorigin="anonymous">
   <style amp-boilerplate>
