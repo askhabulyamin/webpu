@@ -508,9 +508,7 @@
       text-align: center;
       border-radius: 5px;
     }
-    .text-capitalize {
-      text-transform: capitalize!important
-    }
+    
 
   </style>
 </head>
