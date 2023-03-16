@@ -247,14 +247,21 @@
 
     <center><h3 style="color: #0525b2" class="garisbawah">Our Affiliations</h3></center>
 
-    <div class="owl-carousel carousel-responsive1 owl-theme mb-5">
-        <?php for ($i=1; $i <= 16; $i++) :?>
+    <div class="owl-carousel carousel-responsive1 mb-5">
+        <?php foreach ($affiliation as $key => $value): ?>
+            <div class="item">
+                <center>
+                    <img src="<?=puis_url.$value['affiliation_file']?>" class="img-fluid">
+                </center>
+            </div>
+        <?php endforeach ?>
+        <!-- <?php for ($i=1; $i <= 16; $i++) :?>
             <div class="item">
                 <center>
                     <img src="<?=base_url()?>assets/img/brand_affiliations/ba<?=$i?>.webp" class="img-fluid">
                 </center>
             </div>
-        <?php endfor;?>
+        <?php endfor;?> -->
     </div>
 
 </div>
