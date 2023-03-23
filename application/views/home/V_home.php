@@ -177,7 +177,7 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-left">Announcement</h3>
                             <a href="<?=base_url('announcement')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important" data-aos="zoom-out-left">We hereby announce to all Podomoro University students</p>
+                            <p style="color:#6c757d !important">We hereby announce to all Podomoro University students</p>
 
                     </div>
                 </div>
@@ -253,7 +253,7 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-left">Events</h3>
                             <a href="<?=base_url('events')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important" data-aos="zoom-out-left">Event Campus Podomoro University</p>
+                            <p style="color:#6c757d !important">Event Campus Podomoro University</p>
 
                     </div>
                 </div>
@@ -473,7 +473,7 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-left">Cooperation</h3>
                             <a href="<?=base_url('cooperation')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important" data-aos="zoom-out-left">Campus Cooperation Spaces Podomoro University students</p>
+                            <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University students</p>
 
                     </div>
                 </div>
