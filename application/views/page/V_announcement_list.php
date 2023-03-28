@@ -73,8 +73,8 @@
                                 </div>
                                 <div class="col-7 pt-3 pr-5">
                                     <h4><a href="<?= base_url('announcement/').$value['ID'];?>"><?= $value['Title']?></a></h4>
-                                    <hr style="margin: 0px 0px;">
-                                    <strong><?=tgl_ina($value['Start'])?> - <?=tgl_ina($value['End'])?></strong>
+                                    <hr style="margin: 10px 0px;">
+                                    <strong><?=tgl_ina($value['End'])?></strong>
                                 </div>
                             </div>
                         </div>

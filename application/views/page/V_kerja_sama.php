@@ -64,22 +64,26 @@
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-5">
-                                <?php if (!empty($value['CooperationBanner'])): ?>
-                                    <img src="<?=puis_url?><?=$value['CooperationBanner']?>" class="img-fluid">
-                                <?php endif ?>
-                                <?php if (empty($value['CooperationBanner'])): ?>
-                                    <time class="p-3" datetime="">
-                                        <span class="day font-weight-bold"><?=$day?></span>
-                                        <span class="month"><?=$month?></span>
-                                        <span class="year"><?=$year?></span>
-                                    </time>
-                                <?php endif ?>
+                                <a href="<?= base_url('cooperation/').$value['ID'];?>">
+                                    <?php if (!empty($value['CooperationBanner'])): ?>
+                                        <img src="<?=puis_url?><?=$value['CooperationBanner']?>" class="img-fluid">
+                                    <?php endif ?>
+                                    <?php if (empty($value['CooperationBanner'])): ?>
+                                        <time class="p-3" datetime="">
+                                            <span class="day font-weight-bold"><?=$day?></span>
+                                            <span class="month"><?=$month?></span>
+                                            <span class="year"><?=$year?></span>
+                                        </time>
+                                    <?php endif ?>
+                                </a>
                                     
                             </div>
                             <div class="col-7 pt-3 pr-5">
-                                <h5><?= $value['JudulKegiatan']?></h5>
-                                <hr style="margin: 0px 0px;">
-                                <strong><?=tgl_ina($value['StartDate'])?> - <?=tgl_ina($value['EndDate'])?></strong>
+                                <h5><a href="<?= base_url('cooperation/').$value['ID'];?>"><?= $value['JudulKegiatan']?></a></h5>
+                                <hr style="margin: 10px 0px;">
+                                <strong><?=tgl_ina($value['EndDate'])?></strong><br>
+                                <b>Kategori Kegiatan :</b> <?=$value['Kategori_kegiatan']?><br>
+                                <b>Dengan Lembaga :</b> <?=$value['Lembaga']?><br>
                             </div>
                         </div>
                     </div>
@@ -106,8 +110,8 @@
                     <?php foreach ($recent_kerja_sama as $key => $value): ?>
                         <div class="row mb-6">
                             <div class="col-md-12">
-                                <strong><h5><?=$value['JudulKegiatan']?></h5></strong>
-                                <?=tgl_ina($value['StartDate'])?> - <?=tgl_ina($value['EndDate'])?>
+                                <strong><h5><a href="<?= base_url('cooperation/').$value['ID'];?>"><?=$value['JudulKegiatan']?></a></h5></strong>
+                                <?=tgl_ina($value['EndDate'])?>
                                 <hr>
                             </div>
                         </div>

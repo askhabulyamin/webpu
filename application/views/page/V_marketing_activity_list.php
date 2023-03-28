@@ -64,6 +64,7 @@
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-5">
+                                <a href="<?= base_url('marketing_activity/').$value['ID'];?>">
                                 <?php if (!empty($value['Banner'])): ?>
                                     <img src="<?=puis_url?>uploads/admisi/banner/<?=$value['Banner']?>" class="img-fluid">
                                 <?php endif ?>
@@ -74,12 +75,12 @@
                                         <span class="year"><?=$year?></span>
                                     </time>
                                 <?php endif ?>
-                                    
+                                </a>
                             </div>
                             <div class="col-7 pt-3 pr-5">
-                                <h4><?= $value['Title']?></h4>
-                                <hr style="margin: 0px 0px;">
-                                <strong><?=tgl_ina($value['Start'])?> - <?=tgl_ina($value['End'])?></strong>
+                                <h4><a href="<?= base_url('marketing_activity/').$value['ID'];?>"><?= $value['Title']?></a></h4>
+                                <hr style="margin: 10px 0px;">
+                                <strong><?=tgl_ina($value['End'])?></strong>
                             </div>
                         </div>
                     </div>
@@ -106,7 +107,7 @@
                     <?php foreach ($recent_marketing as $key => $value): ?>
                         <div class="row mb-6">
                             <div class="col-md-12">
-                                <strong><h5><?=$value['Title']?></h5></strong>
+                                <strong><h5><a href="<?= base_url('marketing_activity/').$value['ID'];?>"><?=$value['Title']?></a></h5></strong>
                                 <?=tgl_ina($value['Start'])?> - <?=tgl_ina($value['End'])?>
                                 <hr>
                             </div>
