@@ -27,7 +27,6 @@
         border-top-left-radius: 2.25rem;
         border-top-right-radius: 2.25rem;
         }  
-
 </style>
     
 
