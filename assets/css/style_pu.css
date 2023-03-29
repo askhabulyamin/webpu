@@ -1107,6 +1107,12 @@ svg {
 .mb-100{
   margin-bottom: 100px !important;
 }
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto;
+        touch-action: auto;
+}
+
 .owl-carousel {
   /* touch-action: manipulation;  */
   touch-action: none;
@@ -1165,3 +1171,4 @@ svg {
           position: relative;
       }
   }
+
