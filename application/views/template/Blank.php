@@ -201,7 +201,7 @@
                             </div>
                        </div>
                     </div>
-                   <div class="header-bottom header-sticky">
+                   <div id="headerid" class="header-bottom">
                         <div class="container">
                             <div class="row align-items-center">
                                 <!-- <div class="col-xl-10 col-lg-10 col-md-12 header-flex"> -->
@@ -568,6 +568,10 @@
                             document.getElementById('tagline').style.opacity = -currScrollPos2/400 + 2;
                             }
                         });
+
+            if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+             $("#headerid").attr("class", "header-bottom header-sticky");
+            }
 
             var base = '<?=base_url();?>';
 
