@@ -578,7 +578,7 @@
                 headerTitle: 'Get our support!', //Popup Title
                 popupMessage: 'Hello, how can we help you?', //Popup Message
                 showPopup: true, //Enables popup display
-                buttonImage: '<img src="'+base+'assets/img/wa.png" />', //Button Image
+                buttonImage: '<img class="p-2" src="'+base+'assets/img/wa-1.png" />', //Button Image
                 //headerColor: 'crimson', //Custom header color
                 //backgroundColor: 'crimson', //Custom background button color
                 position: "right"    
@@ -596,7 +596,9 @@
                 animateOut: 'fadeOut',
                 responsive:{
                     0:{
-                        items:1
+                        items:1,
+                        infinite: true,
+                        dots: false,
                     }
                 }
             });
@@ -613,10 +615,14 @@
                 autoplay:true,
                 responsive:{
                     0:{
-                        items:1
+                        items:1,
+                        infinite: true,
+                        dots: false,
                     },
                     480 : {
-                        items:2
+                        items:2,
+                        infinite: true,
+                        dots: false,
                     },
                     
                     991 :{
@@ -643,29 +649,6 @@
                   },
                 });
             </script>
-            <!-- <script type="text/javascript">
-              $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                dots: true,
-                nav: false,
-                responsiveClass: true,
-                responsive: {
-                  0: {
-                    items: 2,
-                    margin: 10,
-                    stagePadding: 20,
-                  },
-                  600: {
-                    items: 3,
-                    margin: 20,
-                    stagePadding: 50,
-                  },
-                  1000: {
-                    items: 4
-                  }
-                }
-              });
-            </script> -->
+            
     </body>
 </html>
