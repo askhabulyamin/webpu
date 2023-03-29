@@ -40,18 +40,18 @@
                         <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
                             
                         
-                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
-                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        <h1 data-aos="zoom-in-right" style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 data-aos="zoom-in-right" class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                        <a data-aos="zoom-in-right" href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'center'): ?>
                     <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style=" text-align: center;">
                         <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
-                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                            <h1 data-aos="zoom-in-right" style="color:white"><?=$value['banner_header']?></h1><br>
                             <center>
-                                <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3>
+                                <h3 data-aos="zoom-in-right" class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3>
                             </center><br>
                             <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
@@ -60,9 +60,9 @@
                 <?php if ($value['banner_align'] == 'right'): ?>
                     <div class="owl-lazy" data-src="<?=puis_url.$value['banner_file']?>" style="text-align: right;">
                         <div style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
-                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
-                            <h3 style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
-                            <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                            <h1 data-aos="zoom-in-right" style="color:white"><?=$value['banner_header']?></h1><br>
+                            <h3 data-aos="zoom-in-right" class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                            <a data-aos="zoom-in-right" href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
                     </div>
                 <?php endif ?>
@@ -131,7 +131,7 @@
                     <div class="p-5">
                         
                         <div class="section-tittle mb-30">
-                            <h3 class="text-uppercase text-white" data-aos="fade-left" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                            <h3 class="text-uppercase text-white" data-aos="fade-right" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
                               <?=$semester_name?>
                             </small>
                             </h3>
@@ -169,13 +169,13 @@
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
         </svg>
         <div class="container pt-100 pb-100">
-           <div class="weekly-wrapper">
+           <div class="weekly-wrapper pb-sm-0">
                 <!-- section Tittle -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-left">Announcement</h3>
-                            <a href="<?=base_url('announcement')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Announcement</h3>
+                            <a href="<?=base_url('announcement')?>" class="more ml-sm-0" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
                             <p style="color:#6c757d !important">We hereby announce to all Podomoro University students</p>
 
@@ -184,7 +184,7 @@
                 <div class="row">
                     <div class="col-12">
                         
-                        <div class="weekly-news-active dot-style d-flex dot-style">
+                        <div class="weekly-news-active dot-style d-flex">
                             <?php
                             if (is_array($announcement) || is_object($announcement)) // Anaouncement
                             {   
@@ -250,8 +250,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-left">Events</h3>
-                            <a href="<?=base_url('events')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Events</h3>
+                            <a href="<?=base_url('events')?>" class="more ml-sm-0" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
                             <p style="color:#6c757d !important">Event Campus Podomoro University</p>
 
@@ -328,7 +328,7 @@
                         <div class="trending-tittle">                            
                         
                             <h3 class="text-uppercase" data-aos="zoom-out-right">News </h3>
-                                <a class="more" data-aos="zoom-out-right" href="<?=base_url('news')?>"> More <i class="fas fa-arrow-right fz"></i>
+                                <a class="more ml-sm-0" data-aos="zoom-out-right" href="<?=base_url('news')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
                         </div>
@@ -406,7 +406,7 @@
                         <div class="trending-tittle">                            
 
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Marketing Activity</h3>
-                            <a class="more" data-aos="zoom-out-right" href="<?=base_url('marketing_activity')?>"> 
+                            <a class="more ml-sm-0" data-aos="zoom-out-right" href="<?=base_url('marketing_activity')?>"> 
                                 More 
                                 <i class="fas fa-arrow-right fz"></i>
                             </a> 
@@ -470,8 +470,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-left">Cooperation</h3>
-                            <a href="<?=base_url('cooperation')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Cooperation</h3>
+                            <a href="<?=base_url('cooperation')?>" class="more ml-sm-0" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
                             <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University students</p>
 
@@ -617,7 +617,7 @@
                         <div class="trending-tittle">                            
                         
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Worldwide Articles</h3>
-                                <a class="more" data-aos="zoom-out-right" href="<?=base_url('world_article')?>"> More <i class="fas fa-arrow-right fz"></i>
+                                <a class="more ml-sm-0" data-aos="zoom-out-right" href="<?=base_url('world_article')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
                         </div>

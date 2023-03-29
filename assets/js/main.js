@@ -25,7 +25,7 @@
     $('.weekly-news-active').slick({
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 700,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -45,6 +45,7 @@
           {
             breakpoint: 991,
             settings: {
+              dots: false,
               slidesToShow: 1,
               slidesToScroll: 1
             }
@@ -52,8 +53,10 @@
           {
             breakpoint: 480,
             settings: {
+              dots: false,
               slidesToShow: 1,
               slidesToScroll: 1
+              
             }
           }
           // You can unslick at a given breakpoint now by adding:
@@ -86,6 +89,7 @@
         {
           breakpoint: 991,
           settings: {
+            dots: false,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -93,6 +97,7 @@
         {
           breakpoint: 480,
           settings: {
+            dots: false,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -107,7 +112,7 @@
     $('.weekly2-news-active').slick({
         dots: true,
         infinite: true,
-        speed: 600,
+        speed: 500,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -127,6 +132,7 @@
           {
             breakpoint: 991,
             settings: {
+              dots: false,
               slidesToShow: 2,
               slidesToScroll: 1
             }
@@ -170,7 +176,8 @@
             breakpoint: 991,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              dots: false,
             }
           },
           {
@@ -213,6 +220,7 @@
           {
             breakpoint: 991,
             settings: {
+              dots: false,
               slidesToShow: 2,
               slidesToScroll: 1
             }
@@ -220,6 +228,7 @@
           {
             breakpoint: 480,
             settings: {
+              dots: false,
               slidesToShow: 1,
               slidesToScroll: 1
             }
