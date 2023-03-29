@@ -13,13 +13,6 @@
   <title>News | Podomoro University</title>
   <link rel="canonical" href="/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Product",
-        "headline": "Dessiner Store",
-      }
-    </script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
    crossorigin="anonymous">
   <style amp-boilerplate>
@@ -508,6 +501,7 @@
       text-align: center;
       border-radius: 5px;
     }
+    
 
   </style>
 </head>
@@ -552,7 +546,7 @@
     <div class="content content-width">
       <div class="row">
         <div class="column left">
-          <h2><?=$detail['Title']?></h2>
+          <h2 class="text-capitalize"><?=$detail['Title']?></h2>
             <small><?=tgl_ina($detail['CreateAT'])?></small>
             <a href="<?=blogs_url_file?>upload/<?=$detail['Images']?>" target="_blank"><img src="<?=blogs_url_file?>upload/<?=$detail['Images']?>" style="width:100%"></a><br><br>
             <span class="badge"><?=$detail['Name']?></span>
