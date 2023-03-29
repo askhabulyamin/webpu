@@ -36,6 +36,7 @@
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/owl.carousel.min.css" type='text/css' media='all'>
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/owl.carousel.theme.css" type='text/css' media='all'>
         
+
         <!-- <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/ticker-style.css" type='text/css' media='all'> -->
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/flaticon.css" type='text/css' media='all'>
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/slicknav.css" type='text/css' media='all'>
@@ -47,6 +48,8 @@
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/nice-select.css" type='text/css' media='all'>
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style.css" type='text/css' media='all'>
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style_pu.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' rel="stylesheet" href="<?= base_url();?>/assets/css/wa.css" type='text/css' media='all'>
+
         <!-- AOS Anination -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" data-minify="1" rel='stylesheet' type='text/css' media='all'>
         <!-- Sweper Slide -->
@@ -120,7 +123,7 @@
    </head>
 
     <body>
-           
+        <div id="WAButton" style="z-index: 10"></div>
         <!-- Preloader Start -->
         <!-- <div id="preloader-active">
             <div class="preloader d-flex align-items-center justify-content-center">
@@ -294,9 +297,9 @@
         }
         </style>
 
-        <a href="https://api.whatsapp.com/send?phone=<?=$this->contactinfo['whatsapp']?>&text" class="wa" target="_blank">
+        <!-- <a href="https://api.whatsapp.com/send?phone=<?=$this->contactinfo['whatsapp']?>&text" class="wa" target="_blank">
             <i class="fab fa-whatsapp my-wa" aria-hidden="true"></i>
-        </a>
+        </a> -->
 
        <footer>
            <!-- Footer Start-->
@@ -533,7 +536,7 @@
             <script src="<?= base_url();?>/assets/js/site.js"></script>
 
             <!-- Scrollup, nice-select, sticky -->
-            <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script>
+            <!-- <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script> -->
             <script src="<?= base_url();?>/assets/js/jquery.nice-select.min.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.sticky.js"></script>
             
@@ -547,6 +550,9 @@
             <!-- Jquery Plugins, main Jquery -->    
             <script src="<?= base_url();?>/assets/js/plugins.js"></script>
             <script src="<?= base_url();?>/assets/js/main.js"></script>
+
+            <script src="<?= base_url();?>/assets/js/wa.js"></script>
+
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
             <!-- AOS JS -->
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -563,8 +569,27 @@
                             }
                         });
 
+            var base = '<?=base_url();?>';
+
+            $(function() {
+              $('#WAButton').floatingWhatsApp({
+                phone: '<?=$this->contactinfo['whatsapp']?>', //WhatsApp Business phone number International format-
+                //Get it with Toky at https://toky.co/en/features/whatsapp.
+                headerTitle: 'Get our support!', //Popup Title
+                popupMessage: 'Hello, how can we help you?', //Popup Message
+                showPopup: true, //Enables popup display
+                buttonImage: '<img src="'+base+'assets/img/wa.png" />', //Button Image
+                //headerColor: 'crimson', //Custom header color
+                //backgroundColor: 'crimson', //Custom background button color
+                position: "right"    
+              });
+            });
+
             $('.carousel-banner').owlCarousel({
                 loop:true,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true,
                 lazyLoad: true,
                 dots:false,
                 autoplay:true,

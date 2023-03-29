@@ -46,23 +46,28 @@
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-md-8">
-            <h4><strong><?=$detail['Title']?></strong></h4>
+            <h4><strong><?=$detail['JudulKegiatan']?></strong></h4>
             <hr>
             <?php if (!empty($detail['Banner'])): ?>
-                <img class="img-fluid" src="<?=puis_url?>uploads/admisi/banner/<?=$detail['Banner']?>" alt="">
+                <img class="img-fluid" src="<?=puis_url?><?=$value['CooperationBanner']?>">
             <?php endif ?>
-            <small>Author : <?=$detail['Name']?> | Date : <?=tgl_ina($detail['Start'])?> - <?=tgl_ina($detail['End'])?></small><br>
-            <?=$detail['Description']?>
+            <b>Date :</b> <?=tgl_ina($detail['EndDate'])?><br><br>
+            <b>Kategori Kegiatan :</b> <?=$detail['Kategori_kegiatan']?><br>
+            <b>Dengan Lembaga :</b> <?=$detail['Lembaga']?><br>
+            <b>Bentuk Kegiatan :</b> <?=$detail['BentukKegiatan']?><br>
+            <b>Manfaat Kegiatan :</b> <?=$detail['ManfaatKegiatan']?><br><br>
+
+            <?=$detail['Desc']?>
         </div>
         <div class="col-md-4">
             <div class="card shadow">
                 <div class="card-body">
-                    <h4>Recent Acitivy</h4><hr>
-                    <?php foreach ($recent_marketing as $key => $value): ?>
+                    <h4>Recent Activity</h4><hr>
+                    <?php foreach ($recent_kerja_sama as $key => $value): ?>
                         <div class="row mb-6">
                             <div class="col-md-12">
-                                <a href="<?=base_url()?>marketing_activity/<?=$value['ID']?>"><strong><h5><?=$value['Title']?></h5></strong></a>
-                                <?=tgl_ina($value['Start'])?> - <?=tgl_ina($value['End'])?>
+                                <strong><h5><a href="<?= base_url('cooperation/').$value['ID'];?>"><?=$value['JudulKegiatan']?></a></h5></strong>
+                                <?=tgl_ina($value['EndDate'])?>
                                 <hr>
                             </div>
                         </div>

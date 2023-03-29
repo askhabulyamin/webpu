@@ -132,6 +132,7 @@
                         
                         <div class="section-tittle mb-30">
                             <h3 class="text-uppercase text-white" data-aos="fade-right" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+
                               <?=$semester_name?>
                             </small>
                             </h3>
@@ -214,7 +215,7 @@
                                         </div>
                                         <div class="p-4">
                                             <h5>
-                                                <a href="<?= base_url('details');?>"><?= $b['Title']?></a>
+                                                <a href="<?= base_url('announcement/').$b['ID'];?>"><?= $b['Title']?></a>
                                             </h5>
                                         </div>
                                 </div>
@@ -288,6 +289,9 @@
                                                     <?= $value['event_name']?>
                                                 <?php endif ?>
                                             </h5>
+                                            <hr style="margin: 5px 0px">
+                                            <?=tgl_ina($value['end_date'])?>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -473,7 +477,7 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Cooperation</h3>
                             <a href="<?=base_url('cooperation')?>" class="more ml-sm-0" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University students</p>
+                            <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University Students</p>
 
                     </div>
                 </div>

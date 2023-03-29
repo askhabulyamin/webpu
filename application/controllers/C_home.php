@@ -42,6 +42,7 @@
                             'id_event' => 0,
                             'event_name' => $value['event_name'],
                             'date' => $value['start_date'],
+                            'end_date' => $value['start_date'],
                             'event_background' => puis_url.$value['event_background'],
                             'blogs' => 0
                         );
@@ -53,6 +54,7 @@
                             'id_event' => $value['ID_title'],
                             'event_name' => $value['Title'],
                             'date' => $value['CreateAT'],
+                            'end_date' => $value['CreateAT'],
                             'event_background' => blogs_url_file.'/upload/'.$value['Images'],
                             'blogs' => 1
                         );
