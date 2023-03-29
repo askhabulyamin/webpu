@@ -150,11 +150,11 @@
         }
         else
         {
-            $data['detail'] = $this->client_rest->client_get('announcement/DetailAnnouncement',['id_announcement' => $id_announcement]);
+            $data['detail'] = $this->client_rest->client_get('kerja_sama/DetailKerjaSama',['id_kerjasama' => $id_kerja_sama]);
             
-            $data['recent_announcement'] = $this->client_rest->client_get('announcement/RecentAnnouncement',[]);
+            $data['recent_kerja_sama'] = $this->client_rest->client_get('kerja_sama/KerjaSamaList',['page' => 0, 'limit' => 5]);
 
-            $content = $this->load->view('page/V_announcement_detail',$data,true);
+            $content = $this->load->view('page/V_kerja_sama_detail',$data,true);
             parent::template($content);
         }  
     }

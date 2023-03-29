@@ -131,7 +131,7 @@
                     <div class="p-5">
                         
                         <div class="section-tittle mb-30">
-                            <h3 class="text-uppercase text-white" data-aos="fade-left" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                            <h3 class="text-uppercase text-white" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
                               <?=$semester_name?>
                             </small>
                             </h3>
@@ -174,8 +174,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-left">Announcement</h3>
-                            <a href="<?=base_url('announcement')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                            <h3 class="text-uppercase">Announcement</h3>
+                            <a href="<?=base_url('announcement')?>" class="more">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
                             <p style="color:#6c757d !important">We hereby announce to all Podomoro University students</p>
 
@@ -214,7 +214,7 @@
                                         </div>
                                         <div class="p-4">
                                             <h5>
-                                                <a href="<?= base_url('details');?>"><?= $b['Title']?></a>
+                                                <a href="<?= base_url('announcement/').$b['ID'];?>"><?= $b['Title']?></a>
                                             </h5>
                                         </div>
                                 </div>
@@ -250,8 +250,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-left">Events</h3>
-                            <a href="<?=base_url('events')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                            <h3 class="text-uppercase">Events</h3>
+                            <a href="<?=base_url('events')?>" class="more">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
                             <p style="color:#6c757d !important">Event Campus Podomoro University</p>
 
@@ -288,6 +288,9 @@
                                                     <?= $value['event_name']?>
                                                 <?php endif ?>
                                             </h5>
+                                            <hr style="margin: 5px 0px">
+                                            <?=tgl_ina($value['end_date'])?>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -470,10 +473,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-left">Cooperation</h3>
-                            <a href="<?=base_url('cooperation')?>" class="more" data-aos="zoom-out-left">More <i class="fas fa-arrow-right fz"></i></a>
+                            <h3 class="text-uppercase">Cooperation</h3>
+                            <a href="<?=base_url('cooperation')?>" class="more">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University students</p>
+                            <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University Students</p>
 
                     </div>
                 </div>
