@@ -1117,6 +1117,10 @@ svg {
   /* touch-action: manipulation;  */
   touch-action: none;
 }
+.header-area .slicknav_btn {
+  top: -60px;
+  right: 17px;
+}
 
 /* default styles here for older browsers. 
        I tend to go for a 600px - 960px width max but using percentages
@@ -1169,6 +1173,10 @@ svg {
       .mi-top-140 {
           top: -110px !important;
           position: relative;
+      }
+
+      .pl-sm-0 {
+        padding-left: 0 !important;
       }
   }
 
