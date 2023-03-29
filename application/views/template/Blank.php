@@ -8,37 +8,52 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Podomoro University</title>
-        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>Where Future Entrepreneurs Begin | Podomoro University</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="manifest" href="site.webmanifest"> -->
         <link rel="shortcut icon" type="image/x-icon" href="<?= base_url();?>assets/img/pufavicon.png">
-        <link
-          rel="canonical"
-          href="https://www.ampstart.com/templates/product-material-oak.amp"
-        />
+        <link rel="canonical" href="https://podomorouniversity.ac.id/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Where Future Entrepreneurs Begin | Podomoro University" />
+        <meta property="og:description" content="Where Future Entrepreneur Begins At Podomoro University. Develop Industry Driven Curriculum Framework and Teaching Methodology through Work-Based Learning" />
+        <meta property="og:url" content="https://podomorouniversity.ac.id/" />
+        <meta property="og:site_name" content="Where Future Entrepreneurs Begin" />
+        <meta property="article:publisher" content="https://www.facebook.com/PodomoroUniversity/" />
+        <meta property="article:modified_time" content="2022-12-13T07:39:35+00:00" />
+        <meta property="og:image" content="<?= base_url();?>assets/img/pufavicon.png" />
+        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:height" content="906" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@PodomoroUniv" />
+        <meta name="twitter:label1" content="Est. reading time" />
+        <meta name="twitter:data1" content="12 minutes" />
+        <meta name="keywords" content="Podomoro University, University Podomoro, Podomoro, University, Universitas Podomoro, Podomoro Universitas, PU, Pcam,Pu-x,Pucell">
         <!-- CSS here -->
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/owl.carousel.theme.css">
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/bootstrap.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/owl.carousel.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/owl.carousel.theme.css" type='text/css' media='all'>
         
-        <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/css/ticker-style.css"> -->
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/flaticon.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/slicknav.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/animate.min.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/themify-icons.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/slick.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/nice-select.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/style.css">
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/style_pu.css">
 
-        <link rel="stylesheet" href="<?= base_url();?>/assets/css/wa.css">
+        <!-- <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/ticker-style.css" type='text/css' media='all'> -->
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/flaticon.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/slicknav.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/animate.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/magnific-popup.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/fontawesome-all.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/themify-icons.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/slick.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/nice-select.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style_pu.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' rel="stylesheet" href="<?= base_url();?>/assets/css/wa.css" type='text/css' media='all'>
+
         <!-- AOS Anination -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" data-minify="1" rel='stylesheet' type='text/css' media='all'>
         <!-- Sweper Slide -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.css">
+        <link data-minify="1" rel='stylesheet' type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.css" type='text/css' media='all'>
         <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/amp/css/amp-source-compiled-css.css"> -->
         <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/css/custom.css"> -->
         <!-- Demo styles -->
@@ -96,6 +111,15 @@
                 font-size: 15px;
             }
           </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6SQYCYCYX"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S6SQYCYCYX');
+        </script>  
    </head>
 
     <body>
@@ -567,7 +591,9 @@
                 autoplayTimeout:3000,
                 autoplayHoverPause:true,
                 lazyLoad: true,
-                dots:true,
+                dots:false,
+                autoplay:true,
+                animateOut: 'fadeOut',
                 responsive:{
                     0:{
                         items:1
@@ -587,12 +613,16 @@
                 autoplay:true,
                 responsive:{
                     0:{
+                        items:1
+                    },
+                    480 : {
                         items:2
                     },
-                    600:{
+                    
+                    991 :{
                         items:3
                     },
-                    1000:{
+                    1024:{
                         items:5
                     }
                 }
