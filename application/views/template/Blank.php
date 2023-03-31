@@ -154,6 +154,9 @@
                        </div>
 
                     </div> -->
+                    <script type="text/javascript">
+                       $('.topbannercar').slick();
+                    </script>
 
 
                     <div class="header-mid d-none d-md-block">
