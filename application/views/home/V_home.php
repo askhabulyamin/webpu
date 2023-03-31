@@ -40,18 +40,18 @@
                         <div class="pl-sm-0" style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
                             
                         
-                        <h1 data-aos="zoom-in-right" style="color:white"><?=$value['banner_header']?></h1><br>
-                        <h3 data-aos="zoom-in-right" class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
-                        <a data-aos="zoom-in-right" href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                        <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                        <h3 class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                        <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
                     </div>
                 <?php endif ?>
                 <?php if ($value['banner_align'] == 'center'): ?>
                     <div class="owl-lazy " data-src="<?=puis_url.$value['banner_file']?>" style=" text-align: center;">
                         <div class="pl-sm-0" style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
-                            <h1 data-aos="zoom-in-right" style="color:white"><?=$value['banner_header']?></h1><br>
+                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
                             <center>
-                                <h3 data-aos="zoom-in-right" class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3>
+                                <h3 class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3>
                             </center><br>
                             <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
@@ -60,9 +60,9 @@
                 <?php if ($value['banner_align'] == 'right'): ?>
                     <div class="owl-lazy " data-src="<?=puis_url.$value['banner_file']?>" style="text-align: right;">
                         <div class="pl-sm-0" style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
-                            <h1 data-aos="zoom-in-right" style="color:white"><?=$value['banner_header']?></h1><br>
-                            <h3 data-aos="zoom-in-right" class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
-                            <a data-aos="zoom-in-right" href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
+                            <h1 style="color:white"><?=$value['banner_header']?></h1><br>
+                            <h3 class="d-m-none" style="color:white; max-width: 50%;"><?=$value['banner_text']?></h3><br>
+                            <a href="<?=$value['banner_link']?>" class="btn btn-primary"><?=$value['banner_link_text']?></a>
                         </div>
                     </div>
                 <?php endif ?>
