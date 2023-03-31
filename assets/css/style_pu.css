@@ -1113,10 +1113,7 @@ svg {
         touch-action: auto;
 }
 
-.owl-carousel {
-  /* touch-action: manipulation;  */
-  touch-action: none;
-}
+
 .header-area .slicknav_btn {
   top: -60px;
   right: 17px;
