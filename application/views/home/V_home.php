@@ -34,6 +34,7 @@
         <!-- Set up your HTML -->
         <div class="owl-carousel carousel-banner">
             <?php foreach ($banner as $key => $value): ?>
+                <!-- INI TESTING BANNER -->
                 <?php if ($value['banner_align'] == 'left'): ?>
                     <div class="owl-lazy " data-src="<?=puis_url.$value['banner_file']?>">
                         <div class="pl-sm-0" style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
