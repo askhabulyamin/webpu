@@ -125,6 +125,9 @@ switch (ENVIRONMENT)
 		define("blogs_url_file",$HostPath."adminblogs.podomorouniversity.ac.id/");
 		define("blogs_url",$HostPath."blogs.podomorouniversity.ac.id/");
 		define("puis_url",$HostPath."pcam.podomorouniversity.ac.id//");
+		define("ig_token","IGQVJXc1hMQ3JCQjNBZAUNNTFJ3TUNpYmlCTy1Pek5keEk1eFFQSkNtZA2xOakx5TlVrZAW1QZAm9RM0lOblhXN2ZAsZAXFkRW9ud2VkdmxBZAmtrT0plMVJGX3ByajV6RlBUakRNWnEyalFLcENvSDR4S0tfRgZDZD");
+		define("ytkey","AIzaSyCJ57TRvasB0z24tdyBvqCvc7_RrqeChic");
+		define("channel_id","UC3tL3tMFKDNKXmxKUI103nA");
 		break;
 
 	default:
@@ -135,6 +138,9 @@ switch (ENVIRONMENT)
 		define("blogs_url_file",$HostPath."localhost/blogscms/");
 		define("blogs_url",$HostPath."localhost/blogscms/");
 		define("puis_url",$HostPath."localhost/puis/");
+		define("ig_token","IGQVJXc1hMQ3JCQjNBZAUNNTFJ3TUNpYmlCTy1Pek5keEk1eFFQSkNtZA2xOakx5TlVrZAW1QZAm9RM0lOblhXN2ZAsZAXFkRW9ud2VkdmxBZAmtrT0plMVJGX3ByajV6RlBUakRNWnEyalFLcENvSDR4S0tfRgZDZD");
+		define("ytkey","AIzaSyCJ57TRvasB0z24tdyBvqCvc7_RrqeChic");
+		define("channel_id","UC3tL3tMFKDNKXmxKUI103nA");
 		break;
 }
 

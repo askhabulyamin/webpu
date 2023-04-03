@@ -74,6 +74,10 @@ $route['cooperation/(:any)'] = 'c_information/kerja_sama/$1';
 
 $route['world_article'] = 'c_information/world_article';
 
+$route['gallery'] = 'c_information/gallery';
+
+$route['videos'] = 'c_information/videos';
+
 $route['404_override'] = '';
 
 

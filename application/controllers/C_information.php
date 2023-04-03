@@ -43,6 +43,94 @@
         parent::template($content);
     }
 
+    public function gallery()
+    { 
+        $client = new GuzzleHttp\Client();
+        $data = array();
+
+        $data['part'] = '';
+        $pageget = $this->input->get('part');
+
+        if (empty($pageget)) 
+        {
+            $ig = $client->request('GET', 'https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,permalink,thumbnail_url&limit=8&access_token='.ig_token,[]);
+        }
+        else
+        {
+            $data['part'] = $this->input->get('part');
+            if ($this->input->get('cursor') == 'next') 
+            {
+                $req = 'https://graph.instagram.com/v16.0/17841400913306997/media?access_token='.ig_token.'&fields=id%2Cmedia_type%2Cmedia_url%2Cusername%2Ctimestamp%2Cpermalink%2Cthumbnail_url&limit=8&after='.$data['part'];
+                $ig = $client->request('GET', $req,[]);
+            }
+            if ($this->input->get('cursor') == 'prev') 
+            {
+                $req = 'https://graph.instagram.com/v16.0/17841400913306997/media?access_token='.ig_token.'&fields=id%2Cmedia_type%2Cmedia_url%2Cusername%2Ctimestamp%2Cpermalink%2Cthumbnail_url&limit=8&before='.$data['part'];
+                $ig = $client->request('GET', $req,[]);
+            }
+        }
+
+        $dataigraw = json_decode($ig->getBody()->getCOntents(),true);
+        $paging = $dataigraw['paging'];
+        $data['ig'] = $dataigraw['data'];
+
+        $data['prev'] = '';
+        $data['next'] = '';
+
+        if (!empty($paging['previous'])) 
+        {
+            $data['prev'] = $paging['cursors']['before'];
+
+        }
+        if (!empty($paging['next'])) 
+        {
+            $data['next'] = $paging['cursors']['after'];
+        }
+
+        $content = $this->load->view('page/V_gallery',$data,true);
+        parent::template($content);
+    } 
+
+    public function videos()
+    { 
+        $client = new GuzzleHttp\Client();
+        $data = array();
+
+        $data['pagetoken'] = '';
+        $pageget = $this->input->get('pagetoken');
+
+        if (empty($pageget)) 
+        {
+            $yt = $client->request('GET', 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.channel_id.'&maxResults=4&key='.ytkey.'',[]);
+        }
+        else
+        {
+            $data['pagetoken'] = $this->input->get('pagetoken');
+
+            $req = 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.channel_id.'&maxResults=4&pageToken='.$data['pagetoken'].'&key='.ytkey.'';
+            $yt = $client->request('GET', $req,[]);
+        }
+
+        $dataytraw = json_decode($yt->getBody()->getCOntents(),true);
+        $data['yt'] = $dataytraw['items'];
+
+        $data['prev'] = '';
+        $data['next'] = '';
+
+        if (!empty($dataytraw['prevPageToken'])) 
+        {
+            $data['prev'] = $dataytraw['prevPageToken'];
+
+        }
+        if (!empty($dataytraw['nextPageToken'])) 
+        {
+            $data['next'] = $dataytraw['nextPageToken'];
+        }
+
+        $content = $this->load->view('page/V_videos',$data,true);
+        parent::template($content);
+    } 
+
     public function announcement($id_announcement = false)
     {
         $data = array();

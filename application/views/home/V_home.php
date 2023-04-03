@@ -37,7 +37,7 @@
                 <!-- INI TESTING BANNER -->
                 <?php if ($value['banner_align'] == 'left'): ?>
                     <div class="owl-lazy " data-src="<?=puis_url.$value['banner_file']?>">
-                        <div class="pl-sm-0" style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px;">
+                        <div class="pl-sm-0" style="height: 100%; width: auto; background: rgba(0, 0, 0, 0.5); padding-top:200px; padding-left: 50px !important;">
                             
                         
                         <h1 style="color:white"><?=$value['banner_header']?></h1><br>
@@ -76,7 +76,7 @@
     <main>
 
     <!-- Whats New Start -->
-    <section class="whats-news-area programs pt-100 pb-90">
+    <section class="whats-news-area programs pt-100">
         <svg class="block-wave top  mi-top-187" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" clip-rule="evenodd" d="m1440.3 87h-715.4-725.2v-60.3c239.6 34.4 480.3 34.4 722.2 0s481.4-34.4 718.5 0v60.3z" fill-rule="evenodd"></path></svg>
         
         <div class="container ">
@@ -163,6 +163,34 @@
         </div>
     </section>
     <!-- Whats New End -->
+
+    <section class="weekly2-news-area pb-90">
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle trending-tittle">
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Gallery</h3>
+                            <a href="<?=base_url('gallery')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php for ($i=0; $i < 8; $i++) :?>
+                        <div class="col-md-3 mb-3">
+                            <?php if ($ig[$i]['media_type'] == 'VIDEO'): ?>
+                                <a href="<?=$ig[$i]['permalink']?>" target="_blank"><img class="img-fluid" src="<?=$ig[$i]['thumbnail_url']?>"></a>
+                            <?php endif ?>
+                            <?php if ($ig[$i]['media_type'] != 'VIDEO'): ?>
+                                <a href="<?=$ig[$i]['permalink']?>" target="_blank"><img class="img-fluid" src="<?=$ig[$i]['media_url']?>"></a>
+                            <?php endif ?>
+                        </div>
+                    <?php endfor ?>
+                </div>
+            </div>
+        </div>
+    </section>     
 
     <!--   Weekly-News start -->
     <section class="weekly-news-area mi-top">
@@ -303,6 +331,39 @@
         </div>
     </section>     
     <!-- END EVENTS -->
+
+    <section class="weekly2-news-area">
+        <div class="container">
+            <div class="weekly2-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle trending-tittle">
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Videos</h3>
+                            <a href="<?=base_url('videos')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <?php foreach ($yt as $key => $value): ?>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/hqdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
+                                <div class="p-4">
+                                    <h5>
+                                        <a href="https://youtube.com/watch=<?=$value['id']['videoId']?>" target="_blank"><?= $value['snippet']['title']?></a>
+                                    </h5>
+                                    <hr style="margin: 5px 0px">
+                                    <?=tgl_ina($value['snippet']['publishedAt'])?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
+        </div>
+    </section>   
 
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
       <div class="modal-dialog">
