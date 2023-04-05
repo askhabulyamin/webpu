@@ -50,6 +50,36 @@
         height: 379px;
         object-fit: cover;
     }
+    .prodi {
+        height: 165px !important;
+        margin-bottom: 30px !important;
+    }
+    #navigation {
+        line-height: 60px;
+    }
+    @media (max-width: 767px) {
+        .prodi {
+            height: 120px !important;
+            margin-bottom: 30px !important;
+        }
+        .sticky-bar {
+            display: none;
+        }
+        .top-caption {
+            display: none;
+        }
+        .youtube-area .video-info .video-caption {
+            position: relative;
+            top: 10px;
+        }
+        .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
+            padding: 15px 15px;
+        }
+        .video-caption {
+            display: none;
+        }
+    }
+    
 </style>
     
 
@@ -124,14 +154,14 @@
                                                 
                                                 <?php if ($key == 0): ?>
                                                     <a class="nav-item nav-link min-hight-170 active" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
-                                                        <img class="card-img-top w-100 h-40" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <img class="card-img-top w-100 h-40 prodi" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-left bottom-0 p-2"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 
                                                 <?php endif ?>
                                                 <?php if ($key != 0): ?>
                                                     <a class="nav-item nav-link min-hight-170" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
-                                                        <img class="card-img-top w-100" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <img class="card-img-top w-100 prodi" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-right bottom-0"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 <?php endif ?>
@@ -456,7 +486,7 @@
                         <div class="testmonial-nav text-center">
                         <?php foreach ($yt as $key => $value): ?>
                             <div class="single-video">
-                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" class="pop" style="cursor:pointer" target="_blank"><img class="p-2 mb-3 card-img rounded-15" src="https://youtube.com/embed/<?=$value['id']['videoId']?>" alt="<?= $value['snippet']['title']?>"></a>
+                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" class="pop" style="cursor:pointer" target="_blank"><img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
                                 <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 <div class="video-intro">
                                 <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" target="_blank"><h4><?= $value['snippet']['title']?></h5></a>
