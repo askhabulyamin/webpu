@@ -71,7 +71,7 @@
         $maxpage = 10;
         $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news&page='.$currentPage.'&pageSize='.$maxpage.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
 
-        $ig = $client->request('GET', 'https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,permalink,thumnail_url&limit=8&access_token='.ig_token,[]);
+        // $ig = $client->request('GET', 'https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,permalink,thumnail_url&limit=8&access_token='.ig_token,[]);
 
         $yt = $client->request('GET', 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.channel_id.'&maxResults=4&key='.ytkey.'',[]);
 
@@ -90,8 +90,8 @@
         $data['banner'] = $banner;
         $data['affiliation'] = $affiliation;
 
-        $data['ig'] = json_decode($ig->getBody()->getCOntents(),true);
-        $data['ig'] = $data['ig']['data'];
+        // $data['ig'] = json_decode($ig->getBody()->getCOntents(),true);
+        // $data['ig'] = $data['ig']['data'];
 
         $data['yt'] = json_decode($yt->getBody()->getCOntents(),true);
         $data['yt'] = $data['yt']['items'];
