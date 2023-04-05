@@ -144,17 +144,17 @@ time {
 }
 
 #scrollUp {
-    background: #a19468;
-    height: 50px;
-    width: 50px;
-    right: 31px;
-    bottom: 117px;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 50%;
-    line-height: 48px;
-    border: 2px solid transparent;
+  background: #a19468;
+  height: 45px;
+  width: 45px;
+  left: 31px;
+  bottom: 15px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 45px;
+  border: 2px solid transparent;
 }
 
 a:hover {
@@ -1113,11 +1113,20 @@ svg {
         touch-action: auto;
 }
 
-
 .header-area .slicknav_btn {
   top: -60px;
   right: 17px;
 }
+
+.es-widget-container{
+  padding: 0px !important;
+}
+
+.es-poweredby{
+  display: none !important;
+}
+
+
 
 /* default styles here for older browsers. 
        I tend to go for a 600px - 960px width max but using percentages
