@@ -536,7 +536,7 @@
             <script src="<?= base_url();?>/assets/js/site.js"></script>
 
             <!-- Scrollup, nice-select, sticky -->
-            <!-- <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script> -->
+            <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.nice-select.min.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.sticky.js"></script>
             
