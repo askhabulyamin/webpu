@@ -26,22 +26,28 @@
         background-repeat: no-repeat;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        } 
+    } 
+
     .youtube-area .video-info .video-caption .top-caption{
         padding-top: 75px;
     } 
+
     .rounded-15{
         border-radius: 15px;
     }
+
     .line-page {
         border-bottom: 1px solid #cec7af61;
     }
+
     .line-page1 {
         border-bottom: 1px solid #41509452 !important;
     }
+
     .pb-100{
         padding-bottom: 100px !important;
     }
+
     .card-img-top {
         width: 100%;
         border-top-left-radius: calc(0.25rem - 1px);
@@ -50,13 +56,52 @@
         height: 379px;
         object-fit: cover;
     }
+
     .prodi {
         height: 165px !important;
         margin-bottom: 30px !important;
     }
+
     #navigation {
         line-height: 60px;
     }
+
+    .modal-header {
+        padding: 0px !important;
+        border: none
+    }
+    .modal-header .close {
+        position: absolute !important;
+        z-index: 1;
+        /* border: 8px solid lightgray !important; */
+        width: 10px;
+        height: 10px;
+        border-radius: 10rem;
+        background-color: #ECEFF1 !important;
+        opacity: 1;
+        top: -5px;
+        right: -5px;
+    }
+
+    .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+        color: #dc3545;
+        text-decoration: none;
+        opacity: 1.75;
+    }
+
+    .close>span {
+        position: relative;
+        right: 8px;
+        padding: 0px;
+        bottom: 15px;
+        font-size: 29px;
+        background-color: transparent;
+    }
+
+    .sr-only{
+        display: none !important;
+    }
+
     @media (max-width: 767px) {
         .prodi {
             height: 120px !important;
@@ -427,7 +472,7 @@
     </section>    -->
 
     <!-- Start Youtube -->
-    <div class="youtube-area programs pt-100">
+    <div class="youtube-area pt-100">
         <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
         </svg>
@@ -448,8 +493,8 @@
                     <div class="video-items-active">
                     <?php foreach ($yt as $key => $value): ?>
                         <div class="video-items text-center">
-                            <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" class="pop" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
-                            <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <!-- <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a> -->
+                            <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     <?php endforeach ?>    
                         <!-- <div class="video-items text-center">
@@ -486,7 +531,8 @@
                         <div class="testmonial-nav text-center">
                         <?php foreach ($yt as $key => $value): ?>
                             <div class="single-video">
-                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" class="pop" style="cursor:pointer" target="_blank"><img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
+                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" style="cursor:pointer" target="_blank">
+                                <img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
                                 <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 <div class="video-intro">
                                 <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" target="_blank"><h4><?= $value['snippet']['title']?></h5></a>
@@ -527,9 +573,9 @@
 
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
       <div class="modal-dialog">
-        <div class="modal-content">              
-          <div class="modal-body" style="padding:0">
-            <button type="button" class="close" data-dismiss="modal" style="float:right;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <div class="modal-content"> 
+            <div class="modal-header border-none"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>             
+          <div class="modal-body" style="padding:0">            
             <img src="" class="imagepreview" style="width: 100%;" >
           </div>
         </div>
@@ -822,8 +868,8 @@
     <!-- End pagination  -->
 
     <section class="recent-articles">
-        <div class="container">
-            <center><h3 style="color: #0525b2" class="garisbawah">Our Affiliations</h3></center>
+        <div class="">
+            <center><h3 class="garisbawah pb-100">Our Affiliations</h3></center>
 
             <div class="owl-carousel carousel-responsive1 mb-5">
 

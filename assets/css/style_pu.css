@@ -856,7 +856,7 @@ a, button {
 .garisbawah:after {
     display: block;
     height: 2px;
-    background-color: #19B5FE;
+    background-color: #ae9e6894;
     content: ' ';
     width: 150px;
     margin-top: 10px;
