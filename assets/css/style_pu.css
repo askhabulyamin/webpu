@@ -7,9 +7,9 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: normal;
 }
 
-.header-sticky.sticky-bar.sticky .main-menu ul>li>a {
+/* .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
     padding: 50px 15px;
-}
+} */
 
 .main-header .main-menu ul li a {
     font-size: 16px !important;
@@ -144,17 +144,17 @@ time {
 }
 
 #scrollUp {
-    background: #a19468;
-    height: 50px;
-    width: 50px;
-    right: 31px;
-    bottom: 117px;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 50%;
-    line-height: 48px;
-    border: 2px solid transparent;
+  background: #a19468;
+  height: 45px;
+  width: 45px;
+  left: 31px;
+  bottom: 15px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 45px;
+  border: 2px solid transparent;
 }
 
 a:hover {
@@ -856,7 +856,7 @@ a, button {
 .garisbawah:after {
     display: block;
     height: 2px;
-    background-color: #19B5FE;
+    background-color: #ae9e6894;
     content: ' ';
     width: 150px;
     margin-top: 10px;
@@ -1012,7 +1012,7 @@ display: block;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid #ccc;
-  border-radius: 2.25rem;
+  border-radius: 15px;
   margin: 10px;
 }
 
@@ -1088,8 +1088,8 @@ svg {
   position: relative;
 }
 .border-img {
-  border-top-right-radius: 2.25rem;
-  border-top-left-radius: 2.25rem;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 .mi-top-110 {
   top: -110px;
@@ -1113,11 +1113,20 @@ svg {
         touch-action: auto;
 }
 
-
 .header-area .slicknav_btn {
   top: -60px;
   right: 17px;
 }
+
+.es-widget-container{
+  padding: 0px !important;
+}
+
+.es-poweredby{
+  display: none !important;
+}
+
+
 
 /* default styles here for older browsers. 
        I tend to go for a 600px - 960px width max but using percentages

@@ -4,3 +4,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /code/index.php/$1 [L]
 </IfModule>
+
+<IfModule mod_headers.c>
+    Header always unset X-Frame-Options
+</IfModule>

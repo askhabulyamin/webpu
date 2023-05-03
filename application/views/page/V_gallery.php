@@ -47,7 +47,7 @@
     <center><h3 style="color: #0525b2">Gallery</h3></center>
     <div class="row mt-3">
         <div class="col-md-12">
-            <div class="embedsocial-hashtag" data-ref="bb27a44a7c502e7d88233a3fc4b0ab187ba26327"> <a class="feed-powered-by-es feed-powered-by-es-feed-new" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial"> Widget by EmbedSocial<span>→</span> </a> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+            <div class="embedsocial-hashtag" data-ref="bb27a44a7c502e7d88233a3fc4b0ab187ba26327"> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
         </div>
         <!-- <?php for ($i=0; $i < 8; $i++) :?>
             <div class="col-md-3 mb-3">
