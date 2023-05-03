@@ -336,10 +336,9 @@
     </section>     
     <!-- END EVENTS -->
 
-    <section class="weekly2-news-area">
+    <!-- <section class="weekly2-news-area">
         <div class="container">
             <div class="weekly2-wrapper">
-                <!-- section Tittle -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
@@ -367,22 +366,7 @@
                 </div>
             </div>
         </div>
-    </section>   
-
-    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-      <div class="modal-dialog">
-        <div class="modal-content">              
-          <div class="modal-body" style="padding:0">
-            <button type="button" class="close" data-dismiss="modal" style="float:right;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <img src="" class="imagepreview" style="width: 100%;" >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script type="text/javascript">
-        
-    </script>
+    </section>    -->
 
     <!-- Trending Area Start -->
     <section class="trending-area programs pt-100 mi-top">
