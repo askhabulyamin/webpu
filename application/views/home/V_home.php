@@ -471,6 +471,7 @@
         </div>
     </section>    -->
 
+
     <!-- Start Youtube -->
     <div class="youtube-area pt-100">
         <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">

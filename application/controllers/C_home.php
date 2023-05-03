@@ -73,7 +73,7 @@
 
         // $ig = $client->request('GET', 'https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,permalink,thumnail_url&limit=8&access_token='.ig_token,[]);
 
-        $yt = $client->request('GET', 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.channel_id.'&maxResults=4&key='.ytkey.'',[]);
+        // $yt = $client->request('GET', 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.channel_id.'&maxResults=4&key='.ytkey.'',[]);
 
         // $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?country=id&apiKey=96b7521327044529a95b04762e15d43e',[]);
         $d = json_decode($response->getBody()->getCOntents(),true);            
@@ -93,8 +93,8 @@
         // $data['ig'] = json_decode($ig->getBody()->getCOntents(),true);
         // $data['ig'] = $data['ig']['data'];
 
-        $data['yt'] = json_decode($yt->getBody()->getCOntents(),true);
-        $data['yt'] = $data['yt']['items'];
+        // $data['yt'] = json_decode($yt->getBody()->getCOntents(),true);
+        // $data['yt'] = $data['yt']['items'];
 
         $calendar = array();
         $calendar[0]['name'] = 'Kuliah';
