@@ -67,6 +67,8 @@
 
         $affiliation = $this->client_rest->client_get('affiliation/AffiliationList',[]);
 
+        $video = $this->Custom_model->getdata('db_webpu.video', array('video_status' => 'publish'));
+
         $currentPage = 01;
         $maxpage = 10;
         $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news&page='.$currentPage.'&pageSize='.$maxpage.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
@@ -89,6 +91,7 @@
         $data['kerjasama'] = $kerjasama;
         $data['banner'] = $banner;
         $data['affiliation'] = $affiliation;
+        $data['video'] = $video;
 
         // $data['ig'] = json_decode($ig->getBody()->getCOntents(),true);
         // $data['ig'] = $data['ig']['data'];

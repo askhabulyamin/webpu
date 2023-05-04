@@ -439,7 +439,7 @@
     </section>     
     <!-- END EVENTS -->
 
-    <!-- <section class="weekly2-news-area">
+    <section class="weekly2-news-area mb-50">
         <div class="container">
             <div class="weekly2-wrapper">
                 <div class="row">
@@ -452,16 +452,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <?php foreach ($yt as $key => $value): ?>
+                    <?php foreach ($video as $key => $value): ?>
                         <div class="col-md-3">
                             <div class="card">
-                                <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/hqdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
+                                <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="<?=puis_url.'/'.$value['video_thumbnail']?>" style="max-height: 150px;" alt="<?= $value['video_name']?>"></a>
                                 <div class="p-4">
                                     <h5>
-                                        <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" target="_blank"><?= $value['snippet']['title']?></a>
+                                        <a href="<?=$value['video_link']?>" target="_blank"><?= $value['video_name']?></a>
                                     </h5>
-                                    <hr style="margin: 5px 0px">
-                                    <?=tgl_ina($value['snippet']['publishedAt'])?>
                                 </div>
                             </div>
                         </div>
@@ -469,7 +467,7 @@
                 </div>
             </div>
         </div>
-    </section>    -->
+    </section>   
 
 
     <!-- Start Youtube -->
