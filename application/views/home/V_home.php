@@ -24,9 +24,107 @@
         background-position: left;
         background-size: contain;
         background-repeat: no-repeat;
-        border-top-left-radius: 2.25rem;
-        border-top-right-radius: 2.25rem;
-        }  
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    } 
+
+    .youtube-area .video-info .video-caption .top-caption{
+        padding-top: 75px;
+    } 
+
+    .rounded-15{
+        border-radius: 15px;
+    }
+
+    .line-page {
+        border-bottom: 1px solid #cec7af61;
+    }
+
+    .line-page1 {
+        border-bottom: 1px solid #41509452 !important;
+    }
+
+    .pb-100{
+        padding-bottom: 100px !important;
+    }
+
+    .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(0.25rem - 1px);
+        border-top-right-radius: calc(0.25rem - 1px);
+        float: left;
+        height: 379px;
+        object-fit: cover;
+    }
+
+    .prodi {
+        height: 165px !important;
+        margin-bottom: 30px !important;
+    }
+
+    #navigation {
+        line-height: 60px;
+    }
+
+    .modal-header {
+        padding: 0px !important;
+        border: none
+    }
+    .modal-header .close {
+        position: absolute !important;
+        z-index: 1;
+        /* border: 8px solid lightgray !important; */
+        width: 10px;
+        height: 10px;
+        border-radius: 10rem;
+        background-color: #ECEFF1 !important;
+        opacity: 1;
+        top: -5px;
+        right: -5px;
+    }
+
+    .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+        color: #dc3545;
+        text-decoration: none;
+        opacity: 1.75;
+    }
+
+    .close>span {
+        position: relative;
+        right: 8px;
+        padding: 0px;
+        bottom: 15px;
+        font-size: 29px;
+        background-color: transparent;
+    }
+
+    .sr-only{
+        display: none !important;
+    }
+
+    @media (max-width: 767px) {
+        .prodi {
+            height: 120px !important;
+            margin-bottom: 30px !important;
+        }
+        .sticky-bar {
+            display: none;
+        }
+        .top-caption {
+            display: none;
+        }
+        .youtube-area .video-info .video-caption {
+            position: relative;
+            top: 10px;
+        }
+        .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
+            padding: 15px 15px;
+        }
+        .video-caption {
+            display: none;
+        }
+    }
+    
 </style>
     
 
@@ -101,14 +199,14 @@
                                                 
                                                 <?php if ($key == 0): ?>
                                                     <a class="nav-item nav-link min-hight-170 active" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
-                                                        <img class="card-img-top w-100 h-40" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <img class="card-img-top w-100 h-40 prodi" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-left bottom-0 p-2"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 
                                                 <?php endif ?>
                                                 <?php if ($key != 0): ?>
                                                     <a class="nav-item nav-link min-hight-170" href="https://<?=$value['Host']?>" target="_blank" aria-selected="true">
-                                                        <img class="card-img-top w-100" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
+                                                        <img class="card-img-top w-100 prodi" src="<?=puis_url?>images/logoprodi/<?=$value['FileLogoP']?>" alt="<?=$value['NameEng']?>">
                                                         <p class="text-right bottom-0"><small>Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></small></p>
                                                     </a>
                                                 <?php endif ?>
@@ -164,7 +262,7 @@
     </section>
     <!-- Whats New End -->
 
-    <section class="weekly2-news-area pb-90">
+    <section class="weekly2-news-area pb-90 programs">
         <div class="container">
             <div class="weekly2-wrapper">
                 <!-- section Tittle -->
@@ -174,11 +272,18 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Gallery</h3>
                             <a href="<?=base_url('gallery')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
+                        <p style="color:#6c757d !important">Follow our Instagram, so you can still get other interesting information</p>
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="embedsocial-hashtag" data-ref="bb27a44a7c502e7d88233a3fc4b0ab187ba26327"> <a class="feed-powered-by-es feed-powered-by-es-feed-new" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial"> Widget by EmbedSocial<span>→</span> </a> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+                        <style>
+                            #es-lightbox .es-poweredby{
+                                display: none !important;
+                            }
+                        </style>
+                        <div class="embedsocial-hashtag" data-ref="bb27a44a7c502e7d88233a3fc4b0ab187ba26327"> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
                     </div>
                     
                     <!-- <?php for ($i=0; $i < 8; $i++) :?>
@@ -197,12 +302,12 @@
     </section>     
 
     <!--   Weekly-News start -->
-    <section class="weekly-news-area mi-top">
+    <section class="weekly-news-area ">
         <svg class="block-wave bottom " preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
         </svg>
-        <div class="container pt-100 pb-100">
-           <div class="weekly-wrapper pb-sm-0">
+        <div class="container pt-100 ">
+           <div class="weekly-wrapper line-page1 pb-100">
                 <!-- section Tittle -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -273,10 +378,8 @@
 
     <!-- EVENTS -->
        
-    <section class="weekly2-news-area">
-        <svg class="block-wave gold-1 mi-top-87" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
-        </svg>
+    <section class="weekly-news-area pt-100 pb-90">
+        
         <div class="container">
             <div class="weekly2-wrapper">
                 <!-- section Tittle -->
@@ -366,8 +469,120 @@
         </div>
     </section>   
 
+
+    <!-- Start Youtube -->
+    <div class="youtube-area pt-100">
+        <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
+        </svg>
+        <div class="container">
+            <!-- section Tittle -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle trending-tittle">
+                        <h3 class="text-uppercase" data-aos="zoom-out-right">Videos</h3>
+                        <a href="<?=base_url('videos')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
+                    </div>
+                    <p style="color:#6c757d !important">Follow our YouTube, so you can still get other interesting information</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="video-items-active">
+                    <?php foreach ($yt as $key => $value): ?>
+                        <div class="video-items text-center">
+                            <!-- <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a> -->
+                            <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    <?php endforeach ?>    
+                        <!-- <div class="video-items text-center">
+                            <iframe src="https://www.youtube.com/embed/IdFy7l2hSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-items text-center">
+                            <iframe src="https://www.youtube.com/embed/wlxL2ZChX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-items text-center">
+                            <iframe src="https://www.youtube-nocookie.com/embed/J99I9i4Osps?origin=www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-items text-center">
+                        <iframe src="https://www.youtube.com/embed/NRa2h9AJHgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="video-caption">
+                            <div class="top-caption">
+                                <span class="color1">Podomoro University</span>
+                            </div>
+                            <div class="bottom-caption">
+                                <h2>Founded by Yayasan Pendidikan Agung Podomoro</h2>
+                                <p>Founded by Yayasan Pendidikan Agung Podomoro, and with full support 
+                                    from the leading holding company, Agung Podomoro Group, has made Podomoro University a perfect place to study. We develop industry-driven curriculum framework and teaching methodology through work-based learning, hence the students will be equipped with knowledge and 
+                                    skills that are required highly and consistent with the needs of business and industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testmonial-nav text-center">
+                        <?php foreach ($yt as $key => $value): ?>
+                            <div class="single-video">
+                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" style="cursor:pointer" target="_blank">
+                                <img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
+                                <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                <div class="video-intro">
+                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" target="_blank"><h4><?= $value['snippet']['title']?></h5></a>
+                                </div>
+                            </div>
+                        <?php endforeach ?>
+                            <!-- <div class="single-video">
+                                <iframe src="https://www.youtube.com/embed/IdFy7l2hSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-intro">
+                                    <h5>Fasilitas Podomoro University</h5>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <iframe src="https://www.youtube.com/embed/wlxL2ZChX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-intro">
+                                    <h5>You are The Next Entrepreneur</h5>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <iframe src="https://www.youtube-nocookie.com/embed/J99I9i4Osps?origin=www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-intro">
+                                    <h5>The Next Gen Battle Day 3</h5>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <iframe src="https://www.youtube.com/embed/NRa2h9AJHgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-intro">
+                                    <h5>Business Law Program Parents Gathering</h5>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- End Start youtube -->
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+            <div class="modal-header border-none"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>             
+          <div class="modal-body" style="padding:0">            
+            <img src="" class="imagepreview" style="width: 100%;" >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Trending Area Start -->
-    <section class="trending-area programs pt-100 mi-top">
+    <section class="trending-area programs pt-100 mi-top pb-100">
         <!-- <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
         </svg> -->
@@ -449,7 +664,7 @@
             <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
         </svg>
         <div class="container">
-            <div class="weekly2-wrapper">
+            <div class="weekly2-wrapper pb-100 line-page">
                 <!-- section Tittle -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -514,7 +729,7 @@
     <!-- End Weekly-News -->
 
     <!--   Weekly2-News start -->
-    <section class="weekly2-news-area weekly2-pading gray-bg">
+    <section class="weekly2-news-area weekly2-pading gray-bg pt-0">
         <div class="container">
             <div class="weekly2-wrapper">
                 <!-- section Tittle -->
@@ -576,84 +791,6 @@
     </section>           
     <!-- End Weekly-News -->
 
-    <!-- Start Youtube -->
-    <!-- <div class="youtube-area video-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="video-items-active">
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/2tgbQ_Nrpxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/IdFy7l2hSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/wlxL2ZChX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube-nocookie.com/embed/J99I9i4Osps?origin=www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                        <iframe src="https://www.youtube.com/embed/NRa2h9AJHgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="video-info">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="video-caption">
-                            <div class="top-caption">
-                                <span class="color1">Podomoro University</span>
-                            </div>
-                            <div class="bottom-caption">
-                                <h2>Founded by Yayasan Pendidikan Agung Podomoro</h2>
-                                <p>Founded by Yayasan Pendidikan Agung Podomoro, and with full support 
-                                    from the leading holding company, Agung Podomoro Group, has made Podomoro University a perfect place to study. We develop industry-driven curriculum framework and teaching methodology through work-based learning, hence the students will be equipped with knowledge and 
-                                    skills that are required highly and consistent with the needs of business and industry.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testmonial-nav text-center">
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/2tgbQ_Nrpxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>Alur Pendaftaran Online di Podomoro University</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/IdFy7l2hSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>Fasilitas Podomoro University</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/wlxL2ZChX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>You are The Next Entrepreneur</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube-nocookie.com/embed/J99I9i4Osps?origin=www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>The Next Gen Battle Day 3</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/NRa2h9AJHgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>Business Law Program Parents Gathering</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  -->
-    <!-- End Start youtube -->
     <!--  Recent Articles start -->
     <section class="recent-articles weekly2-pading ">
         <svg class="block-wave mi-top-110" style="color:#f7f7fd;" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
@@ -730,8 +867,8 @@
     <!-- End pagination  -->
 
     <section class="recent-articles">
-        <div class="container">
-            <center><h3 style="color: #0525b2" class="garisbawah">Our Affiliations</h3></center>
+        <div class="">
+            <center><h3 class="garisbawah pb-100">Our Affiliations</h3></center>
 
             <div class="owl-carousel carousel-responsive1 mb-5">
 

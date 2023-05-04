@@ -536,7 +536,7 @@
             <script src="<?= base_url();?>/assets/js/site.js"></script>
 
             <!-- Scrollup, nice-select, sticky -->
-            <!-- <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script> -->
+            <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.nice-select.min.js"></script>
             <script src="<?= base_url();?>/assets/js/jquery.sticky.js"></script>
             
@@ -579,7 +579,7 @@
               $('#WAButton').floatingWhatsApp({
                 phone: '<?=$this->contactinfo['whatsapp']?>', //WhatsApp Business phone number International format-
                 //Get it with Toky at https://toky.co/en/features/whatsapp.
-                headerTitle: 'Get our support!', //Popup Title
+                headerTitle: 'PODOMORO UNIVERSITY', //Popup Title
                 popupMessage: 'Hello, how can we help you?', //Popup Message
                 showPopup: true, //Enables popup display
                 buttonImage: '<img class="p-2" src="'+base+'assets/img/wa-1.png" />', //Button Image
@@ -633,7 +633,7 @@
                         items:3
                     },
                     1024:{
-                        items:5
+                        items:8
                     }
                 }
             })
@@ -653,6 +653,7 @@
                   },
                 });
             </script>
+            
             
     </body>
 </html>
