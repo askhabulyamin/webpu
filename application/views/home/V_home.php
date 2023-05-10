@@ -439,37 +439,6 @@
     </section>     
     <!-- END EVENTS -->
 
-    <section class="weekly2-news-area mb-50">
-        <div class="container">
-            <div class="weekly2-wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">Videos</h3>
-                            <a href="<?=base_url('videos')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <?php foreach ($video as $key => $value): ?>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="<?=puis_url.'/'.$value['video_thumbnail']?>" style="max-height: 150px;" alt="<?= $value['video_name']?>"></a>
-                                <div class="p-4">
-                                    <h5>
-                                        <a href="<?=$value['video_link']?>" target="_blank"><?= $value['video_name']?></a>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach ?>
-                </div>
-            </div>
-        </div>
-    </section>   
-
-
     <!-- Start Youtube -->
     <div class="youtube-area pt-100">
         <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
@@ -490,10 +459,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="video-items-active">
-                    <?php foreach ($yt as $key => $value): ?>
+                    <?php foreach ($video as $key => $value): ?>
                         <div class="video-items text-center">
-                            <!-- <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a> -->
-                            <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/hqdefault.jpg" alt="<?= $value['video_name']?>"></a>
+                            <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
                     <?php endforeach ?>    
                         <!-- <div class="video-items text-center">
@@ -528,13 +497,13 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="testmonial-nav text-center">
-                        <?php foreach ($yt as $key => $value): ?>
+                        <?php foreach ($video as $key => $value): ?>
                             <div class="single-video">
-                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" style="cursor:pointer" target="_blank">
-                                <img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['id']['videoId'];?>/maxresdefault.jpg" alt="<?= $value['snippet']['title']?>"></a>
+                                <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank">
+                                <img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['video_link'];?>/mqdefault.jpg" alt="<?= $value['video_name']?>"></a>
                                 <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 <div class="video-intro">
-                                <a href="https://youtube.com/embed/<?=$value['id']['videoId']?>" target="_blank"><h4><?= $value['snippet']['title']?></h5></a>
+                                <a href="https://youtube.com/embed/<?=$value['video_link']?>" target="_blank"><h4><?= $value['video_name']?></h5></a>
                                 </div>
                             </div>
                         <?php endforeach ?>
@@ -618,34 +587,34 @@
                         <!-- Trending Bottom -->
                         <div class="trending-bottom">
                             <div class="row">
-                                <?php for ($i=1; $i <= 3; $i++) :?>
+                                <?php for ($i=0; $i <= 2; $i++) :?>
                                     <div class="col-lg-4" data-aos="zoom-in">
                                         <div class="single-bottom mb-35">
                                             <div class="trend-bottom-img mb-30">
-                                                <img src="<?=blogs_url_file?>upload/<?=$response[$i]['img']?>" alt="">
+                                                <img src="<?=blogs_url_file?>upload/<?=$recomendnews[$i]['Images']?>" alt="">
                                             </div>
                                             <div class="trend-bottom-cap">
-                                                <span class="color1"><?=$response[$i]['Category']?></span>
-                                                <h5><a href="<?=base_url()?>news/<?=$response[$i]['ID_title']?>"><?=$response[$i]['Title']?></a></h5>
+                                                <span class="color1"><?=$recomendnews[$i]['Category']?></span>
+                                                <h5><a href="<?=base_url()?>news/<?=$recomendnews[$i]['ID_title']?>"><?=$recomendnews[$i]['Title']?></a></h5>
                                             </div>
                                         </div>
                                     </div>
-                                <?php endfor; ?>
+                                <?php endfor;$i++ ?>
                             </div>
                         </div>
                     </div>
                     <!-- Riht content -->
                     <div class="col-lg-4">
                         
-                        <?php for ($i=4; $i <= 8; $i++) :?>
+                        <?php for ($i=0; $i <= 4; $i++) :?>
                     
                         <div class="trand-right-single d-flex" data-aos="zoom-in">
                             <div class="trand-right-img">
-                                <img src="<?= blogs_url_file; ?>upload/<?= $response[$i]['img'];?>" alt="<?= $response[$i]['SEO_title']; ?>">
+                                <img src="<?= blogs_url_file; ?>upload/<?= $recentnews[$i]['Images'];?>" alt="">
                             </div>
                             <div class="trand-right-cap">
-                                <span class="color<?php echo $no; ?>"><?php echo $response[$i]['Category'];?></span>
-                                <h4><a href="<?=base_url()?>news/<?=$response[$i]['ID_title']?>"><?php echo $response[$i]['Title'];?></a></h4>
+                                <span class="color<?php echo $no; ?>"><?php echo $recentnews[$i]['Name'];?></span>
+                                <h4><a href="<?=base_url()?>news/<?=$recentnews[$i]['ID_title']?>"><?php echo $recentnews[$i]['Title'];?></a></h4>
                             </div>
                         </div>
                         <?php endfor; ?>

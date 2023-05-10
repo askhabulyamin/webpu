@@ -30,7 +30,8 @@
         
 
         $recomendnews = $this->client_rest->client_get('blogs/RecomentNews',[]);
-
+        $recentnews = $this->client_rest->client_get('blogs/RecentNews',[]);
+ 
         $events = $this->client_rest->client_get('events/EventsList',['page' => 0, 'limit' => 10]);
         $eventblog = $this->client_rest->client_get('blogs/EventsBlog',['page' => 0, 'limit' => 5]);
 
@@ -80,6 +81,8 @@
         // $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?country=id&apiKey=96b7521327044529a95b04762e15d43e',[]);
         $d = json_decode($response->getBody()->getCOntents(),true);            
         $data['response'] = $get_api;
+        $data['recomendnews'] = $recomendnews;
+        $data['recentnews'] = $recentnews;
         $data['ProdiList'] = $getprodi[0];
         $data['ProdiSlider'] = $getprodi[1];
         $data['ProdiAbout'] = $getprodi[2];
@@ -92,7 +95,6 @@
         $data['banner'] = $banner;
         $data['affiliation'] = $affiliation;
         $data['video'] = $video;
-
         // $data['ig'] = json_decode($ig->getBody()->getCOntents(),true);
         // $data['ig'] = $data['ig']['data'];
 
