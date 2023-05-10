@@ -31,7 +31,7 @@
 
         $recomendnews = $this->client_rest->client_get('blogs/RecomentNews',[]);
         $recentnews = $this->client_rest->client_get('blogs/RecentNews',[]);
-
+ 
         $events = $this->client_rest->client_get('events/EventsList',['page' => 0, 'limit' => 10]);
         $eventblog = $this->client_rest->client_get('blogs/EventsBlog',['page' => 0, 'limit' => 5]);
 
