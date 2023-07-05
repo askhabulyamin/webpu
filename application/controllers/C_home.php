@@ -202,6 +202,48 @@
 
         $content = $this->load->view('page/V_undergraduated_programs',$data,true);
         parent::template($content);
+    } 
+
+    public function admission(){ 
+        $data = array();
+
+        $getcalendaracademic = $this->client_rest->client_get('academic/calendaracademic',[]);
+        $calendar = array();
+        $calendar[0]['name'] = 'Mulai Kuliah';
+        $calendar[0]['date'] = $getcalendaracademic[1]['kuliahStart'];
+
+        $calendar[1]['name'] = 'Selesai Kuliah';
+        $calendar[1]['date'] = $getcalendaracademic[1]['kuliahEnd'];
+
+        $calendar[2]['name'] = 'UTS Mulai';
+        $calendar[3]['name'] = 'UTS Selesai';
+        $calendar[2]['date'] = $getcalendaracademic[1]['utsStart'];
+        $calendar[3]['date'] = $getcalendaracademic[1]['utsEnd'];
+
+        $calendar[4]['name'] = 'UAS Mulai';
+        $calendar[5]['name'] = 'UAS Selesai';
+        $calendar[4]['date'] = $getcalendaracademic[1]['uasStart'];
+        $calendar[5]['date'] = $getcalendaracademic[1]['uasEnd'];
+
+        $calendar[6]['name'] = 'Seminar TA Registration Buka';
+        $calendar[7]['name'] = 'Seminar TA Registration Selesai';
+        $calendar[6]['date'] = $getcalendaracademic[1]['TARegStart'];
+        $calendar[7]['date'] = $getcalendaracademic[1]['TARegEnd'];
+
+        $calendar[8]['name'] = 'Mulai Penilaian Sarana Prasarana';
+        $calendar[9]['name'] = 'Selesai Penilaian Sarana Prasarana';
+        $calendar[8]['date'] = $getcalendaracademic[1]['edom2Start'];
+        $calendar[9]['date'] = $getcalendaracademic[1]['edom2End'];
+
+        $calendar[10]['name'] = 'Mulai Evaluasi Dosen Oleh Mahasiswa';
+        $calendar[11]['name'] = 'Selesai Evaluasi Dosen Oleh Mahasiswa';
+        $calendar[10]['date'] = $getcalendaracademic[1]['edomStart'];
+        $calendar[11]['date'] = $getcalendaracademic[1]['edomEnd'];
+
+        $data['calendar'] = json_encode($calendar);
+
+        $content = $this->load->view('page/V_admission',$data,true);
+        parent::template($content);
     }   
   }
 

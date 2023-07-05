@@ -589,7 +589,7 @@
                             <div class="row">
                                 <?php for ($i=0; $i <= 2; $i++) :?>
                                     <div class="col-lg-4" data-aos="zoom-in">
-                                        <div class="single-bottom mb-35">
+                                        <!-- <div class="single-bottom mb-35">
                                             <div class="trend-bottom-img mb-30">
                                                 <img src="<?=blogs_url_file?>upload/<?=$recomendnews[$i]['Images']?>" alt="">
                                             </div>
@@ -597,7 +597,7 @@
                                                 <span class="color1"><?=$recomendnews[$i]['Category']?></span>
                                                 <h5><a href="<?=base_url()?>news/<?=$recomendnews[$i]['ID_title']?>"><?=$recomendnews[$i]['Title']?></a></h5>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 <?php endfor;$i++ ?>
                             </div>
@@ -681,7 +681,7 @@
                                         <div class="p-4">
 
                                             <h5>
-                                                <?= $b['Title']?>
+                                                <a href="<?=base_url('marketing_activity/').$value['ID']?>"><?= $b['Title']?></a>
                                             </h5>
 
                                         </div>
