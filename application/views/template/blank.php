@@ -251,7 +251,7 @@
                                                 </li>
                                                 <li><a href="https://studentlife.podomorouniversity.ac.id/">Student Life</a></li>
                                                 <li><a href="https://admission.podomorouniversity.ac.id/">Admission & Registrasi</a></li> -->
-                                                <li style="float: right;"><a href="https://admission.podomorouniversity.ac.id/"><span class="badge badge-primary" style="padding: 1em 4em;">Online Registration</span></a></li>
+                                                <!-- <li style="float: right;"><a href="https://admission.podomorouniversity.ac.id/"><span class="badge badge-primary" style="padding: 1em 4em;">Online Registration</span></a></li> -->
                                             </ul>
                                             <!-- <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                                                 <ul class="navbar-nav ml-auto">

@@ -62,6 +62,9 @@
                   <li class="nav-item">
                     <a class="nav-link" id="pills-tuition-tab" data-toggle="pill" href="#pills-tuition" role="tab" aria-controls="pills-tuition" aria-selected="false">Tuition Fee</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://admission.podomorouniversity.ac.id/">Online Registration</a>
+                  </li>
                 </ul>
             </center>
                 
