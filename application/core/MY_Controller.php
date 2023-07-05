@@ -28,7 +28,7 @@ class MY_Controller extends CI_Controller {
 
         foreach ($this->menu_nav as $key => $value) 
         {
-            $findsubmenu = $this->Custom_model->getdata('db_webpu.submenu_nav', array('id_menu_nav' => $value['id_menu_nav']), 'name_submenu_nav', 'ASC');
+            $findsubmenu = $this->Custom_model->getdata('db_webpu.submenu_nav', array('id_menu_nav' => $value['id_menu_nav'], 'status' => 1), 'name_submenu_nav', 'ASC');
 
             if (!empty($findsubmenu)) 
             {
