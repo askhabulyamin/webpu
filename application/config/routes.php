@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'c_home/index';
 $route['home'] = 'c_home/index';
 $route['about'] = 'c_home/about';
+$route['admission'] = 'c_home/admission';
 $route['undergraduated_programs'] = 'c_home/undergraduated_programs';
 
 $route['information'] = 'c_information/index';

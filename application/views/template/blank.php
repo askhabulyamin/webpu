@@ -50,6 +50,11 @@
         <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style_pu.css" type='text/css' media='all'>
         <link data-minify="1" rel='stylesheet' rel="stylesheet" href="<?= base_url();?>/assets/css/wa.css" type='text/css' media='all'>
 
+        <!-- CALEANDAR -->
+        <link rel='stylesheet' href="<?= base_url();?>/assets/vendor/caleandar/css/demo.css" type='text/css'>
+        <link rel='stylesheet' href="<?= base_url();?>/assets/vendor/caleandar/css/theme3.css" type='text/css'>
+        <script src="<?= base_url();?>/assets/vendor/caleandar/js/caleandar.js"></script>
+
         <!-- AOS Anination -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" data-minify="1" rel='stylesheet' type='text/css' media='all'>
         <!-- Sweper Slide -->
@@ -190,12 +195,12 @@
                                 </div>
                                 <div class="col-xl-9 col-lg-9 col-md-9">
                                     <div class="header-banner f-right ">
-                                            <?php if ($this->topbanner['banner_top_link'] != ''): ?>
+                                            <?php if ($this->topbanner != null): ?>
                                                 <a href="<?=$this->topbanner['banner_top_link']?>" target="_blank"><img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt=""></a>
                                             <?php endif ?>
-                                            <?php if ($this->topbanner['banner_top_link'] == ''): ?>
+                                            <!-- <?php if ($this->topbanner['banner_top_link'] == ''): ?>
                                                 <img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt="">
-                                            <?php endif ?>
+                                            <?php endif ?> -->
                                     </div>
                                 </div>
                             </div>
@@ -245,10 +250,22 @@
                                                     </ul>
                                                 </li>
                                                 <li><a href="https://studentlife.podomorouniversity.ac.id/">Student Life</a></li>
-                                                <li><a href="https://admission.podomorouniversity.ac.id/">Admission & Registrasi</a></li>
-                                                <li><a href="https://portal.podomorouniversity.ac.id/">Portal</a></li> -->
+                                                <li><a href="https://admission.podomorouniversity.ac.id/">Admission & Registrasi</a></li> -->
+                                                <!-- <li style="float: right;"><a href="https://admission.podomorouniversity.ac.id/"><span class="badge badge-primary" style="padding: 1em 4em;">Online Registration</span></a></li> -->
                                             </ul>
+                                            <!-- <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                                                <ul class="navbar-nav ml-auto">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Right</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Link</a>
+                                                    </li>
+                                                </ul>
+                                            </div> -->
+                                            <!-- <button class="btn btn-primary">Online Registration</button> -->
                                         </nav>
+
                                     </div>
                                 </div>             
                                 <!-- <div class="col-xl-2 col-lg-2 col-md-4">
@@ -652,6 +669,8 @@
                     clickable: true,
                   },
                 });
+
+                
             </script>
             
             
