@@ -1,5 +1,9 @@
+@font-face { font-family: d-din-pro; 
+    src: url('../fonts/D-DIN-PRO-400-Regular.otf'); 
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto",sans-serif;
+    font-family: "d-din-pro",sans-serif;
     color: #415094;
     margin-top: 0px;
     font-style: normal;
@@ -1126,42 +1130,50 @@ svg {
   display: none !important;
 }
 
+.slider {
+  height: 100%;
+  width: auto;
+  background: rgba(21, 26, 24, 0.119);
+  padding-top: 18% !important;
+  padding-left: 2% !important;
+}
+
 
 
 /* default styles here for older browsers. 
-       I tend to go for a 600px - 960px width max but using percentages
-    */
-  @media only screen and (min-width: 960px) {
-      /* styles for browsers larger than 960px; */
-  }
-  @media only screen and (min-width: 1440px) {
-      /* styles for browsers larger than 1440px; */
-  }
-  @media only screen and (min-width: 2000px) {
-      /* for sumo sized (mac) screens */
-  }
-  @media only screen and (max-device-width: 480px) {
-     /* styles for mobile browsers smaller than 480px; (iPhone) */
-  }
-  @media only screen and (device-width: 768px) {
-     /* default iPad screens */
-     .more {
-          margin-left: 0px;
-          line-height: 2.5;
-      }
-      .mi-top-110 {
-          top: -80px;
-          position: relative;
-      }
-  }
-  /* different techniques for iPad screening */
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-    /* For portrait layouts only */
-  }
+  I tend to go for a 600px - 960px width max but using percentages
+  */
+@media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width: 1440px) {
+    /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+    /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media only screen and (device-width: 768px) {
+    /* default iPad screens */
+    .more {
+        margin-left: 0px;
+        line-height: 2.5;
+    }
+    .mi-top-110 {
+        top: -80px;
+        position: relative;
+    }
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
 
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    /* For landscape layouts only */
-  }
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+}
 /* Hide/rearrange for smaller screens */
 @media (max-width: 767px) {
       /* styles for browsers larger than 768px; */

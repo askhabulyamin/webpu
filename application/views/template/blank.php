@@ -31,38 +31,40 @@
         <meta name="twitter:label1" content="Est. reading time" />
         <meta name="twitter:data1" content="12 minutes" />
         <meta name="keywords" content="Podomoro University, University Podomoro, Podomoro, University, Universitas Podomoro, Podomoro Universitas, PU, Pcam,Pu-x,Pucell">
-        <!-- CSS here -->
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/bootstrap.min.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/owl.carousel.min.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/owl.carousel.theme.css" type='text/css' media='all'>
         
-
-        <!-- <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/ticker-style.css" type='text/css' media='all'> -->
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/flaticon.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/slicknav.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/animate.min.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/magnific-popup.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/fontawesome-all.min.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/themify-icons.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/slick.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/nice-select.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>/assets/css/style_pu.css" type='text/css' media='all'>
-        <link data-minify="1" rel='stylesheet' rel="stylesheet" href="<?= base_url();?>/assets/css/wa.css" type='text/css' media='all'>
+        <!-- CSS here -->
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/bootstrap.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/owl.carousel.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/owl.carousel.theme.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/flaticon.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/slicknav.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/animate.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/magnific-popup.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/fontawesome-all.min.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/themify-icons.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/slick.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/nice-select.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/style.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/style_pu.css" type='text/css' media='all'>
+        <link data-minify="1" rel='stylesheet' href="<?= base_url();?>assets/css/wa.css" type='text/css' media='all'>
 
         <!-- CALEANDAR -->
-        <link rel='stylesheet' href="<?= base_url();?>/assets/vendor/caleandar/css/demo.css" type='text/css'>
-        <link rel='stylesheet' href="<?= base_url();?>/assets/vendor/caleandar/css/theme3.css" type='text/css'>
-        <script src="<?= base_url();?>/assets/vendor/caleandar/js/caleandar.js"></script>
+        <link rel='stylesheet' href="<?= base_url();?>assets/vendor/caleandar/css/demo.css" type='text/css'>
+        <link rel='stylesheet' href="<?= base_url();?>assets/vendor/caleandar/css/theme3.css" type='text/css'>
+        <script src="<?= base_url();?>assets/vendor/caleandar/js/caleandar.js"></script>
 
         <!-- AOS Anination -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" data-minify="1" rel='stylesheet' type='text/css' media='all'>
         <!-- Sweper Slide -->
         <link data-minify="1" rel='stylesheet' type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.css" type='text/css' media='all'>
-        <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/amp/css/amp-source-compiled-css.css"> -->
-        <!-- <link rel="stylesheet" href="<?= base_url();?>/assets/css/custom.css"> -->
+        
+        <!-- //Cookie// -->
+        <link rel="stylesheet" href="<?= base_url();?>assets/cookie/src/cookieconsent.css" media="print" onload="this.media='all'">
+        
+        <!-- //Cookie// -->
+        
         <!-- Demo styles -->
-          <style>            
+        <style>            
             .swiper {
               width: 100%;
               height: 100%;
@@ -115,7 +117,8 @@
                 font-weight: 300;
                 font-size: 15px;
             }
-          </style>
+        </style>
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6SQYCYCYX"></script>
         <script>
@@ -128,6 +131,7 @@
    </head>
 
     <body>
+        <!-- <button type="button" data-cc="c-settings">Cookie preferences</button> -->
         <div id="WAButton" style="z-index: 10"></div>
         <!-- Preloader Start -->
         <!-- <div id="preloader-active">
@@ -527,57 +531,65 @@
         </script>
 
         <!-- JS here -->
+        <!-- Cookies -->
+        <script defer src="<?= base_url();?>assets/cookie/src/cookieconsent.js"></script>
+        <script defer src="<?= base_url();?>assets/cookie/cookieconsent-init.js"></script>
+
+        <!-- All JS Custom Plugins Link Here here -->
+        <script src="<?= base_url();?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <!-- Jquery, Popper, Bootstrap -->
+        <script src="<?= base_url();?>assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="<?= base_url();?>assets/js/popper.min.js"></script>
+        <script src="<?= base_url();?>assets/js/bootstrap.min.js"></script>
+        <!-- Jquery Mobile Menu -->
+        <script src="<?= base_url();?>assets/js/jquery.slicknav.min.js"></script>
+
+        <!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="<?= base_url();?>assets/js/owl.carousel.min.js"></script>
+        <script src="<?= base_url();?>assets/js/slick.min.js"></script>
+
+        <!-- Date Picker -->
+        <script src="<?= base_url();?>assets/js/moment.js"></script>
+        <script src="<?= base_url();?>assets/js/gijgo.min.js"></script>
+
+        <!-- One Page, Animated-HeadLin -->
+        <script src="<?= base_url();?>assets/js/wow.min.js"></script>
+        <script src="<?= base_url();?>assets/js/animated.headline.js"></script>
+        <script src="<?= base_url();?>assets/js/jquery.magnific-popup.js"></script>
+
+        <!-- Breaking New Pluging -->
+        <script src="<?= base_url();?>assets/js/jquery.ticker.js"></script>
+        <script src="<?= base_url();?>assets/js/site.js"></script>
+
+        <!-- Scrollup, nice-select, sticky -->
+        <script src="<?= base_url();?>assets/js/jquery.scrollUp.min.js"></script>
+        <script src="<?= base_url();?>assets/js/jquery.nice-select.min.js"></script>
+        <script src="<?= base_url();?>assets/js/jquery.sticky.js"></script>
         
-            <!-- All JS Custom Plugins Link Here here -->
-            <script src="<?= base_url();?>/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-            <!-- Jquery, Popper, Bootstrap -->
-            <script src="<?= base_url();?>/assets/js/vendor/jquery-1.12.4.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/popper.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/bootstrap.min.js"></script>
-            <!-- Jquery Mobile Menu -->
-            <script src="<?= base_url();?>/assets/js/jquery.slicknav.min.js"></script>
+        <!-- contact js -->
+        <script src="<?= base_url();?>assets/js/contact.js"></script>
+        <script src="<?= base_url();?>assets/js/jquery.form.js"></script>
+        <script src="<?= base_url();?>assets/js/jquery.validate.min.js"></script>
+        <script src="<?= base_url();?>assets/js/mail-script.js"></script>
+        <script src="<?= base_url();?>assets/js/jquery.ajaxchimp.min.js"></script>
+        
+        <!-- Jquery Plugins, main Jquery -->    
+        <script src="<?= base_url();?>assets/js/plugins.js"></script>
+        <script src="<?= base_url();?>assets/js/main.js"></script>
+        <script src="<?= base_url();?>assets/js/wa.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
 
-            <!-- Jquery Slick , Owl-Carousel Plugins -->
-            <script src="<?= base_url();?>/assets/js/owl.carousel.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/slick.min.js"></script>
-            <!-- Date Picker -->
-            <script src="<?= base_url();?>/assets/js/moment.js"></script>
-            <script src="<?= base_url();?>/assets/js/gijgo.min.js"></script>
-            <!-- One Page, Animated-HeadLin -->
-            <script src="<?= base_url();?>/assets/js/wow.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/animated.headline.js"></script>
-            <script src="<?= base_url();?>/assets/js/jquery.magnific-popup.js"></script>
+        
 
-            <!-- Breaking New Pluging -->
-            <script src="<?= base_url();?>/assets/js/jquery.ticker.js"></script>
-            <script src="<?= base_url();?>/assets/js/site.js"></script>
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.js"></script>
+        <script>
+            AOS.init();
+        </script>
 
-            <!-- Scrollup, nice-select, sticky -->
-            <script src="<?= base_url();?>/assets/js/jquery.scrollUp.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/jquery.nice-select.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/jquery.sticky.js"></script>
-            
-            <!-- contact js -->
-            <script src="<?= base_url();?>/assets/js/contact.js"></script>
-            <script src="<?= base_url();?>/assets/js/jquery.form.js"></script>
-            <script src="<?= base_url();?>/assets/js/jquery.validate.min.js"></script>
-            <script src="<?= base_url();?>/assets/js/mail-script.js"></script>
-            <script src="<?= base_url();?>/assets/js/jquery.ajaxchimp.min.js"></script>
-            
-            <!-- Jquery Plugins, main Jquery -->    
-            <script src="<?= base_url();?>/assets/js/plugins.js"></script>
-            <script src="<?= base_url();?>/assets/js/main.js"></script>
-
-            <script src="<?= base_url();?>/assets/js/wa.js"></script>
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-            <!-- AOS JS -->
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.js"></script>
-            <script>
-              AOS.init();
-            </script>
-            <script type="text/javascript">
+        
+        <script type="text/javascript">
             moment().format(); 
             document.addEventListener('scroll', function(e) {
                         if (document.body.scrollTop > 400) {
@@ -587,13 +599,13 @@
                         });
 
             if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-             $("#headerid").attr("class", "header-bottom header-sticky");
+            $("#headerid").attr("class", "header-bottom header-sticky");
             }
 
             var base = '<?=base_url();?>';
 
             $(function() {
-              $('#WAButton').floatingWhatsApp({
+            $('#WAButton').floatingWhatsApp({
                 phone: '<?=$this->contactinfo['whatsapp']?>', //WhatsApp Business phone number International format-
                 //Get it with Toky at https://toky.co/en/features/whatsapp.
                 headerTitle: 'PODOMORO UNIVERSITY', //Popup Title
@@ -603,7 +615,7 @@
                 //headerColor: 'crimson', //Custom header color
                 //backgroundColor: 'crimson', //Custom background button color
                 position: "right"    
-              });
+            });
             });
 
             $('.carousel-banner').owlCarousel({
@@ -653,25 +665,22 @@
                         items:8
                     }
                 }
-            })
+            })            
+        </script>
 
-            
-            </script>
-            <!-- Initialize Swiper -->
-            <script>
-                var swiper = new Swiper(".mySwiper", {
-                  slidesPerView: 4,
-                  centeredSlides: true,
-                  spaceBetween: 30,
-                  grabCursor: true,
-                  pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                  },
-                });
-
-                
-            </script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                centeredSlides: true,
+                spaceBetween: 30,
+                grabCursor: true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });                
+        </script>
             
             
     </body>
