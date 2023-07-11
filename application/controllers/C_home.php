@@ -242,6 +242,12 @@
 
         $data['calendar'] = json_encode($calendar);
 
+        $data['faq'] = $this->Custom_model->getdata('db_webpu.faq');
+        $data['process']['cover'] = $this->Custom_model->getdetail('db_webpu.process_document', array('option' => 'cover'))['value'];
+        $data['process']['description'] = $this->Custom_model->getdetail('db_webpu.process_document', array('option' => 'description'))['value'];
+
+        $data['tuition'] = $this->Custom_model->getdata('db_webpu.tuition', array('status' => 1));
+
         $content = $this->load->view('page/V_admission',$data,true);
         parent::template($content);
     }   
