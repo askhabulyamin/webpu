@@ -3,7 +3,7 @@ var cc = initCookieConsent();
 
 // example logo
 var logo = '<img src="'+base+'assets/img/pufavicon.png" alt="Logo" loading="lazy" style="margin-left: -4px; margin-bottom: -5px; height: 35px">';
-var cookie = '!';
+var cookie = '';
 
 // run plugin with config object
 cc.run({
@@ -54,8 +54,8 @@ cc.run({
     languages: {
         'en': {
             consent_modal: {
-                title: cookie + ' We use cookies! ',
-                description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+                title: cookie + ' We use cookies ',
+                description: 'Podomoro University website uses traffic log cookies to identify which pages are being used. This helps us analyse data about web page traffic and improve our website in order to tailor it to customer needs and serve better perfomance. We only use this information for stastical analiysis purposes and then the data is removed from the system. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
                 primary_btn: {
                     text: 'Accept all',
                     role: 'accept_all'              // 'accept_selected' or 'accept_all'
