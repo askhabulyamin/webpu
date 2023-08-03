@@ -127,7 +127,7 @@ for (i=0; i<fromPHP.length; i++)
     var month = fromPHP[i]['date'].substring(6, 7);
     var date = fromPHP[i]['date'].substring(9, 10);
 
-    var obj = {'Date': new Date(year, month-1, date), 'Title': fromPHP[i]['name']};
+    var obj = {'Date': new Date(year, month-1, date), 'Title': fromPHP[i]['name'], 'Link': 'javascript:void(0);'};
 
     events[i] = obj;
 }
