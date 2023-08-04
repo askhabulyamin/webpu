@@ -145,7 +145,7 @@
                 <img src="<?=base_url()?>assets/img/people/lily.webp" class="img-fluid"><br><br>
                 <strong>
                     <font style="color: grey">Lily B. Putri, S.E.</font><br>
-                    Vice Rector I
+                    Vice Rector II
                 </strong>
             </center>
         </div>
@@ -174,9 +174,9 @@
 
         <div class="col-md-3 mb-3">
             <center>
-                <img src="<?=base_url()?>assets/img/people/susy.webp" class="img-fluid"><br><br>
+                <img src="<?=base_url()?>assets/img/people/baskoro.webp" class="img-fluid"><br><br>
                 <strong>
-                    <font style="color: grey">Dr. Susy Fatena Rostiyanti, S.T., M.Sc.</font><br>
+                    <font style="color: grey">Aloysius Baskoro Junianto S.Sn., M.I.D.</font><br>
                     Head of Product Design Program
                 </strong>
             </center>
@@ -234,9 +234,9 @@
 
         <div class="col-md-3 mb-3">
             <center>
-                <img src="<?=base_url()?>assets/img/people/riyo.webp" class="img-fluid"><br><br>
+                <img src="<?=base_url()?>assets/img/people/bl_sanggup_.webp" class="img-fluid"><br><br>
                 <strong>
-                    <font style="color: grey">Riyo H. Prasetyo, S.H., M.Kn.</font><br>
+                    <font style="color: grey">Sanggup Leonard Agustian S.H., M.H.</font><br>
                     Head of Business Law Program
                 </strong>
             </center>
