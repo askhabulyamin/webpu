@@ -22,7 +22,9 @@
 
         $client = new GuzzleHttp\Client();
         $get_api = $this->client_rest->client_get('blogs/TrendingNews',[]);
-        $getAnouncem_api = $this->client_rest->client_get('announcement/listAnnouncement',[]);
+        $getAnouncem_api = $this->client_rest->client_get('announcement/ActiveAnnouncement',[]);
+        // var_dump($getAnouncem_api);
+        // die();
         $getprodi = $this->client_rest->client_get('prodi/ProdiFront',[]);
         $getcalendaracademic = $this->client_rest->client_get('academic/calendaracademic',[]);
 

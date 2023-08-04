@@ -677,7 +677,7 @@
                                         <div class="p-4">
 
                                             <h5>
-                                                <a href="<?=base_url('marketing_activity/').$value['ID']?>"><?= $b['Title']?></a>
+                                                <a href="<?=base_url('marketing_activity/').$value['ID']?>"><?= $value['Title']?></a>
                                             </h5>
 
                                         </div>
