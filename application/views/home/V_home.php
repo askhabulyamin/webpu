@@ -62,10 +62,6 @@
         margin-bottom: 30px !important;
     }
 
-    #navigation {
-        line-height: 60px;
-    }
-
     .modal-header {
         padding: 0px !important;
         border: none
@@ -708,7 +704,6 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Cooperation</h3>
                             <a href="<?=base_url('cooperation')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important">Campus Cooperation Spaces Podomoro University Students</p>
 
                     </div>
                 </div>
