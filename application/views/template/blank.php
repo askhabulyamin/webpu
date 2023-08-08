@@ -149,14 +149,14 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                width: 24%;
+                width: 14%;
                 z-index: 4;
             }
             .bg-kiri{
                 position: absolute;
                 left: 0;
                 top: 0;
-                width: 26%;
+                width: 14%;
                 z-index: 4;
             }
             .foot-bg-kanan{
