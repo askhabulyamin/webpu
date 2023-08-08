@@ -268,7 +268,7 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Gallery</h3>
                             <a href="<?=base_url('gallery')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                        <p style="color:#6c757d !important">Follow our Instagram, so you can still get other interesting information</p>
+                        <!-- <p style="color:#6c757d !important">Follow our Instagram, so you can still get other interesting information</p> -->
 
                     </div>
                 </div>
@@ -311,7 +311,7 @@
                             <h3 class="text-uppercase" data-aos="zoom-out-right">Announcement</h3>
                             <a href="<?=base_url('announcement')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important">We hereby announce to all Podomoro University students</p>
+                            <!-- <p style="color:#6c757d !important">We hereby announce to all Podomoro University students</p> -->
 
                     </div>
                 </div>
@@ -382,10 +382,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle trending-tittle">
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">Events</h3>
+                            <!-- Event -->
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">ACTIVITIES</h3>
                             <a href="<?=base_url('events')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                         </div>
-                            <p style="color:#6c757d !important">Event Campus Podomoro University</p>
+                            <!-- <p style="color:#6c757d !important">Event Campus Podomoro University</p> -->
 
                     </div>
                 </div>
@@ -448,7 +449,7 @@
                         <h3 class="text-uppercase" data-aos="zoom-out-right">Videos</h3>
                         <a href="<?=base_url('videos')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                     </div>
-                    <p style="color:#6c757d !important">Follow our YouTube, so you can still get other interesting information</p>
+                    <!-- <p style="color:#6c757d !important">Follow our YouTube, so you can still get other interesting information</p> -->
 
                 </div>
             </div>
@@ -457,7 +458,7 @@
                     <div class="video-items-active">
                     <?php foreach ($video as $key => $value): ?>
                         <div class="video-items text-center">
-                            <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/hqdefault.jpg" alt="<?= $value['video_name']?>"></a>
+                            <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/mqdefault.jpg" alt="<?= $value['video_name']?>"></a>
                             <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
                     <?php endforeach ?>    
@@ -558,12 +559,12 @@
                     <div class="col-lg-12">
                         <div class="trending-tittle">                            
                         
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">News </h3>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUCEL</h3>
                                 <a class="more" data-aos="zoom-out-right" href="<?=base_url('news')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
                         </div>
-                        <p data-aos="zoom-out-right">Find the latest breaking news and information on the top stories, weather, business, entertainment and more</p>
+                        <!-- <p data-aos="zoom-out-right">Find the latest breaking news and information on the top stories, weather, business, entertainment and more</p> -->
                         
                     </div>
                 </div>
@@ -768,7 +769,7 @@
                         
                         <div class="trending-tittle">                            
                         
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">Worldwide Articles</h3>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUX</h3>
                                 <a class="more" data-aos="zoom-out-right" href="<?=base_url('world_article')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
