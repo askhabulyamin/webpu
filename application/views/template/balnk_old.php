@@ -117,33 +117,6 @@
                 font-weight: 300;
                 font-size: 15px;
             }
-
-            .header {
-                background: url(<?=base_url()?>/assets/img/BG_Header_kiri_Node_PUNew.svg);
-                background-repeat: no-repeat;
-                background-size: 18%;
-                background-position: left;
-                background-attachment: fixed;
-                width: 100%;
-            }  
-
-            .wa{
-                position: fixed;
-                width: 60px;
-                height: 60px;
-                bottom: 117px;
-                right: 90px;
-                background-color: #25d366;
-                color: #FFF;
-                border-radius: 50px;
-                text-align: center;
-                font-size: 30px;
-                z-index: 100;
-            }
-
-            .my-wa{
-                margin-top:16px;
-            }
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -158,27 +131,87 @@
     </head>
 
     <body>
-        <div id="WAButton" style="z-index: 10"></div>       
-        <div class="header"></div>
-        <header class="">
+        <!-- <button type="button" data-cc="c-settings">Cookie preferences</button> -->
+        <div id="WAButton" style="z-index: 10"></div>
+        <!-- Preloader Start -->
+        <!-- <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="assets/img/logo/icon_right.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Preloader Start -->
+
+        
+           
+        <!-- Preloader Start -->
+        <!-- <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="assets/img/logo/icon_right.png" >
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Preloader Start -->
+
+        <header>
             <!-- Header Start -->
            <div class="header-area">
-                <div class="main-header">     
-                    
+                <div class="main-header ">
+                    <!-- <div class="header-top black-bg d-none d-md-block">
+                       <div class="container">
+                           <div class="col-xl-12">
+                                <div class="row d-flex justify-content-between align-items-center">
+                                    <div class="header-info-left">
+                                        <ul>     
+                                            <li><img src="<?=base_url()?>assets/img/icon/header_icon1.png" alt="">34ºc, Sunny </li>
+                                            <li><img src="<?=base_url()?>assets/img/icon/header_icon1.png" alt="">Tuesday, 18th June, 2019</li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-info-right">
+                                        <ul class="header-social">    
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                           <li> <a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+
+                    </div> -->
+            
                     <div class="header-mid d-none d-md-block">
                        <div class="container">
-                            <div class="row d-flex justify-content-center">
+                            <div class="row d-flex align-items-center">
                                 <!-- Logo -->
                                 <div class="col-xl-3 col-lg-3 col-md-3">
                                     <div class="logo">
                                         <a href="<?=base_url()?>"><img src="<?=base_url()?>assets/img/logo/logo_PU.webp" alt="Logo Podomoro University"></a>
                                     </div>
-                                </div>                                
+                                </div>
+                                <div class="col-xl-9 col-lg-9 col-md-9">
+                                    <div class="header-banner f-right ">
+                                            <?php if ($this->topbanner != null): ?>
+                                                <a href="<?=$this->topbanner['banner_top_link']?>" target="_blank"><img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt=""></a>
+                                            <?php endif ?>
+                                            <!-- <?php if ($this->topbanner['banner_top_link'] == ''): ?>
+                                                <img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt="">
+                                            <?php endif ?> -->
+                                    </div>
+                                </div>
                             </div>
                        </div>
                     </div>
-                    <div id="headerid" class="header-bottom">
-                        <div class="container d-flex justify-content-center">
+                   <div id="headerid" class="header-bottom">
+                        <div class="container">
                             <div class="row align-items-center">
                                 <!-- <div class="col-xl-10 col-lg-10 col-md-12 header-flex"> -->
                                 <div class="col-xl-12 col-lg-12 col-md-12 header-flex">
@@ -206,12 +239,50 @@
                                                     
                                                 <?php endforeach ?>
                                                 
+                                                <!-- <li><a href="<?= base_url();?>index.php/about">About Us</a></li>
+                                                <li><a href="<?= base_url();?>reasearch">Reasearch</a></li>
+                                                <li><a href="#">Undergraduate Programs</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="https://hbp.podomorouniversity.ac.id/">Hotel Business</a></li>
+                                                        <li><a href="https://ent.podomorouniversity.ac.id/">Entrepreneurship</a></li>
+                                                        <li><a href="https://acc.podomorouniversity.ac.id/">Accounting</a></li>
+                                                        <li><a href="https://law.podomorouniversity.ac.id/">Business Law</a></li>
+                                                        <li><a href="https://pdp.podomorouniversity.ac.id/">Product Design</a></li>
+                                                        <li><a href="https://arc.podomorouniversity.ac.id/">Architecture</a></li>
+                                                        <li><a href="https://cem.podomorouniversity.ac.id/">Construction Engineering and Management</a></li>
+                                                        <li><a href="https://erp.podomorouniversity.ac.id/">Urban and Regional Planning</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="https://studentlife.podomorouniversity.ac.id/">Student Life</a></li>
+                                                <li><a href="https://admission.podomorouniversity.ac.id/">Admission & Registrasi</a></li> -->
+                                                <!-- <li style="float: right;"><a href="https://admission.podomorouniversity.ac.id/"><span class="badge badge-primary" style="padding: 1em 4em;">Online Registration</span></a></li> -->
                                             </ul>
-                                           
+                                            <!-- <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                                                <ul class="navbar-nav ml-auto">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Right</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Link</a>
+                                                    </li>
+                                                </ul>
+                                            </div> -->
+                                            <!-- <button class="btn btn-primary">Online Registration</button> -->
                                         </nav>
 
                                     </div>
-                                </div>     
+                                </div>             
+                                <!-- <div class="col-xl-2 col-lg-2 col-md-4">
+                                    <div class="header-right-btn f-right d-none d-lg-block">
+                                        <i class="fas fa-search special-tag"></i>
+                                        <div class="search-box">
+                                            <form action="#">
+                                                <input type="text" placeholder="Search">
+                                                
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div> -->
                                 <!-- Mobile Menu -->
                                 <div class="col-12">
                                     <div class="mobile_menu d-block d-md-none"></div>
@@ -227,7 +298,25 @@
        
         <?= $content ?>
 
-        
+        <style>
+        .wa{
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 117px;
+            right: 90px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            z-index: 100;
+        }
+
+        .my-wa{
+            margin-top:16px;
+        }
+        </style>
 
         <!-- <a href="https://api.whatsapp.com/send?phone=<?=$this->contactinfo['whatsapp']?>&text" class="wa" target="_blank">
             <i class="fab fa-whatsapp my-wa" aria-hidden="true"></i>
