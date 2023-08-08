@@ -81,7 +81,7 @@
                           </h5>
                         </div>
 
-                        <div id="collapse<?=$key?>" class="collapse" aria-labelledby="heading<?=$key?>" data-parent="#accordion">
+                        <div id="collapse<?=$key?>" class="collapse <?=$key==0 ? 'show':'';?>" aria-labelledby="heading<?=$key?>" data-parent="#accordion">
                           <div class="card-body">
                             <?=$value['text_faq']?>
                           </div>
@@ -112,7 +112,17 @@
                   </div>
               </div>
             </div>
-
+            
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <div class="header-banner">
+                    <?php if ($this->topbanner != null): ?>
+                        <a href="<?=$this->topbanner['banner_top_link']?>" target="_blank"><img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt=""></a>
+                    <?php endif ?>
+                    <!-- <?php if ($this->topbanner['banner_top_link'] == ''): ?>
+                        <img src="<?=puis_url.$this->topbanner['banner_top_file']?>" alt="">
+                    <?php endif ?> -->
+            </div>
         </div>
     </div>
 </div>

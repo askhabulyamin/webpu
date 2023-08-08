@@ -120,6 +120,9 @@
             display: none;
         }
     }
+    .video-items.card-img {
+        height: 640px;
+    }
     
 </style>
     
@@ -352,15 +355,6 @@
                                             </h5>
                                         </div>
                                 </div>
-                                <!-- <div class="card">
-                                    <span class="day"><?=$day?>-</span>
-                                    <span class="month"><?=$month?>-</span>
-                                    <span class="year"><?=$year?>-</span>
-                                </div>
-                                <div class="weekly-caption">
-                                    <span class="color<?=$no?>"><?= $month ?></span>
-                                    <h5><a href="<?= $b['File']?>"><?= $b['Title']?></a></h5>
-                                </div> -->
                             </div> 
                             <?php }} ?>
                             
@@ -403,13 +397,7 @@
                                         <?php if (empty($value['event_background'])): ?>
                                             <?php $randomimg = array_rand($this->genimg);?>
                                             <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="<?=base_url()?><?=$this->genimg[$randomimg]?>" alt="Card image cap"></a>
-                                            <!-- <div class="overlay rounded">
-                                                <time class="p-3" datetime="">
-                                                    <span class="day font-weight-bold"><?=$day?></span>
-                                                    <span class="month"><?=$month?></span>
-                                                    <span class="year"><?=$year?></span>
-                                                </time>
-                                            </div> -->
+                                          
                                         <?php endif ?>
                                             
                                         <div class="p-4">
@@ -453,28 +441,30 @@
 
                 </div>
             </div>
+        </div>
+        <div class="video-items-active">
+        <?php foreach ($video as $key => $value): ?>
+            <div class="video-items text-center">
+                <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/maxres2.jpg" alt="<?= $value['video_name']?>" style="height: 60rem;"></a>
+            </div>
+        <?php endforeach ?>    
+
+        </div>
+        <div class="container">
+            <!-- section Tittle -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle trending-tittle">
+                        <h3 class="text-uppercase" data-aos="zoom-out-right">Videos</h3>
+                        <a href="<?=base_url('videos')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
+                    </div>
+                    <!-- <p style="color:#6c757d !important">Follow our YouTube, so you can still get other interesting information</p> -->
+
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="video-items-active">
-                    <?php foreach ($video as $key => $value): ?>
-                        <div class="video-items text-center">
-                            <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/mqdefault.jpg" alt="<?= $value['video_name']?>"></a>
-                            <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        </div>
-                    <?php endforeach ?>    
-                        <!-- <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/IdFy7l2hSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/wlxL2ZChX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube-nocookie.com/embed/J99I9i4Osps?origin=www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                        <iframe src="https://www.youtube.com/embed/NRa2h9AJHgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div> -->
-                    </div>
+                    
                 </div>
             </div>
             <div class="video-info">
@@ -497,37 +487,12 @@
                         <?php foreach ($video as $key => $value): ?>
                             <div class="single-video">
                                 <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank">
-                                <img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['video_link'];?>/mqdefault.jpg" alt="<?= $value['video_name']?>"></a>
-                                <!-- <iframe src="https://youtube.com/embed/<?=$value['id']['videoId']?>" title="<?= $value['snippet']['title']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                <img class="p-2 mb-3 card-img rounded-15" src="https://img.youtube.com/vi/<?= $value['video_link'];?>/maxres2.jpg" alt="<?= $value['video_name']?>"></a>
                                 <div class="video-intro">
                                 <a href="https://youtube.com/embed/<?=$value['video_link']?>" target="_blank"><h4><?= $value['video_name']?></h5></a>
                                 </div>
                             </div>
                         <?php endforeach ?>
-                            <!-- <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/IdFy7l2hSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>Fasilitas Podomoro University</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/wlxL2ZChX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>You are The Next Entrepreneur</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube-nocookie.com/embed/J99I9i4Osps?origin=www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>The Next Gen Battle Day 3</h5>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/NRa2h9AJHgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h5>Business Law Program Parents Gathering</h5>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -549,9 +514,6 @@
 
     <!-- Trending Area Start -->
     <section class="trending-area programs pt-100 mi-top pb-100">
-        <!-- <svg class="block-wave gold-1 mi-top-100" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
-        </svg> -->
         <div class="container pt-50 ">
             <div class="trending-main">
                 <!-- Trending Tittle -->
@@ -729,13 +691,6 @@
                                         <?php if (empty($value['CooperationBanner'])): ?>
                                             <?php $randomimg = array_rand($this->genimg);?>
                                             <img class="card-img-top border-img" src="<?=base_url()?><?=$this->genimg[$randomimg]?>" alt="Card image cap">
-                                            <!-- <div class="overlay rounded">
-                                                <time class="p-3" datetime="">
-                                                    <span class="day font-weight-bold"><?=$day?></span>
-                                                    <span class="month"><?=$month?></span>
-                                                    <span class="year"><?=$year?></span>
-                                                </time>
-                                            </div> -->
                                         <?php endif ?>
                                             
                                         <div class="p-4">
@@ -804,32 +759,6 @@
            </div>
         </div>
     </section>           
-    <!--Recent Articles End -->
-    <!--Start pagination -->
-    <!-- <div class="pagination-area pb-45 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    
-                    <div class="single-wrap d-flex justify-content-center">
-                        <?php 
-                            echo $this->pagination->create_links();
-                        ?>
-                        pass <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-start">
-                              <li class="page-item"><a class="page-link" href="#"><span class="flaticon-arrow roted"></span></a></li>
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                              <li class="page-item"><a class="page-link" href="#"><span class="flaticon-arrow right-arrow"></span></a></li>
-                            </ul>
-                          </nav> pass
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End pagination  -->
 
     <section class="recent-articles">
         <div class="">

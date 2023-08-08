@@ -144,6 +144,26 @@
             .my-wa{
                 margin-top:16px;
             }
+            
+            .bg-kanan{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 25%;
+                z-index: 4;
+            }
+            .bg-kiri{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30%;
+                z-index: 4;
+            }
+            .foot-bg-kanan{
+                width: 50%;
+                position: absolute;
+                left: -28%;
+            }
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -159,12 +179,14 @@
 
     <body>
         <div id="WAButton" style="z-index: 10"></div>       
-        <div class="header"></div>
         <header class="">
             <!-- Header Start -->
+            <div class="header-kiri">
+                <img class="bg-kiri" src="<?=base_url()?>assets/img/BG_Header_kiri_Node_PUNew.svg">
+            </div>
            <div class="header-area">
                 <div class="main-header">     
-                    
+
                     <div class="header-mid d-none d-md-block">
                        <div class="container">
                             <div class="row d-flex justify-content-center">
@@ -221,6 +243,9 @@
                    </div>
                 </div>
            </div>
+           <div class="header-kanan">
+                <img class="bg-kanan" src="<?=base_url()?>assets/img/BG_Header_kanan_PUNew.svg">
+            </div>
             <!-- Header End -->
 
         </header> 
@@ -239,6 +264,9 @@
                 <svg class="block-wave bottom mi-top-140" preserveAspectRatio="none" height="87" width="100%" enable-background="new 0 0 1440 87" viewBox="0 0 1440 87" xmlns="http://www.w3.org/2000/svg">
                     <path fill="currentColor" clip-rule="evenodd" d="m-.3 0h715.4 725.1v60.2c-239.6-34.3-480.3-34.3-722.1 0s-481.3 34.3-718.4 0v-60.2z" fill-rule="evenodd"></path>
                 </svg>
+                <div class="footer-kiri">
+                    <img class="foot-bg-kanan" src="<?=base_url()?>assets/img/BG_Node_White.svg">
+                </div>
                 <div class="container">
                     <div class="row d-flex justify-content-between">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
