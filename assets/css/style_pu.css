@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a{
-    line-height: 4;
+    line-height: 2;
 }
 
 time > .day {
@@ -50,6 +50,8 @@ time {
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .preloader .preloader-circle {
