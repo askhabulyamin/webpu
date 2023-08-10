@@ -521,7 +521,7 @@
                     <div class="col-lg-12">
                         <div class="trending-tittle">                            
                         
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUCEL</h3>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUCEL <?=count($recentpucel)?></h3>
                                 <a class="more" data-aos="zoom-out-right" href="<?=base_url('news')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
@@ -536,10 +536,10 @@
                         <div class="trending-top mb-30" data-aos="zoom-in">
                             
                             <div class="trend-top-img">
-                                <img width="100%" src="<?=blogs_url_file?>upload/<?=$response[0]['img']?>" alt="">
+                                <img width="100%" src="<?=blogs_url_file?>upload/<?=$recentpucel[0]['Images']?>" alt="">
                                 <div class="trend-top-cap">
-                                    <span><?=$response[0]['Category']?></span>
-                                    <h2><a href="<?=base_url()?>news/<?=$response[0]['ID_title']?>"><?=$response[0]['Title']?></a></h2>
+                                    <span><?=$recentpucel[0]['Name']?></span>
+                                    <h2><a href="<?=base_url()?>news/<?=$recentpucel[0]['ID_title']?>"><?=$recentpucel[0]['Title']?></a></h2>
                                 </div>
                             </div>
                         </div>
@@ -565,17 +565,16 @@
                     <!-- Riht content -->
                     <div class="col-lg-4">
                         
-                        <?php for ($i=0; $i <= 4; $i++) :?>
-                    
-                        <div class="trand-right-single d-flex" data-aos="zoom-in">
-                            <div class="trand-right-img">
-                                <img src="<?= blogs_url_file; ?>upload/<?= $recentnews[$i]['Images'];?>" alt="">
+                        <?php for ($i=1; $i < count($recentpucel); $i++) :?>
+                            <div class="trand-right-single d-flex" data-aos="zoom-in">
+                                <div class="trand-right-img">
+                                    <img src="<?= blogs_url_file; ?>upload/<?= $recentpucel[$i]['Images'];?>" alt="">
+                                </div>
+                                <div class="trand-right-cap">
+                                    <span class="color<?php echo $no; ?>"><?php echo $recentpucel[$i]['Name'];?></span>
+                                    <h4><a href="<?=base_url()?>news/<?=$recentpucel[$i]['ID_title']?>"><?php echo $recentpucel[$i]['Title'];?></a></h4>
+                                </div>
                             </div>
-                            <div class="trand-right-cap">
-                                <span class="color<?php echo $no; ?>"><?php echo $recentnews[$i]['Name'];?></span>
-                                <h4><a href="<?=base_url()?>news/<?=$recentnews[$i]['ID_title']?>"><?php echo $recentnews[$i]['Title'];?></a></h4>
-                            </div>
-                        </div>
                         <?php endfor; ?>
                                                 
                     </div>

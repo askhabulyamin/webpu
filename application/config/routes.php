@@ -61,6 +61,14 @@ $route['news'] = 'c_information/news';
 $route['news/category'] = 'c_information/news_category';
 $route['news/(:any)'] = 'c_information/news/$1';
 
+$route['pucel'] = 'c_information/pucel';
+$route['pucel/category'] = 'c_information/news_category/pucel';
+$route['pucel/(:any)'] = 'c_information/pucel/$1';
+
+$route['pu-x'] = 'c_information/pux';
+$route['pu-x/category'] = 'c_information/news_category/pux';
+$route['pu-x/(:any)'] = 'c_information/pux/$1';
+
 $route['marketing_activity'] = 'c_information/marketing_activity';
 $route['marketing_activity/(:any)'] = 'c_information/marketing_activity/$1';
 
