@@ -34,6 +34,9 @@
 
         $pucellist = $this->client_rest->client_get('blogs/ListPucel',[]);
         $recentpucel = $this->client_rest->client_get('blogs/RecentPucel',[]);
+
+        $puxlist = $this->client_rest->client_get('blogs/ListPux',[]);
+        $recentpux = $this->client_rest->client_get('blogs/RecentPux',[]);
  
         $events = $this->client_rest->client_get('events/EventsList',['page' => 0, 'limit' => 10]);
         $eventblog = $this->client_rest->client_get('blogs/EventsBlog',['page' => 0, 'limit' => 5]);
@@ -88,6 +91,10 @@
         // $data['recentnews'] = $recentnews;
         $data['pucellist'] = $pucellist;
         $data['recentpucel'] = $recentpucel;
+        
+        $data['puxlist'] = $puxlist;
+        $data['recentpux'] = $recentpux;
+
         $data['ProdiList'] = $getprodi[0];
         $data['ProdiSlider'] = $getprodi[1];
         $data['ProdiAbout'] = $getprodi[2];
