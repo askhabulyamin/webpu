@@ -41,61 +41,48 @@
     .purple-gradient {
         background: linear-gradient(88deg, #034087,#d71921, #fc3f00) !important;
     }
+    .clear {
+        clear: both;
+    }
 </style>
-
-<div class="container mt-5 mb-5">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h4>Events List</h4><hr>
-            
-            <div class="row">
-                <?php foreach ($events as $key => $value): ?>
-
-                <?php
-                    $getStart = $value['start_date'];
-                    $newDate = date("d-M-Y", strtotime($getStart));
-                    // $fromat = moment($getStart).format("D-MM-YYYY HH:mm");
-                    $day = date("d",strtotime($getStart));
-                    $month = date("F",strtotime($getStart));
-                    $year = date("Y",strtotime($getStart));
-                ?>
-
-                <div class="col-md-6 mb-3">
-                    <div class="card shadow">
-                        <div class="card-body p-0">
-                            <div class="row">
-                                <div class="col-5">
-                                    <time class="p-3" datetime="">
-                                        <span class="day font-weight-bold"><?=$day?></span>
-                                        <span class="month"><?=$month?></span>
-                                        <span class="year"><?=$year?></span>
-                                    </time>
-                                </div>
-                                <div class="col-7 pt-3 pr-5">
-                                    <h4><?= $value['event_name']?></h4>
-                                    <hr style="margin: 0px 0px;">
-                                    <strong><?=tgl_ina($value['start_date'])?> - <?=tgl_ina($value['end_date'])?></strong>
-                                </div>
-                            </div>
-                        </div>
+            <h4 class="pt-4">ACTIVITIES</h4><hr>
+                
+            <?php foreach ($events as $key => $value): ?>
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <img src="<?=blogs_url_file.'upload/'.$value['Images']?>" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <a href="<?=base_url()?>events/<?=$value['ID_title']?>"><strong><h5><?=$value['Title']?></h5></strong></a>
+                        <small><?=tgl_ina($value['CreateAT'])?></small>
+                        <?php 
+                            $explodetext = explode('.', $value['Images']) 
+                        ?>
+                        <?php if ($explodetext[1] != 'gif'): ?>
+                            <!-- <p><?=text_panjang(htmlspecialchars($value['Content']))?></p> -->
+                        <?php endif ?>
+                        <br>
+                        <span class="badge badge-primary"><?=$value['Name']?></span>
+                        <!-- <p><?= substr($value['Content'],0,12); ?></p> -->
                     </div>
                 </div>
-                <?php endforeach ?>
-            </div>
-            
+            <?php endforeach ?>
+
+            <nav>
+              <ul class="pagination">
+                <?php if (!empty($page)): ?>
+                    <?php if ($page > 1): ?>
+                        <li class="page-item"><a class="page-link" href="<?=base_url()?>events?page=<?=$page-1?>"><</a></li>
+                    <?php endif ?>
+                <?php endif ?>
+                <li class="page-item"><a class="page-link" href="<?=base_url()?>events?page=<?=$page+1?>">></a></li>
+              </ul>
+            </nav>
+
         </div>
     </div>
-    <center>
-        <nav>
-        <center>
-          <ul class="pagination mt-5 text-center">
-            <?php if (!empty($page)): ?>
-                <?php if ($page > 1): ?>
-                    <li class="page-item"><a class="page-link" href="<?=base_url()?>news?page=<?=$page-1?>"><</a></li>
-                <?php endif ?>
-            <?php endif ?>
-            <li class="page-item"><a class="page-link" href="<?=base_url()?>news?page=<?=$page+1?>">></a></li>
-          </ul>
-        </nav>
-    </center>
 </div>
+

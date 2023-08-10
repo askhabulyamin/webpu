@@ -1,20 +1,31 @@
 <!doctype html>
-<html amp lang="en">
-
+<html ⚡ amp lang="en">
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element=”amp-analytics” src=”https://cdn.ampproject.org/v0/amp-analytics-0.1.js”></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
   <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <link rel="shortcut icon" href="<?=base_url()?>assets/img/pufavicon.png" type="image/png">
   <title>News | Podomoro University</title>
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="https://web.podomorouniversity.ac.id/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
    crossorigin="anonymous">
+   <script type=”application/ld+json”>
+    {
+    “@context”: “http://schema.org”,
+    “@type”: “NewsArticle”,
+    “headline”: “Open-source framework for publishing content”,
+    “datePublished”: “2015-10-07T12:02:41Z”,
+    “image”: [
+    “logo.jpg”
+    ]
+    }
+    </script>
   <style amp-boilerplate>
     body {
       -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -72,7 +83,8 @@
         visibility: visible
       }
     }
-  </style><noscript>
+  </style>
+  <noscript>
     <style amp-boilerplate>
       body {
         -webkit-animation: none;
@@ -82,7 +94,7 @@
       }
     </style>
   </noscript>
-  <style amp-custom=''>
+  <style amp-custom>
     * {
       box-sizing: border-box;
       font-family: 'Roboto';
@@ -676,7 +688,7 @@
         <p style="float: left">&#169; 2023 <a href="<?=base_url()?>">Podomoro University</a>. All Rights Reserved.</p>
         <p style="float: right">
           <?php foreach ($this->footer_nav as $key => $value): ?>
-            <a href="<?=$value['link_footer']?>"><?=$value['name_footer_nav']?></a> 
+            <a target="_blank" href="<?=$value['link_footer']?>"><?=$value['name_footer_nav']?></a> 
             <?php if ($key+1 != count($this->footer_nav)): ?>
               |
             <?php endif ?>
@@ -686,5 +698,9 @@
     </div>
   </footer>
 </body>
-
+<amp-analytics type=”googleanalytics”> 
+  <script async custom-element=”amp-analytics” src=”https://cdn.ampproject.org/v0/amp-analytics-0.1.js”></script>
+  <script type=”application/json”> { “vars”: { “account”: “UA-XXXXX-Y” }, “triggers”: { “trackPageview”: { “on”: “visible”, “request”: “pageview” } } } 
+  </script> 
+</amp-analytics>
 </html>

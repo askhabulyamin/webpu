@@ -445,20 +445,20 @@
         <div class="video-items-active">
         <?php foreach ($video as $key => $value): ?>
             <div class="video-items text-center">
-                <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/maxres2.jpg" alt="<?= $value['video_name']?>" style="height: 60rem;"></a>
+                <a href="https://youtube.com/embed/<?=$value['video_link']?>" style="cursor:pointer" target="_blank"><img class="card-img" src="https://img.youtube.com/vi/<?=$value['video_link']?>/maxres2.jpg" alt="<?= $value['video_name']?>" style="height: 50%;"></a>
             </div>
         <?php endforeach ?>    
 
         </div>
         <div class="container">
             <!-- section Tittle -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle trending-tittle">
                         <h3 class="text-uppercase" data-aos="zoom-out-right">Videos</h3>
                         <a href="<?=base_url('videos')?>" class="more" data-aos="zoom-out-right">More <i class="fas fa-arrow-right fz"></i></a>
                     </div>
-                    <!-- <p style="color:#6c757d !important">Follow our YouTube, so you can still get other interesting information</p> -->
+                    <p style="color:#6c757d !important">Follow our YouTube, so you can still get other interesting information</p>
 
                 </div>
             </div>
@@ -466,7 +466,7 @@
                 <div class="col-12">
                     
                 </div>
-            </div>
+            </div> -->
             <div class="video-info">
                 <div class="row">
                     <div class="col-lg-6">

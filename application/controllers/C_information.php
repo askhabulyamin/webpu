@@ -191,19 +191,22 @@
                 }
             }
 
-            $data['events'] = $this->client_rest->client_get('events/EventsList',['page' => $page]);
+            $data['events'] = $this->client_rest->client_get('blogs/EventsBlog',['page' => $page, 'limit' => 5]);
 
             $content = $this->load->view('page/V_events',$data,true);
             parent::template($content);
         }
         else
         {
-            $data['detail'] = $this->client_rest->client_get('announcement/DetailAnnouncement',['id_announcement' => $id_announcement]);
-            
-            $data['recent_announcement'] = $this->client_rest->client_get('announcement/RecentAnnouncement',[]);
+            $data = array();
 
-            $content = $this->load->view('page/V_announcement_detail',$data,true);
-            parent::template($content);
+            $data['detail'] = $this->client_rest->client_get('blogs/DetailNews',['id_title' => $id_event]);
+
+            $data['trend_cat'] = $this->client_rest->client_get('blogs/TrendingCategory',[]);
+
+            $data['recent_news'] = $this->client_rest->client_get('blogs/RecentNews',[]);
+
+            $this->load->view('page/V_news_detail',$data);
         }  
     }
 
@@ -404,6 +407,18 @@
             $this->load->view('page/V_news_detail',$data);
         }    
     }   
+
+    public function contact()
+    {
+        $data = array();
+
+        $content = $this->load->view('page/V_contact',$data,true);
+        parent::template($content);
+    }
+
+    
   }
+
+  
 
 ?>
