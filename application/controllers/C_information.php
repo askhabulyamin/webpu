@@ -37,7 +37,9 @@
 
     public function index()
     {
-        $data = array();
+        $findinformation = $this->Custom_model->getdetail('db_webpu.menu_nav', array('name_menu_nav' => 'Information'));
+        $findsubmenu = $this->Custom_model->getdata('db_webpu.submenu_nav', array('id_menu_nav' => $findinformation['id_menu_nav']), 'name_submenu_nav', 'ASC');
+        $data = array('submenu' => $findsubmenu);
 
         $content = $this->load->view('page/V_information',$data,true);
         parent::template($content);
@@ -287,7 +289,7 @@
         }  
     }
 
-    public function news_category()
+    public function news_category($kat = false)
     { 
         $data = array();
 
@@ -295,10 +297,24 @@
 
         $data['trend_cat'] = $this->client_rest->client_get('blogs/TrendingCategory',[]);
 
-        $data['recent_news'] = $this->client_rest->client_get('blogs/RecentNews',[]);
+        if ($kat == 'pucel') 
+        {
+            $data['recent_pucel'] = $this->client_rest->client_get('blogs/RecentPucel',[]);
+            $content = $this->load->view('page/V_pucel_category',$data,true);
+        }
+        if ($kat == 'pux') 
+        {
+            $data['recent_pux'] = $this->client_rest->client_get('blogs/RecentPux',[]);
+            $content = $this->load->view('page/V_pux_category',$data,true);
+        }
+        if ($kat == false) 
+        {
+            $data['recent_news'] = $this->client_rest->client_get('blogs/RecentNews',[]);
+            $content = $this->load->view('page/V_news_category',$data,true);
+        }
 
-        $content = $this->load->view('page/V_news_category',$data,true);
         parent::template($content);
+        
     } 
 
     public function news($id_title = false)
@@ -355,6 +371,120 @@
             $data['recent_news'] = $this->client_rest->client_get('blogs/RecentNews',[]);
 
             $this->load->view('page/V_news_detail',$data);
+        }    
+    }   
+
+    public function pucel($id_title = false)
+    { 
+        if ($id_title == false) 
+        {
+            $data = array();
+
+            $data['page'] = 1;
+
+            $pageget = $this->input->get('page');
+            $page = 0;
+            if (!empty($pageget)) 
+            {
+                if ($pageget == 1) 
+                {
+                    $page = 0;
+                }
+                else
+                {
+                    $page = $pageget * 5 - 5;
+                    $data['page'] = $pageget;
+                }
+            }
+
+            $category = false;
+            if (!empty($this->input->get('category')))
+            {
+                $findcategory = $this->Custom_model->getdetail('db_blogs.category', array('Name' => $this->input->get('category')));
+
+                if (!empty($findcategory)) 
+                {
+                    $category = $findcategory['ID_category'];
+                }
+            }
+
+            $data['list'] = $this->client_rest->client_get('blogs/ListPucel',['page' => $page, 'category' => $category]);
+
+            $data['trend_cat'] = $this->client_rest->client_get('blogs/TrendingCategory',[]);
+
+            $data['recent_pucel'] = $this->client_rest->client_get('blogs/RecentPucel',[]);
+
+            $content = $this->load->view('page/V_pucel_list',$data,true);
+            parent::template($content);
+        }
+        else
+        {
+            $data = array();
+
+            $data['detail'] = $this->client_rest->client_get('blogs/DetailNews',['id_title' => $id_title]);
+
+            $data['trend_cat'] = $this->client_rest->client_get('blogs/TrendingCategory',[]);
+
+            $data['recent_pucel'] = $this->client_rest->client_get('blogs/RecentPucel',[]);
+
+            $this->load->view('page/V_pucel_detail',$data);
+        }    
+    }  
+
+    public function pux($id_title = false)
+    { 
+        if ($id_title == false) 
+        {
+            $data = array();
+
+            $data['page'] = 1;
+
+            $pageget = $this->input->get('page');
+            $page = 0;
+            if (!empty($pageget)) 
+            {
+                if ($pageget == 1) 
+                {
+                    $page = 0;
+                }
+                else
+                {
+                    $page = $pageget * 5 - 5;
+                    $data['page'] = $pageget;
+                }
+            }
+
+            $category = false;
+            if (!empty($this->input->get('category')))
+            {
+                $findcategory = $this->Custom_model->getdetail('db_blogs.category', array('Name' => $this->input->get('category')));
+
+                if (!empty($findcategory)) 
+                {
+                    $category = $findcategory['ID_category'];
+                }
+            }
+
+            $data['list'] = $this->client_rest->client_get('blogs/ListPux',['page' => $page, 'category' => $category]);
+
+            $data['trend_cat'] = $this->client_rest->client_get('blogs/TrendingCategory',[]);
+
+            $data['recent_pux'] = $this->client_rest->client_get('blogs/RecentPux',[]);
+
+            $content = $this->load->view('page/V_pux_list',$data,true);
+            parent::template($content);
+        }
+        else
+        {
+            $data = array();
+
+            $data['detail'] = $this->client_rest->client_get('blogs/DetailNews',['id_title' => $id_title]);
+
+            $data['trend_cat'] = $this->client_rest->client_get('blogs/TrendingCategory',[]);
+
+            $data['recent_pux'] = $this->client_rest->client_get('blogs/RecentPux',[]);
+
+            $this->load->view('page/V_pux_detail',$data);
         }    
     }   
 

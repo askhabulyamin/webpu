@@ -51,7 +51,7 @@
             <div class="row">
                 <?php foreach ($categories as $key => $value): ?>
                     <div class="col-md-4 mb-3 text-center">
-                        <a href="<?=base_url()?>news?category=<?=$value['Name']?>" class="btn btn-primary w-100"><?=$value['Name']?></a>
+                        <a href="<?=base_url()?>pu-x?category=<?=$value['Name']?>" class="btn btn-primary w-100"><?=$value['Name']?></a>
                     </div>
                 <?php endforeach ?>
             </div>
@@ -60,15 +60,15 @@
         <div class="col-md-4">
             <div class="card shadow">
                 <div class="card-body">
-                    <h4>Recent News</h4><hr>
-                    <?php foreach ($recent_news as $key => $value): ?>
+                    <h4>Recent PU-X</h4><hr>
+                    <?php foreach ($recent_pux as $key => $value): ?>
                         <div class="row mb-6">
                             <div class="col-md-4">
                                 <img src="<?=blogs_url_file.'uploads/'.$value['Images']?>" class="img-fluid">
                             </div>
                             <div class="col-md-6">
                                 <span class="badge badge-primary"><?=$value['Name']?></span>
-                                <a href="<?=base_url()?>news/<?=$value['ID_title']?>"><strong><h5><?=$value['Title']?></h5></strong></a>
+                                <a href="<?=base_url()?>pu-x/<?=$value['ID_title']?>"><strong><h5><?=$value['Title']?></h5></strong></a>
                             </div>
                         </div>
                     <?php endforeach ?>
@@ -79,9 +79,9 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h4>Trending Categories</h4><hr>
-                    <a href="<?=base_url()?>news/category"><span class="badge badge-primary">All Categories</span></a><br>
+                    <a href="<?=base_url()?>pu-x/category"><span class="badge badge-primary">All Categories</span></a><br>
                     <?php foreach ($trend_cat as $key => $value): ?>
-                        <a href="<?=base_url()?>news?category=<?=$value['Name']?>"><span class="badge badge-primary"><?=$value['Name']?></span>
+                        <a href="<?=base_url()?>pu-x?category=<?=$value['Name']?>"><span class="badge badge-primary"><?=$value['Name']?></span>
                     <?php endforeach ?>
                 </div>
             </div>
