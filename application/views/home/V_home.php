@@ -559,7 +559,7 @@
                     <div class="col-lg-12">
                         <div class="trending-tittle">                            
                         
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUCEL <?=count($recentpucel)?></h3>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUCEL</h3>
                                 <a class="more" data-aos="zoom-out-right" href="<?=base_url('news')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
@@ -573,13 +573,16 @@
                         <!-- Trending Top -->
                         <div class="trending-top mb-30" data-aos="zoom-in">
                             
-                            <div class="trend-top-img">
-                                <img width="100%" src="<?=blogs_url_file?>upload/<?=$recentpucel[0]['Images']?>" alt="">
-                                <div class="trend-top-cap">
-                                    <span><?=$recentpucel[0]['Name']?></span>
-                                    <h2><a href="<?=base_url()?>news/<?=$recentpucel[0]['ID_title']?>"><?=$recentpucel[0]['Title']?></a></h2>
+                            <?php if (!empty($recentpucel)): ?>
+                                <div class="trend-top-img">
+                                    <img width="100%" src="<?=blogs_url_file?>upload/<?=$recentpucel[0]['Images']?>" alt="">
+                                    <div class="trend-top-cap">
+                                        <span><?=$recentpucel[0]['Name']?></span>
+                                        <h2><a href="<?=base_url()?>news/<?=$recentpucel[0]['ID_title']?>"><?=$recentpucel[0]['Title']?></a></h2>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endif ?>
+                                
                         </div>
                         <!-- Trending Bottom -->
                         <div class="trending-bottom">
@@ -768,8 +771,8 @@
                         
                         <div class="trending-tittle">                            
                         
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">PUX</h3>
-                                <a class="more" data-aos="zoom-out-right" href="<?=base_url('world_article')?>"> More <i class="fas fa-arrow-right fz"></i>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">PU-X</h3>
+                                <a class="more" data-aos="zoom-out-right" href="<?=base_url('pu-x')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
                         </div>
@@ -780,19 +783,19 @@
                         <div class="recent-active dot-style d-flex dot-style" >
                             <?php 
 
-                            if (is_array($newsapi) || is_object($newsapi))
+                            if (is_array($puxlist) || is_object($puxlist))
                             {   
                                 $no = 1;
                                 $array = array();
-                                foreach($newsapi as $key => $value){
+                                foreach($puxlist as $key => $value){
                             ?>
                             <div class="single-recent mb-100" data-aos="zoom-in-up">
                                 <div class="what-img">
-                                    <img src="<?= $value['urlToImage']; ?>" alt="<?= $value['description']; ?>">
+                                    <img src="<?= blogs_url_file.'upload/'.$value['Images']; ?>" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <span class="color<?= $no;?>"><?= $value['author']; ?></span>
-                                    <h5><a target="_blank" href="<?= $value['url']?>"><?= $value['title'];?></a></h5>
+                                    <span class="color<?= $no;?>"><?=tgl_ina($value['CreateAT'])?></span>
+                                    <h5><a target="_blank" href="<?= base_url('pu-x/detail/').$value['ID_title']?>"><?= $value['Title'];?></a></h5>
                                 </div>
                             </div>
                             <?php $no++;}} ?>
