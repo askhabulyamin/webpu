@@ -119,7 +119,7 @@ cc.run({
                 blocks: [
                     {
                         title: 'Cookie usage',
-                        description: LOREM_IPSUM + ' <a href="#" class="cc-link">Privacy Policy</a>.'
+                        description: LOREM_IPSUM + ' <a href="https://portal.podomorouniversity.ac.id/privacy_policy_pcam" class="cc-link">Privacy Policy</a>.'
                     }, {
                         title: 'Strictly necessary cookies',
                         description: LOREM_IPSUM + LOREM_IPSUM + "<br><br>" + LOREM_IPSUM + LOREM_IPSUM,
@@ -156,7 +156,7 @@ cc.run({
                         ]
                     }, {
                         title: 'More information',
-                        description: LOREM_IPSUM + ' <a class="cc-link" href="https://orestbida.com/contact/">Contact me</a>.',
+                        description: LOREM_IPSUM + ' <a class="cc-link" href="https://web.podomorouniversity.ac.id/contact">Contact me</a>.',
                     }
                 ]
             }

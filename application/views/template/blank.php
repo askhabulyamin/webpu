@@ -255,7 +255,7 @@
         </header> 
        
         <?= $content ?>
-
+        <div class="clearfix"></div>
         
 
         <!-- <a href="https://api.whatsapp.com/send?phone=<?=$this->contactinfo['whatsapp']?>&text" class="wa" target="_blank">
@@ -279,11 +279,6 @@
                                     <div class="footer-logo">
                                         <a href="<?=base_url()?>"><img class="w-100" src="<?=base_url()?>assets/img/logo/log_PU-w.webp" alt=""></a>
                                     </div>
-                                   <!--  <div class="footer-tittle">
-                                        <div class="footer-pera">
-                                            <p>Founded by Yayasan Pendidikan Agung Podomoro, and with full support from the leading holding company, Agung Podomoro Group, has made Podomoro University a perfect place to study. We develop industry-driven curriculum framework and teaching methodology through work-based learning, hence the students will be equipped with knowledge and skills that are required highly and consistent with the needs of business and industry.</p>
-                                        </div>
-                                    </div> -->
                                     
                                 </div>
                             </div>
@@ -300,16 +295,6 @@
                                     <strong>Email:</strong> <span id="Email"><?=$this->contactinfo['email']?></span><br>
                                     
                                 </p>
-                                <!-- <div class="instagram-gellay">
-                                    <ul class="insta-feed">
-                                        <li><a href="#"><img src="assets/img/post/instra1.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/post/instra2.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/post/instra3.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/post/instra4.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/post/instra5.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/post/instra6.jpg" alt=""></a></li>
-                                    </ul>
-                                </div> -->
                             </div>
                         </div>
                     </div>

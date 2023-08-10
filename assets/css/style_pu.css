@@ -364,7 +364,10 @@ a, button {
 
 @media (max-width: 739px),(max-height: 699px){
     .precis.above-fold{
-        display:none
+        display:none;
+    }
+    .video-items-active {
+        display:none;
     }
 }
 
