@@ -7,8 +7,8 @@
         margin-top: 0px;
         }
     .bg-calender {
-        /*background-image: url(assets/img/15273.jpg); local*/ 
-        background-image: url(<?=puis_url?>uploads/marcom/15273.jpg); 
+        background-image: url(assets/img/15273.jpg);
+		/* background-image: url(<?=puis_url?>uploads/marcom/15273.jpg);  */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
