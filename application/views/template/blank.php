@@ -538,7 +538,7 @@
                 //Get it with Toky at https://toky.co/en/features/whatsapp.
                 headerTitle: 'PODOMORO UNIVERSITY', //Popup Title
                 popupMessage: 'Hello, how can we help you?', //Popup Message
-                showPopup: true, //Enables popup display
+                showPopup: false, //Enables popup display
                 buttonImage: '<img class="p-2" src="'+base+'assets/img/wa-1.png" />', //Button Image
                 //headerColor: 'crimson', //Custom header color
                 //backgroundColor: 'crimson', //Custom background button color

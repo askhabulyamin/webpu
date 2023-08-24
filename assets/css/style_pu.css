@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #415094;
     margin-top: 0px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: normal;
 }
 
@@ -501,7 +501,7 @@ a, button {
 .calend {
     background: #faf9f7d9;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .list-timeline {
   margin: 0;
@@ -513,7 +513,7 @@ a, button {
   width: 3px;
   background: #ccc;
   position: absolute;
-  left: 5px;
+  left: 4px;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -856,7 +856,7 @@ a, button {
 }
 
 .list-timeline.list-timeline-primary .list-timeline-item:before {
-    border-color: #bd2130;
+    border-color: #14388c;
 }
 
 .page-holder {

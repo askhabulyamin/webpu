@@ -7,7 +7,8 @@
         margin-top: 0px;
         }
     .bg-calender {
-        background-image: url(assets/img/bg_calender.png);
+        /*background-image: url(assets/img/15273.jpg); local*/ 
+        background-image: url(<?=puis_url?>uploads/marcom/15273.jpg); 
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -27,7 +28,10 @@
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     } 
-
+    .text-blue {
+        color: #14388c!important;
+        font-weight: 700;
+    }
     .youtube-area .video-info .video-caption .top-caption{
         padding-top: 75px;
     } 
@@ -98,6 +102,21 @@
         display: none !important;
     }
 
+    .youtube-area .testmonial-nav button.slick-next {
+        left: -530px !important;
+    }
+
+    .youtube-area .testmonial-nav button {
+        left: -600px !important;
+    }
+    .youtube-area .video-info .video-caption .top-caption {
+        background: none;
+    }
+    .youtube-area .video-info .video-caption {
+        position: relative;
+        top: -40px;
+    }
+
     @media (max-width: 767px) {
         .prodi {
             height: 120px !important;
@@ -120,8 +139,15 @@
             display: none;
         }
     }
+
     .video-items.card-img {
         height: 640px;
+    }
+    .bor-5{
+        border-radius: 5px !important;
+    }
+    .floating-wpp:hover .floating-wpp-button {
+        padding: 10px;
     }
     
 </style>
@@ -221,20 +247,20 @@
                     
                 </div>
             </div>
-            <div class="row bg-calender card mb-100">
-                
-                <div class="col-md-6 ml-auto">
-
+            <div class="row">
+                <div class="col-md-6 ml-auto  bg-calender">
+                   
+                </div>
+                <div class="col-md-6 ml-auto ">
+                     <div class="section-tittle mb-30 p-3">
+                        <h1 class="text-uppercase text-blue" data-aos="fade-right" style="font-size: 40px;">Calender Academic </h1>
+                        <h2><small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                          <?=$semester_name?>
+                        </small>
+                        </h2>
+                        <p class="text-blue">Podomoro University Academic Calendars</p>
+                    </div>
                     <div class="p-5">
-                        
-                        <div class="section-tittle mb-30">
-                            <h3 class="text-uppercase text-white" data-aos="fade-right" >Calender Academic  /<small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
-
-                              <?=$semester_name?>
-                            </small>
-                            </h3>
-                            <p class="text-white">Podomoro University Academic Calendars</p>
-                        </div>
                         <!-- Days -->
                         <div class="row">
                           <div class="col-lg-12 mb-3" id="Friday, Nov 13th">
@@ -243,9 +269,9 @@
 
                                <?php foreach ($calendar as $key => $value): ?>
                                      <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-aos="flip-up">
-                                       <div class="calend my-0 text-dark flex-fw text-sm text-uppercase" style="font-size: 14px;">
-                                            <span class="text-inverse op-8"><i class="fa-calender"></i><?=tgl_ina($value['date_start'])?> - <?=tgl_ina($value['date_end'])?></span>
+                                       <div class="calend my-0 flex-fw text-sm text-uppercase" style="font-size: 14px;">                                            
                                             <h5 style="text-size:20px"><?=$value['name']?></h5>
+                                            <span class="text-inverse op-8"><i class="fa-calender"></i><?=tgl_ina($value['date_start'])?> - <?=tgl_ina($value['date_end'])?></span>
                                         </div>
                                      </li>
                                <?php endforeach ?>
@@ -276,7 +302,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="background: #f2f2f2;">
                         <style>
                             #es-lightbox .es-poweredby{
                                 display: none !important;
@@ -338,7 +364,7 @@
 
                             ?>
                             <div class="weekly-single active">
-                                <div class="card" data-aos="fade-right"
+                                <div class="card bor-5" data-aos="fade-right"
                                                      data-aos-offset="300"
                                                      data-aos-easing="ease-in-sine">
                                         <div class="">
@@ -390,7 +416,7 @@
                             <?php foreach ($events as $key => $value): ?>
                                
                                 <div class="weekly2-single active">
-                                    <div class="card">
+                                    <div class="card bor-5">
                                         <?php if (!empty($value['event_background'])): ?>
                                             <a class="pop" style="cursor:pointer"><img class="card-img-top border-img" src="<?=$value['event_background']?>" alt="Card image cap"></a>
                                         <?php endif ?>
@@ -513,7 +539,7 @@
     </div>
 
     <!-- Trending Area Start -->
-    <section class="trending-area programs pt-100 mi-top pb-100">
+    <section class="trending-area pt-100 mi-top pb-100">
         <div class="container pt-50 ">
             <div class="trending-main">
                 <!-- Trending Tittle -->
@@ -624,7 +650,7 @@
                                     $year = date("Y",strtotime($getStart));
                                 ?>
                                 <div class="weekly2-single">
-                                    <div class="card"  data-aos="flip-up">
+                                    <div class="card bor-5"  data-aos="flip-up">
                                         <?php if (!empty($value['Banner'])): ?>
                                             <img class="card-img-top border-img" src="<?=puis_url?>uploads/admisi/banner/<?=$value['Banner']?>" alt="">
                                             
@@ -686,7 +712,7 @@
                                     $year = date("Y",strtotime($getStart));
                                 ?>
                                 <div class="weekly2-single">
-                                    <div class="card">
+                                    <div class="card bor-5">
                                         <?php if (!empty($value['CooperationBanner'])): ?>
                                             <img class="card-img-top border-img" src="<?=puis_url?><?=$value['CooperationBanner']?>" alt="Card image cap">
                                         <?php endif ?>
