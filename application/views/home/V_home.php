@@ -248,10 +248,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 ml-auto  bg-calender">
-                   
+                <div class="col-md-6 ml-auto bg-calender d-none d-md-block">                   
                 </div>
-                <div class="col-md-6 ml-auto ">
+                <div class="col-md-6 ml-auto">
                      <div class="section-tittle mb-30 p-3">
                         <h1 class="text-uppercase text-blue" data-aos="fade-right" style="font-size: 40px;">Calender Academic </h1>
                         <h2><small class="mt-0 mb-3 text-dark op-8 font-weight-bold">
@@ -752,7 +751,7 @@
                         
                         <div class="trending-tittle">                            
                         
-                            <h3 class="text-uppercase" data-aos="zoom-out-right">PU-X</h3>
+                            <h3 class="text-uppercase" data-aos="zoom-out-right">Podomoro University Xpertise Center(PU-X)</h3>
                                 <a class="more" data-aos="zoom-out-right" href="<?=base_url('pu-x')?>"> More <i class="fas fa-arrow-right fz"></i>
                             </a> 
                                      
