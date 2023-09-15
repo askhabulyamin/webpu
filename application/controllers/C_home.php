@@ -78,14 +78,14 @@
 
         $currentPage = 01;
         $maxpage = 10;
-        $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news&page='.$currentPage.'&pageSize='.$maxpage.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
+        // $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news&page='.$currentPage.'&pageSize='.$maxpage.'&apiKey=96b7521327044529a95b04762e15d43e',[]);
 
         // $ig = $client->request('GET', 'https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,permalink,thumnail_url&limit=8&access_token='.ig_token,[]);
 
         // $yt = $client->request('GET', 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.channel_id.'&maxResults=4&key='.ytkey.'',[]);
 
         // $response = $client->request('GET', 'https://newsapi.org/v2/top-headlines?country=id&apiKey=96b7521327044529a95b04762e15d43e',[]);
-        $d = json_decode($response->getBody()->getCOntents(),true);            
+        // $d = json_decode($response->getBody()->getCOntents(),true);            
         $data['response'] = $get_api;
         // $data['recomendnews'] = $recomendnews;
         // $data['recentnews'] = $recentnews;
@@ -99,7 +99,7 @@
         $data['ProdiSlider'] = $getprodi[1];
         $data['ProdiAbout'] = $getprodi[2];
         $data['ProdiHost'] = $getprodi[3];
-        $data['newsapi'] = $d['articles'];
+        // $data['newsapi'] = $d['articles'];
         $data['announcement'] = $getAnouncem_api;
         $data['marketingactivity'] = $marketingactivity;
         $data['events'] = $eventout;
@@ -147,10 +147,10 @@
         // die();
 
         //konfigurasi pagination
-        $jumlah_data = $d['totalResults'];
+        // $jumlah_data = $d['totalResults'];
         // $config['base_url'] = $response; //site url
-        $config['total_rows'] = $jumlah_data;
-        $config['per_page'] = $maxpage;
+        // $config['total_rows'] = $jumlah_data;
+        // $config['per_page'] = $maxpage;
 
         // Membuat Style pagination untuk BootStrap v4
         $config['full_tag_open'] = '<nav aria-label="Page navigation example"><ul class="pagination justify-content-start">';
